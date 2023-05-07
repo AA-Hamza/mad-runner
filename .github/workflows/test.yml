@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         java_version: [13, 16, 17, 18, 19, 20]
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, ubuntu-20.04, ubuntu-18.04, windows-latest, windows-2019]
         java_distributions: [zulu, liberica]
     runs-on: ${{ matrix.os }}
     steps:
