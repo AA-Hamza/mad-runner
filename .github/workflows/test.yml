@@ -10,12 +10,13 @@ jobs:
       matrix:
         java_version: [17]
         os: [ubuntu-latest, windows-latest]
+        java_distributions: [microsoft, corretto, zulu, adopt]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          distribution: 'oracle'
+          distribution: ${{ matrix.java_distributions }}
           java-version: ${{ matrix.java_version }}
           java-package: jdk+fx
           cache: 'gradle'
