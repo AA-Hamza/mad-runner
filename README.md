@@ -17,3 +17,15 @@
 ```
 .\gradlew.bin build
 ```
+
+
+## Running
+#### Linux
+```
+./gradlew run
+```
+
+#### Windows
+```
+.\gradlew.bin run
+```
