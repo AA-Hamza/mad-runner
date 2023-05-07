@@ -11,7 +11,7 @@ jobs:
       matrix:
         java_version: [17]
         os: [ubuntu-latest, windows-latest]
-        java_distributions: [zulu, temurin, liberica, semeru]
+        java_distributions: [zulu, liberica]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
@@ -25,4 +25,4 @@ jobs:
       - name: Run build
         shell: bash
         run: |
-          ./gradlew build --stack-trace
+          ./gradlew build --stacktrace
