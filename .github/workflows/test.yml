@@ -17,6 +17,7 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: ${{ matrix.java_version }}
+          java-package: jdk+fx
           cache: 'gradle'
 
       - name: Run build
