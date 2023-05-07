@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java_version: [17]
+        java_version: [20]
         os: [ubuntu-latest, windows-latest]
         java_distributions: [corretto, zulu, adopt, temurin, liberica, semeru]
     runs-on: ${{ matrix.os }}
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: ${{ matrix.java_distributions }}
-          java-version: '17'
+          java-version: ${{ matrix.java_version }}
           java-package: jdk+fx
           cache: 'gradle'
 
