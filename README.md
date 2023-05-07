@@ -4,5 +4,16 @@
 
 
 ## Building
-- We use java 17 as our main development version (openjdk)
-- We are using javajfx 17
+### Requirements
+- Java version above 13, We are using java openjdk version 17
+- JavaFx 17, We are using JavaJFx 17
+
+#### Linux
+```
+./gradlew build
+```
+
+#### Windows
+```
+.\gradlew.bin build
+```
