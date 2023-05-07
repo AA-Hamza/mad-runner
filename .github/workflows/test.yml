@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: ${{ matrix.java_distributions }}
-          java-version: ${{ matrix.java_version }}
+          java-version: 17
           java-package: jdk+fx
           cache: 'gradle'
 
