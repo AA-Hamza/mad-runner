@@ -11,7 +11,7 @@ jobs:
       matrix:
         java_version: [17]
         os: [ubuntu-latest, windows-latest]
-        java_distributions: [microsoft, corretto, zulu, adopt]
+        java_distributions: [corretto, zulu, adopt, temurin, liberica, semeru]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
