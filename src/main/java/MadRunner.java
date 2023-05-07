@@ -4,7 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Subway extends Application {
+public class MadRunner extends Application {
 
   @Override
   public void start(Stage stage) {
