@@ -4,7 +4,7 @@ import logic.Logic;
 
 public class Player extends GameObject {
 
-  static private final double playerLength = 50;
+  static public final double playerLength = 50;
   private final Color playerColor = Color.GREEN;
 
   public Player() {
@@ -13,31 +13,29 @@ public class Player extends GameObject {
   }
 
   public void moveLeft() {
-    switch (this.lane) {
+    switch (getLanePath()) {
     case CENTER:
-      this.lane = Lane.PATH.LEFT;
+      this.setLanePath(Lane.PATH.LEFT);
       break;
     case RIGHT:
-      this.lane = Lane.PATH.CENTER;
+      this.setLanePath(Lane.PATH.CENTER);
       break;
     default:
       break;
     }
-    // updatePlayerX();
   }
 
   public void moveRight() {
-    switch (this.lane) {
+    switch (getLanePath()) {
     case CENTER:
-      lane = Lane.PATH.RIGHT;
+      setLanePath(Lane.PATH.RIGHT);
       break;
     case LEFT:
-      lane = Lane.PATH.CENTER;
+      setLanePath(Lane.PATH.CENTER);
       break;
     default:
       break;
     }
-    // updatePlayerX();
   }
 
   // private void updatePlayerX() {

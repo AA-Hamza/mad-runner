@@ -7,7 +7,7 @@ import logic.Logic;
 public class GameObject {
   protected Color color = Color.GREEN;
   protected Image image = null;
-  protected Lane.PATH lane = null;
+  private Lane.PATH lane = null;
 
   protected double x, y, width, length = 0;
   private int zIndex;
@@ -39,10 +39,13 @@ public class GameObject {
   public double getWidth() { return this.width; }
   public double getLength() { return this.length; }
   public void setColor(Color color) { this.color = color; }
+  public void setLanePath(Lane.PATH path) { this.lane = path; }
+  public Lane.PATH getLanePath() { return this.lane; }
   public void setY(double y) { this.y = y; }
   public double getY() { return this.y; }
 
-  public void Draw(GraphicsContext gc) {
+  public void Draw() {
+    GraphicsContext gc = Logic.gc;
     double objX = this.x;
 
     if (this.lane != null) {
@@ -63,6 +66,39 @@ public class GameObject {
     if (x > this.x && x < this.x + this.width && y > this.y &&
         y < this.y + length) {
       return true;
+    }
+    return false;
+  }
+
+  public boolean interesects(Lane.PATH path, double y) {
+    if (this.lane == null) {
+      System.out.println(
+          "Trying to get interesection using Lanes on an Object without lane field");
+    } else {
+      if (this.lane == path && y > this.y && y < this.y + this.length) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public boolean touches(GameObject other) {
+    if (other.lane != null) {
+      if (other.lane != this.lane) {
+        return false;
+      }
+      double y11 = other.y;
+      double y12 = other.y + other.length;
+      double y21 = this.y;
+      double y22 = this.y + this.length;
+      if (y11 >= y21 && y11 <= y22)
+        return true;
+      else if (y12 >= y21 && y12 <= y22)
+        return true;
+      if (y21 >= y11 && y21 <= y12)
+        return true;
+      else if (y22 >= y11 && y22 <= y12)
+        return true;
     }
     return false;
   }

@@ -2,6 +2,11 @@ package logic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -10,19 +15,19 @@ import objects.GameObject;
 import objects.Ground;
 import objects.Lane;
 import objects.Lane.PATH;
+import objects.Obstacle;
 import objects.Player;
 
 public class Logic {
-  private GraphicsContext gc;
+  static public GraphicsContext gc;
   private final double canvasWidth;
   private final double canvasHeight;
   private final double playerLength = 50;
+  static private final double targetFPS = 60;
   private final int zLimit = 5;
   private Ground ground;
-  // private ArrayList<GameObject> objects;
-  private ArrayList<Iterable<GameObject>>[] objects;
-  private Lane[] lanes;
-
+  private ObstacleFactory obstacleFactory;
+  private Deque<Lane> Obstacles;
   private Player player;
 
   public Logic(GraphicsContext gc) {
@@ -32,19 +37,17 @@ public class Logic {
     this.canvasHeight = canvas.getHeight();
     bounderiesOBJ = new Bounderies(this.canvasWidth, this.canvasHeight);
 
-    this.lanes = new Lane[3];
-    this.lanes[PATH.LEFT.ordinal()] = new Lane(PATH.LEFT);
-    this.lanes[PATH.CENTER.ordinal()] = new Lane(PATH.CENTER);
-    this.lanes[PATH.RIGHT.ordinal()] = new Lane(PATH.RIGHT);
-
-    // this.objects = new ArrayList[zLimit];
+    // this.objects = new Iterable<Iterable<GameObject>>;
     // for (int i = 0; i < zLimit; i++) {
-    //   this.objects[i] = new ArrayList<GameObject>();
+    //   this.objects.add(null);
     // }
-    this.objects = new ArrayList[zLimit];
-    for (int i = 0; i < zLimit; i++) {
-      this.objects[i] = new ArrayList<Iterable<GameObject>>();
-    }
+    this.obstacleFactory = new ObstacleFactory();
+    this.Obstacles = new LinkedList<Lane>();
+    Obstacles.add(obstacleFactory.generateLane());
+    // this.lanes = new LinkedList<Iterable<GameObject>>();
+    // ((LinkedList<Iterable<GameObject>>)lanes)
+    //     .add(new Lane(obstacleFactory.generateLanes()));
+    // System.out.println(obstacleFactory.generateLanes());
 
     // Calculating ground
     final double groundStartX = getBounderies().getGroundStartX();
@@ -56,43 +59,58 @@ public class Logic {
     this.player = new Player();
 
     // Add objects for drawing
-    objects[0].add(Arrays.asList(ground));
-    objects[1].add(this.lanes[PATH.LEFT.ordinal()]);
-    objects[1].add(this.lanes[PATH.CENTER.ordinal()]);
-    objects[1].add(this.lanes[PATH.RIGHT.ordinal()]);
-    objects[zLimit - 1].add(Arrays.asList(this.player));
+    // objects.set(0, Arrays.asList(Arrays.asList(ground)));
+    // objects.add(Arrays.asList(Arrays.asList(ground)));
+    // objects.set(1, new ArrayList<>(c))
+    //     objects.set(1, Arrays.asList(this.lanes.peek().getArrayList()));
+    // Iterable<Iterable<GameObject>> test = new
+    // ArrayList<Iterable<GameObject>>();
+    // ((ArrayList<Iterable<GameObject>>)test).add(Arrays.asList(player));
+    // objects.set(zLimit - 1, test);
+    // objects.set(1, lanes);
+    // objects.set(zLimit - 1, Arrays.asList(Arrays.asList(this.player)));
 
     canvas.getScene().setOnKeyReleased(new GameControls());
   }
 
-  public void drawObjects() {
-    for (int i = 0; i < zLimit; i++) {
-      for (int j = 0; j < objects[i].size(); j++) {
-        for (GameObject obj : objects[i].get(j)) {
-          obj.Draw(gc);
-        }
-      }
-    }
-  }
-
+  private long lastFrame = 0;
   private long last100Millisecond = 0;
   private long last1000Millisecond = 0;
   public void tick(Long now) {
-    drawObjects();
-    for (int i = 0; i < 3; i++) {
-      lanes[i].frameUpdate();
-      // lanes[i].generateObstacles();
-    }
-
-    if ((now - last100Millisecond) > 100 * 1_000_000) {
-      last100Millisecond = now;
-      if ((now - last1000Millisecond) > 1000 * 1_000_000) {
-        last1000Millisecond = now;
-        for (int i = 0; i < 3; i++) {
-          lanes[i].generateObstacles();
-          lanes[i].cleanOffFrame();
-        }
+    ground.Draw();
+    for (Lane l : Obstacles) {
+      l.frameUpdate();
+      for (Obstacle o : l.left) {
+        o.Draw();
       }
+      for (Obstacle o : l.center) {
+        o.Draw();
+      }
+      for (Obstacle o : l.right) {
+        o.Draw();
+      }
+    }
+    player.Draw();
+    lastFrame = now;
+    last100Millisecond = now;
+    if ((now - last1000Millisecond) > 1000 * 1_000_000) {
+      System.out.println("First: " + Obstacles.peekFirst().getCurrentY());
+      Lane first = Obstacles.peekFirst();
+      if (first.getCurrentY() > -1 * getBounderies().getScreenHeight() *
+                                    ObstacleFactory.bufferScreens) {
+        Obstacles.addFirst(obstacleFactory.generateLane());
+        System.out.println("Generated new lane: " +
+                           Obstacles.peekFirst().getCurrentY());
+        System.out.println("Deleting out of screen: " +
+                           Obstacles.peekLast().getCurrentY());
+      }
+      Lane last = Obstacles.peekLast();
+      if (last.getCurrentY() > getBounderies().getScreenHeight()) {
+        System.out.println("Deleting out of screen: " + last.getCurrentY());
+        Obstacles.removeLast();
+      }
+      // System.gc();
+      last1000Millisecond = now;
     }
   }
 
