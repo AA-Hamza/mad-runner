@@ -18,8 +18,8 @@ public class MadRunner extends Application {
     stage.setResizable(false);
 
     Canvas canvas = new Canvas(1024, 768);
-
     canvas.requestFocus();
+
     root.getChildren().add(canvas);
 
     AnimationTimer myGameLoop = new GameLoop(canvas);

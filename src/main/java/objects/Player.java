@@ -1,74 +1,62 @@
 package objects;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-
-enum PlayerPOS { LEFT, CENTER, RIGHT }
+import logic.Logic;
 
 public class Player extends GameObject {
 
+  static private final double playerLength = 50;
   private final Color playerColor = Color.GREEN;
-  private final double startX, startY;
-  private final double laneLength, lanePadding;
 
-  private PlayerPOS pos;
-
-  public Player(double startX, double startY, double playerLength,
-                double laneLength) {
-    super(startX, startY, playerLength);
+  public Player() {
+    super(Lane.PATH.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
     super.setColor(playerColor);
-    this.startX = startX;
-    this.startY = startY;
-    this.laneLength = laneLength;
-    this.lanePadding = (laneLength - playerLength) / 2.0d;
-    this.pos = PlayerPOS.CENTER;
-    this.updatePlayerX();
   }
 
   public void moveLeft() {
-    switch (this.pos) {
+    switch (this.lane) {
     case CENTER:
-      pos = PlayerPOS.LEFT;
+      this.lane = Lane.PATH.LEFT;
       break;
     case RIGHT:
-      pos = PlayerPOS.CENTER;
+      this.lane = Lane.PATH.CENTER;
       break;
     default:
       break;
     }
-    updatePlayerX();
+    // updatePlayerX();
   }
 
   public void moveRight() {
-    switch (this.pos) {
+    switch (this.lane) {
     case CENTER:
-      pos = PlayerPOS.RIGHT;
+      lane = Lane.PATH.RIGHT;
       break;
     case LEFT:
-      pos = PlayerPOS.CENTER;
+      lane = Lane.PATH.CENTER;
       break;
     default:
       break;
     }
-    updatePlayerX();
+    // updatePlayerX();
   }
 
-  private void updatePlayerX() {
-    switch (this.pos) {
-    case LEFT:
-      this.x = this.startX + this.lanePadding;
-      break;
-    case CENTER:
-      this.x = this.startX + this.laneLength + this.lanePadding;
-      break;
-    case RIGHT:
-      this.x = this.startX + 2 * this.laneLength + this.lanePadding;
-      break;
-    default:
-      break;
-    }
-  }
+  // private void updatePlayerX() {
+  //   switch (this.lane) {
+  //   case LEFT:
+  //     this.x = this.startX + this.lanePadding;
+  //     break;
+  //   case CENTER:
+  //     this.x = this.startX + this.laneWidth + this.lanePadding;
+  //     break;
+  //   case RIGHT:
+  //     this.x = this.startX + 2 * this.laneWidth + this.lanePadding;
+  //     break;
+  //   default:
+  //     break;
+  //   }
+  // }
 
-  public PlayerPOS getPlayerPOS() { return this.pos; }
+  // public Lane.PATH getPlayerPOS() { return this.lane; }
 
   // public int getScore() { return this.score; }
   //
