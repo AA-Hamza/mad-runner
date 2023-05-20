@@ -6,19 +6,26 @@ public class Player extends GameObject {
 
   static public final double playerLength = 50;
   private final Color playerColor = Color.GREEN;
+  static public enum Stage { LOW, HIGH }
+  private Stage playerStage;
+  public Stage lastStage;
+  private boolean jumping = false;
+  private int jumpFrame = 0;
+  private final int maxJumFrames = 100;
 
   public Player() {
-    super(Lane.PATH.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
+    super(Block.Lane.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
     super.setColor(playerColor);
+    this.playerStage = Stage.LOW;
   }
 
   public void moveLeft() {
-    switch (getLanePath()) {
+    switch (getLane()) {
     case CENTER:
-      this.setLanePath(Lane.PATH.LEFT);
+      this.setLanePath(Block.Lane.LEFT);
       break;
     case RIGHT:
-      this.setLanePath(Lane.PATH.CENTER);
+      this.setLanePath(Block.Lane.CENTER);
       break;
     default:
       break;
@@ -26,17 +33,63 @@ public class Player extends GameObject {
   }
 
   public void moveRight() {
-    switch (getLanePath()) {
+    switch (getLane()) {
     case CENTER:
-      setLanePath(Lane.PATH.RIGHT);
+      setLanePath(Block.Lane.RIGHT);
       break;
     case LEFT:
-      setLanePath(Lane.PATH.CENTER);
+      setLanePath(Block.Lane.CENTER);
       break;
     default:
       break;
     }
   }
+
+  public void jumpUpdate() {
+    if (this.jumping == true) {
+      if (this.jumpFrame != 0) {
+        this.jumpFrame += 1;
+        if (this.jumpFrame < this.maxJumFrames / 2) { // Up
+          this.length += 0.5;
+          this.width += 0.5;
+          if (this.jumpFrame == this.maxJumFrames / 10) {
+            this.moveUp();
+          }
+        } else { // down
+          this.length -= 0.5;
+          this.width -= 0.5;
+          if (this.jumpFrame == 9 * this.maxJumFrames / 10) {
+            this.moveDown();
+          }
+          if (this.jumpFrame == this.maxJumFrames) {
+            this.jumpFrame = 0;
+            this.length = playerLength;
+            this.width = playerLength;
+            this.jumping = false;
+            this.playerStage = this.lastStage;
+          }
+        }
+      }
+      this.jumpFrame += 1;
+    }
+  }
+
+  public void jump() {
+    this.lastStage = this.playerStage;
+    this.jumping = true;
+  }
+
+  public boolean isJumping() { return this.jumping; }
+
+  public void moveUp() {
+    this.playerStage = Stage.HIGH;
+    System.out.println("Player is HIGH");
+  }
+  public void moveDown() {
+    this.playerStage = Stage.LOW;
+    System.out.println("Player is LOW");
+  }
+  public Stage getStage() { return this.playerStage; }
 
   // private void updatePlayerX() {
   //   switch (this.lane) {

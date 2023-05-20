@@ -7,7 +7,7 @@ import logic.Logic;
 public class GameObject {
   protected Color color = Color.GREEN;
   protected Image image = null;
-  private Lane.PATH lane = null;
+  private Block.Lane lane = null;
 
   protected double x, y, width, length = 0;
   private int zIndex;
@@ -19,14 +19,14 @@ public class GameObject {
     this.length = length;
   }
 
-  public GameObject(Lane.PATH lane, double y, double width, double length) {
+  public GameObject(Block.Lane lane, double y, double width, double length) {
     this.lane = lane;
     this.y = y;
     this.width = width;
     this.length = length;
   }
 
-  public GameObject(Lane.PATH lane, double y, double cubeLength) {
+  public GameObject(Block.Lane lane, double y, double cubeLength) {
     this(lane, y, cubeLength, cubeLength);
   }
 
@@ -39,8 +39,8 @@ public class GameObject {
   public double getWidth() { return this.width; }
   public double getLength() { return this.length; }
   public void setColor(Color color) { this.color = color; }
-  public void setLanePath(Lane.PATH path) { this.lane = path; }
-  public Lane.PATH getLanePath() { return this.lane; }
+  public void setLanePath(Block.Lane path) { this.lane = path; }
+  public Block.Lane getLane() { return this.lane; }
   public void setY(double y) { this.y = y; }
   public double getY() { return this.y; }
 
@@ -70,12 +70,12 @@ public class GameObject {
     return false;
   }
 
-  public boolean interesects(Lane.PATH path, double y) {
+  public boolean interesects(Block.Lane lane, double y) {
     if (this.lane == null) {
       System.out.println(
           "Trying to get interesection using Lanes on an Object without lane field");
     } else {
-      if (this.lane == path && y > this.y && y < this.y + this.length) {
+      if (this.lane == lane && y > this.y && y < this.y + this.length) {
         return true;
       }
     }

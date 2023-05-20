@@ -3,10 +3,11 @@ package logic;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import objects.Block;
 import objects.GameObject;
-import objects.Lane;
 import objects.Obstacle;
 import objects.Player;
+import objects.RoadBlock;
 import objects.Trailer;
 import objects.TrailerWithRamp;
 
@@ -14,8 +15,8 @@ public class ObstacleFactory {
   static public final int buildingScreens = 2;
   static public final int bufferScreens = 0;
 
-  static private final double minSpace = 500d;
-  static private final double space = 1000d;
+  static private final double minSpace = 100d;
+  static private final double space = 250d;
 
   private final double logicalLaneLength;
 
@@ -24,7 +25,7 @@ public class ObstacleFactory {
         Logic.getBounderies().getScreenHeight() * buildingScreens;
   }
 
-  public Lane generateLane() {
+  public Block generateLane() {
     int tries = 10000;
     ArrayList<ArrayList<Obstacle>> result =
         new ArrayList<ArrayList<Obstacle>>(3);
@@ -33,7 +34,7 @@ public class ObstacleFactory {
     result.add(generatePath());
     while (tries-- > 0) {
       if (winningPath(result) == true) {
-        return new Lane(result.get(0), result.get(1), result.get(2));
+        return new Block(result.get(0), result.get(1), result.get(2));
       }
       System.out.println("Got unwinning path, trying again");
       result.set((int)(Math.random() * 3), generatePath());
@@ -61,7 +62,7 @@ public class ObstacleFactory {
 
   public boolean winningPath(ArrayList<ArrayList<Obstacle>> lanes) {
     GameObject testObj =
-        new GameObject(Lane.PATH.LEFT, 0, Player.playerLength * 2);
+        new GameObject(Block.Lane.LEFT, 0, Player.playerLength * 2);
     while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
       int pointOfContacts = 0;
       for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
@@ -132,8 +133,15 @@ public class ObstacleFactory {
     return true;
   }
 
-  // public Obstacle generateObstacle() { return new Trailer(Lane.PATH.LEFT); }
+  // public Obstacle generateObstacle() {  }
   public Obstacle generateObstacle() {
-    return new TrailerWithRamp(Lane.PATH.LEFT);
+    double chance = Math.random();
+    if (chance < 0.3) {
+      return new RoadBlock(Block.Lane.LEFT);
+    } else if (chance < 0.5) {
+      return new TrailerWithRamp(Block.Lane.LEFT);
+    } else {
+      return new Trailer(Block.Lane.LEFT);
+    }
   }
 }

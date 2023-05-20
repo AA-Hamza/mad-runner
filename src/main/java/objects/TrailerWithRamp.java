@@ -8,7 +8,7 @@ public class TrailerWithRamp extends Obstacle {
   protected final int count;
   private Trailer trailer;
   private Obstacle ramp;
-  public TrailerWithRamp(Lane.PATH lane, double length) {
+  public TrailerWithRamp(Block.Lane lane, double length) {
     super(lane, 0, length);
     int count = (int)(length / Trailer.singleTrailerLength);
     this.count = count;
@@ -17,14 +17,14 @@ public class TrailerWithRamp extends Obstacle {
     this.ramp.setColor(Color.BROWN);
   }
 
-  public TrailerWithRamp(Lane.PATH lane) {
+  public TrailerWithRamp(Block.Lane lane) {
     this(lane, ((int)(Math.random() * Trailer.maxNumberOfTrailers) + 1) *
                        Trailer.singleTrailerLength +
                    rampSize);
   }
 
   @Override
-  public void setLanePath(Lane.PATH path) {
+  public void setLanePath(Block.Lane path) {
     super.setLanePath(path);
     this.trailer.setLanePath(path);
     this.ramp.setLanePath(path);

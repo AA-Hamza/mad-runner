@@ -6,17 +6,17 @@ public class Trailer extends Obstacle {
   static public final double singleTrailerLength = 100d;
   static public final int maxNumberOfTrailers = 3;
   protected final int count;
-  public Trailer(Lane.PATH lane, int count) {
+  public Trailer(Block.Lane lane, int count) {
     super(lane, 0, singleTrailerLength * count);
     this.count = count;
     setColor(Color.DARKCYAN);
   }
 
-  public Trailer(Lane.PATH lane) {
+  public Trailer(Block.Lane lane) {
     this(lane, (int)(Math.random() * maxNumberOfTrailers + 1));
   }
 
-  public Trailer(Lane.PATH lane, double length) {
+  public Trailer(Block.Lane lane, double length) {
     super(lane, 0, length);
     this.count = (int)(length / singleTrailerLength);
   }

@@ -3,16 +3,16 @@ package objects;
 import java.util.ArrayList;
 import logic.Logic;
 
-public class Lane {
-  static public enum PATH { LEFT, CENTER, RIGHT }
+public class Block {
+  static public enum Lane { LEFT, CENTER, RIGHT }
   static private final double speed = 4d;
   private double currentY;
   public final ArrayList<Obstacle> left;
   public final ArrayList<Obstacle> center;
   public final ArrayList<Obstacle> right;
 
-  public Lane(ArrayList<Obstacle> left, ArrayList<Obstacle> center,
-              ArrayList<Obstacle> right) {
+  public Block(ArrayList<Obstacle> left, ArrayList<Obstacle> center,
+               ArrayList<Obstacle> right) {
     if (left == null || center == null || right == null) {
       System.out.println("received null lanes");
       System.exit(-1);
@@ -30,17 +30,17 @@ public class Lane {
     // Update left
     for (Obstacle obs : left) {
       obs.setY(obs.getY() + currentY);
-      obs.setLanePath(PATH.LEFT);
+      obs.setLanePath(Lane.LEFT);
     }
     // Update center
     for (Obstacle obs : center) {
       obs.setY(obs.getY() + currentY);
-      obs.setLanePath(PATH.CENTER);
+      obs.setLanePath(Lane.CENTER);
     }
     // Update right
     for (Obstacle obs : right) {
       obs.setY(obs.getY() + currentY);
-      obs.setLanePath(PATH.RIGHT);
+      obs.setLanePath(Lane.RIGHT);
     }
   }
 
@@ -61,6 +61,19 @@ public class Lane {
   }
 
   public double getCurrentY() { return currentY; }
+
+  public ArrayList<Obstacle> getLane(Lane lane) {
+    switch (lane) {
+    case LEFT:
+      return this.left;
+    case CENTER:
+      return this.center;
+    case RIGHT:
+      return this.right;
+    default:
+      return null;
+    }
+  }
 
   // static public final int maxNumberOfObstacles = 10;
   // static private final int screens = -2;

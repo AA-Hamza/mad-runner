@@ -3,7 +3,7 @@ package objects;
 public class Obstacle extends GameObject {
   static private final double obestacleWidth = 70.0d;
 
-  public Obstacle(Lane.PATH lane, double y, double length) {
+  public Obstacle(Block.Lane lane, double y, double length) {
     super(lane, y, obestacleWidth, length);
   }
 
