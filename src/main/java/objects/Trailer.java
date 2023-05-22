@@ -1,6 +1,8 @@
 package objects;
 
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import logic.Logic;
 
 public class Trailer extends Obstacle {
   static public final double singleTrailerLength = 100d;
@@ -9,7 +11,10 @@ public class Trailer extends Obstacle {
   public Trailer(Block.Lane lane, int count) {
     super(lane, 0, singleTrailerLength * count);
     this.count = count;
-    setColor(Color.DARKCYAN);
+    setColor(Color.CADETBLUE);
+    this.image =
+        new Image("file:src/main/java/assets/trailer.png",
+                  Obstacle.obestacleWidth, singleTrailerLength, false, false);
   }
 
   public Trailer(Block.Lane lane) {
@@ -19,6 +24,16 @@ public class Trailer extends Obstacle {
   public Trailer(Block.Lane lane, double length) {
     super(lane, 0, length);
     this.count = (int)(length / singleTrailerLength);
+  }
+
+  @Override
+  public void Draw() {
+    for (int i = 0; i < this.length; i += singleTrailerLength) {
+      Logic.gc.drawImage(this.image,
+                         Logic.getBounderies().getLaneStartX(this.getLane()) +
+                             Logic.getBounderies().getLanePadding(),
+                         i + this.getY());
+    }
   }
 
   // static public class TrailerWithRamp extends Trailer {

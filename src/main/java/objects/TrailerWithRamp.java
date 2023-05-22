@@ -1,9 +1,11 @@
 package objects;
 
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class TrailerWithRamp extends Obstacle {
-  static public final double rampSize = Trailer.singleTrailerLength / 2.0d;
+  // static public final double rampSize = Trailer.singleTrailerLength / 2.0d;
+  static public final double rampSize = Obstacle.obestacleWidth;
   // static public final int maxNumberOfTrailers = 3;
   protected final int count;
   private Trailer trailer;
@@ -28,6 +30,8 @@ public class TrailerWithRamp extends Obstacle {
     super.setLanePath(path);
     this.trailer.setLanePath(path);
     this.ramp.setLanePath(path);
+    this.ramp.image = new Image("file:src/main/java/assets/ramp.png",
+                                ramp.getWidth(), ramp.getLength(), true, false);
   }
 
   @Override

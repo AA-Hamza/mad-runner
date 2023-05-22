@@ -1,5 +1,6 @@
 plugins {
   id 'application'
+  id 'com.github.johnrengelman.shadow' version '8.1.1'
   id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
@@ -12,4 +13,4 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 
-mainClassName = 'MadRunner'
+mainClassName = 'game.MadRunner'

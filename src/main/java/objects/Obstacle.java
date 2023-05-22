@@ -1,7 +1,7 @@
 package objects;
 
-public class Obstacle extends GameObject {
-  static private final double obestacleWidth = 70.0d;
+public class Obstacle extends GameLaneObject {
+  static public final double obestacleWidth = 70.0d;
 
   public Obstacle(Block.Lane lane, double y, double length) {
     super(lane, y, obestacleWidth, length);

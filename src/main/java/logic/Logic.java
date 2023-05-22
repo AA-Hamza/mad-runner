@@ -1,25 +1,23 @@
 package logic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import game.MadRunner;
 import java.util.Deque;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import objects.Block;
 import objects.Block.Lane;
 import objects.GameObject;
 import objects.Ground;
 import objects.Obstacle;
 import objects.Player;
-import objects.Player.Stage;
+import objects.Player.Level;
 import objects.RoadBlock;
+import objects.Trailer;
 import objects.TrailerWithRamp;
 
 public class Logic {
@@ -44,7 +42,7 @@ public class Logic {
     // Obstacles
     this.obstacleFactory = new ObstacleFactory();
     this.obstaclesBlocks = new LinkedList<Block>();
-    obstaclesBlocks.add(obstacleFactory.generateLane());
+    obstaclesBlocks.add(obstacleFactory.generateBlock());
 
     // Calculating ground
     final double groundStartX = getBounderies().getGroundStartX();
@@ -68,6 +66,8 @@ public class Logic {
     if (playerStopped == true) {
       return;
     }
+    Logic.gc.fillRect(0, 0, Logic.getBounderies().getScreenWidth(),
+                      Logic.getBounderies().getScreenHeight());
     ground.Draw();
 
     for (Block l : obstaclesBlocks) {
@@ -84,10 +84,11 @@ public class Logic {
     }
 
     player.Draw();
-    player.jumpUpdate();
+    // player.jumpUpdate();
+    player.playerUpdateAnimation();
     score.Draw();
 
-    if (checkPlayerCollision()) {
+    if (playerCollision()) {
       stopPlayer();
     }
 
@@ -95,15 +96,14 @@ public class Logic {
     last100Millisecond = now;
     if ((now - last1000Millisecond) > 1000 * 1_000_000) {
       score.incrementScore();
-      System.out.println("First: " + obstaclesBlocks.peekFirst().getCurrentY());
+      // System.out.println("First: " +
+      // obstaclesBlocks.peekFirst().getCurrentY());
       Block first = obstaclesBlocks.peekFirst();
       if (first.getCurrentY() > -1 * getBounderies().getScreenHeight() *
                                     ObstacleFactory.bufferScreens) {
-        obstaclesBlocks.addFirst(obstacleFactory.generateLane());
-        System.out.println("Generated new lane: " +
+        obstaclesBlocks.addFirst(obstacleFactory.generateBlock());
+        System.out.println("Generated new block: " +
                            obstaclesBlocks.peekFirst().getCurrentY());
-        System.out.println("Deleting out of screen: " +
-                           obstaclesBlocks.peekLast().getCurrentY());
       }
       Block last = obstaclesBlocks.peekLast();
       if (last.getCurrentY() > getBounderies().getScreenHeight()) {
@@ -129,7 +129,7 @@ public class Logic {
 
   static public class Bounderies {
     private final double groundPaddingPercentage = 0.25;
-    private final double groundStartX, groundWidth, groundEndX, pathWidth,
+    private final double groundStartX, groundWidth, groundEndX, laneWidth,
         screenWidth, screenHeight;
 
     private final double playerYPercentage = 0.8;
@@ -137,10 +137,23 @@ public class Logic {
     public Bounderies(double screenWidth, double screenHeight) {
       this.screenWidth = screenWidth;
       this.screenHeight = screenHeight;
-      this.groundStartX = screenWidth * groundPaddingPercentage;
-      this.groundWidth = screenWidth * (1 - 2 * groundPaddingPercentage);
-      this.pathWidth = this.groundWidth / 3.0d;
-      this.groundEndX = this.groundStartX + this.groundWidth;
+      System.out.println((1 - groundPaddingPercentage * 2) *
+                         MadRunner.minScreenX);
+      System.out.println(screenWidth);
+      if ((1 - groundPaddingPercentage * 2) * screenWidth <=
+          MadRunner.minScreenX) {
+        this.groundStartX = 0;
+        this.groundWidth = screenWidth;
+        this.laneWidth = this.groundWidth / 3.0d;
+        this.groundEndX = this.groundStartX + this.groundWidth;
+      } else {
+        // this.scale = screenWidth / MadRunner.minScreenX - 2;
+        // System.out.println("scale: " + scale);
+        this.groundStartX = screenWidth * groundPaddingPercentage;
+        this.groundWidth = screenWidth * (1 - 2 * groundPaddingPercentage);
+        this.laneWidth = this.groundWidth / 3.0d;
+        this.groundEndX = this.groundStartX + this.groundWidth;
+      }
     }
 
     public double getGroundStartX() { return this.groundStartX; }
@@ -149,11 +162,14 @@ public class Logic {
       return this.playerYPercentage * this.screenHeight;
     }
     public double getScreenHeight() { return this.screenHeight; }
-    public double getScreenWidth() { return this.screenHeight; }
+    public double getScreenWidth() { return this.screenWidth; }
     public double getGroundWidth() { return this.groundWidth; }
-    public double getPathWidth() { return this.pathWidth; }
-    public double getPathStartX() { return this.groundStartX; }
-    public double getPathStartX(Block.Lane path) {
+    public double getLaneWidth() { return this.laneWidth; }
+    public double getLaneStartX() { return this.groundStartX; }
+    public double getLanePadding() {
+      return (this.laneWidth - Obstacle.obestacleWidth) / 2.0d;
+    }
+    public double getLaneStartX(Block.Lane path) {
       int multiplier = 0;
       switch (path) {
       case RIGHT:
@@ -166,7 +182,7 @@ public class Logic {
         break;
       }
 
-      return this.groundStartX + multiplier * this.pathWidth;
+      return this.groundStartX + multiplier * this.laneWidth;
     }
   }
 
@@ -175,13 +191,8 @@ public class Logic {
     public void handle(KeyEvent event) {
       switch (event.getCode()) {
       case RIGHT:
-        // if (player.within(ground) == true) {
-        //   player.moveRight();
-        // } else {
-        //   player.moveRight();
-        // }
         player.moveRight();
-        if (checkIfLaneAvailable(Lane.RIGHT) == false) {
+        if (checkIfLaneAvailable(player.getLane()) == false) {
           stopPlayer();
         };
         break;
@@ -192,14 +203,14 @@ public class Logic {
         //   player.moveRight();
         // }
         player.moveLeft();
-        if (checkIfLaneAvailable(Lane.LEFT) == false)
+        if (checkIfLaneAvailable(player.getLane()) == false)
           stopPlayer();
         break;
       case UP:
         player.jump();
         break;
       case DOWN:
-        // player.moveDown();
+        startPlayer();
         break;
       default:
         break;
@@ -207,19 +218,21 @@ public class Logic {
     }
   }
 
+  /**
+   * Checks if the lane is available so the player will be able to move into
+   * the plane without losing
+   * @param lane the target lane, the lane the player is moving into
+   */
   public boolean checkIfLaneAvailable(Lane lane) {
-    if (this.player.getStage() == Stage.HIGH) {
+    // All lanes are available if the user is on a trailer
+    if (this.player.getLevel() == Level.HIGH) {
       return true;
     }
+
     for (Block block : obstaclesBlocks) {
       for (Obstacle obs : block.getLane(lane)) {
-        if (obs.interesects(lane, player.getY())) {
-          System.out.println("Lane not available");
-          System.out.println("Lane.y: " + obs.getY() +
-                             " player.y: " + player.getY());
-          return false;
-        }
-        if (obs.interesects(lane, player.getY() + player.getLength())) {
+        if (obs.contains(lane, player.getY()) ||
+            obs.contains(lane, player.getY() + player.getLength() / 1.5d)) {
           System.out.println("Lane not available");
           System.out.println("Lane.y: " + obs.getY() +
                              " player.y: " + player.getY());
@@ -230,45 +243,112 @@ public class Logic {
     return true;
   }
 
-  private GameObject lastTouch = null;
-  public boolean checkPlayerCollision() {
-    Block.Lane playerLane = this.player.getLane();
-    for (Block block : obstaclesBlocks) {
-      for (Obstacle obs : block.getLane(playerLane)) {
-        if (player.touches(obs)) {
-          if (obs instanceof TrailerWithRamp) {
-            System.out.println("Ramp");
-            if (player.getStage() == Stage.LOW) {
-              player.moveUp();
-              player.lastStage = Stage.HIGH;
-            }
-          }
-          System.out.println(player.getStage());
-          if (player.getStage() == Stage.LOW) {
-          }
-        }
-        if (player.getStage() == Stage.LOW && player.touches(obs)) {
-          System.out.println("Player touches something");
-          if (obs instanceof TrailerWithRamp) {
-            System.out.println("Ramp");
-            if (player.getStage() == Stage.LOW) {
-              player.lastStage = Stage.HIGH;
-              player.moveUp();
-            }
-            System.out.println(player.getStage());
-          } else if (obs instanceof RoadBlock &&
-                     player.getStage() == Stage.HIGH) {
+  private Obstacle lastTouch = null;
+  /**
+   * This function is responsible of detecting if the user has collided with
+   * any Obstacle
+   */
+
+  public boolean playerCollision() {
+    Obstacle obs = getPlayerTouchingObstacle();
+    if (obs != null) {
+      if (obs == lastTouch) {
+        player.setPlayerLevelHigh();
+        return false;
+      }
+      lastTouch = obs;
+
+      if (player.getLevel() == Level.LOW) {
+        if ((obs instanceof RoadBlock)) {
+          if (player.isJumping()) {
             return false;
-          } else {
-            return true;
           }
-        } else if (player.getStage() == Stage.HIGH && !player.isJumping() &&
-                   !player.touches(obs)) {
-          player.moveDown();
+          return true;
+        }
+
+        if (obs instanceof TrailerWithRamp) {
+          player.isClimbingRamp = true;
+          return false;
+        }
+      }
+    } else if (lastTouch != null) {
+      System.out.println("Player is low");
+      // player.setLevel(Level.LOW);
+      player.setPlayerLevelLow();
+      lastTouch = null;
+    } else if (player.isJumping() == false) {
+      player.setPlayerLevelLow();
+    }
+    return false;
+
+    // if (lastTouch != null) {
+    //   if (player.touches(lastTouch)) {
+    //     return false;
+    //   }
+    //
+    //   // Test if the object tests other objects
+    //   for (Block block : obstaclesBlocks) {
+    //     for (Obstacle obs : block.getLane(playerLane)) {
+    //       // System.out.println("Testing");
+    //       if (player.touches(obs)) {
+    //         lastTouch = obs;
+    //         return false;
+    //       }
+    //     }
+    //   }
+    //   if (!player.isJumping()) {
+    //     player.setLevel(Player.Level.LOW);
+    //     // System.out.println("Player is getting low");
+    //     lastTouch = null;
+    //   }
+    //   return false;
+    // }
+    //
+    // for (Block block : obstaclesBlocks) {
+    //   for (Obstacle obs : block.getLane(playerLane)) {
+    //     if (player.touches(obs)) {
+    //       // System.out.println("Touches another object");
+    //       if (obs instanceof TrailerWithRamp) {
+    //         // System.out.println("Player is touching ramp");
+    //         // player.setLevel(Player.Level.HIGH);
+    //         player.isClimbingRamp = true;
+    //
+    //         lastTouch = obs;
+    //         return false;
+    //       } else if (obs instanceof RoadBlock) {
+    //         if (player.isJumping()) {
+    //           return false;
+    //         }
+    //         return true;
+    //       } else {
+    //         return true;
+    //       }
+    //     }
+    //   }
+    // }
+    // return false;
+    // }
+  }
+
+  public Obstacle getPlayerTouchingObstacle() {
+    for (Block block : obstaclesBlocks) {
+      for (Obstacle obs : block.getLane(player.getLane())) {
+        if (player.touches(obs)) {
+          return obs;
         }
       }
     }
-    return false;
+    return null;
+  }
+
+  public Level getPlayerLevel() {
+    Obstacle obs = getPlayerTouchingObstacle();
+    if (obs != null) {
+      if (obs instanceof TrailerWithRamp || obs instanceof Trailer) {
+        return Level.HIGH;
+      }
+    }
+    return Level.LOW;
   }
 
   public class Score extends GameObject {
@@ -279,7 +359,8 @@ public class Logic {
       super(Logic.getBounderies().getGroundEndX() - padding - length, padding,
             length);
       this.currentScore = 0;
-      this.color = Color.WHEAT;
+      // this.color = Color.WHEAT;
+      this.color = Color.YELLOW;
     }
 
     public void increaseScore(int diff) { this.currentScore += diff; }
@@ -291,10 +372,12 @@ public class Logic {
 
     @Override
     public void Draw() {
+      Paint p = gc.getFill();
       gc.setFill(this.color);
       String s = "Score: " + this.currentScore;
       gc.fillText(s, this.x - (s.length() - 8) * gc.getFont().getSize(),
                   this.y);
+      gc.setFill(p);
     }
   }
 }

@@ -1,10 +1,8 @@
 package logic;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import objects.Block;
-import objects.GameObject;
+import objects.GameLaneObject;
 import objects.Obstacle;
 import objects.Player;
 import objects.RoadBlock;
@@ -17,6 +15,7 @@ public class ObstacleFactory {
 
   static private final double minSpace = 100d;
   static private final double space = 250d;
+  static private final double testObjectStep = Player.playerLength / 2.0d;
 
   private final double logicalLaneLength;
 
@@ -25,8 +24,8 @@ public class ObstacleFactory {
         Logic.getBounderies().getScreenHeight() * buildingScreens;
   }
 
-  public Block generateLane() {
-    int tries = 10000;
+  public Block generateBlock() {
+    int tries = 100;
     ArrayList<ArrayList<Obstacle>> result =
         new ArrayList<ArrayList<Obstacle>>(3);
     result.add(generatePath());
@@ -61,8 +60,15 @@ public class ObstacleFactory {
   }
 
   public boolean winningPath(ArrayList<ArrayList<Obstacle>> lanes) {
-    GameObject testObj =
-        new GameObject(Block.Lane.LEFT, 0, Player.playerLength * 2);
+    GameLaneObject testObj =
+        new GameLaneObject(Block.Lane.LEFT, 0, Player.playerLength * 2);
+
+    // Test if there is enough space between trailers for the player
+    // un winnable
+    // |   |
+    // |   |
+    //   |
+    //   |
     while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
       int pointOfContacts = 0;
       for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
@@ -78,55 +84,54 @@ public class ObstacleFactory {
         }
       }
 
-      testObj.setY(testObj.getY() + Player.playerLength / 2.0d);
-      // System.out.println("Point of contacts: " + pointOfContacts);
+      testObj.setY(testObj.getY() + testObjectStep);
       if (pointOfContacts == 3) {
         return false;
       }
+    }
 
-      // Test if a trailer in the center PATH is adjacent to 2 trailers on each
-      // PATH
-      //
-      // Un winnable
-      //     |
-      //   | |
-      // | |
-      // | |
-      // |
-      // |
-      //
-      //
-      // Winnable
-      // |
-      // | |
-      // |
-      // |   |
-      //     |
-      //     |
-      for (Obstacle obsCenter : lanes.get(1)) {
-        if (obsCenter instanceof Trailer) {
-          int touches = 0;
-          for (Obstacle obsLeft : lanes.get(0)) {
-            if (obsLeft instanceof Trailer) {
-              if (obsCenter.touches(obsLeft)) {
-                touches++;
-                break;
-              }
+    // Test if a trailer in the center PATH is adjacent to 2 trailers on each
+    // PATH
+    //
+    // Un winnable
+    //     |
+    //   | |
+    // | |
+    // | |
+    // |
+    // |
+    //
+    //
+    // Winnable
+    // |
+    // | |
+    // |
+    // |   |
+    //     |
+    //     |
+    for (Obstacle obsCenter : lanes.get(1)) {
+      if (obsCenter instanceof Trailer) {
+        int touches = 0;
+        for (Obstacle obsLeft : lanes.get(0)) {
+          if (obsLeft instanceof Trailer) {
+            if (obsCenter.touches(obsLeft)) {
+              touches++;
+              break;
             }
           }
+        }
 
-          for (Obstacle obsRight : lanes.get(2)) {
-            if (obsRight instanceof Trailer) {
-              if (obsCenter.touches(obsRight)) {
-                touches++;
-                break;
-              }
+        for (Obstacle obsRight : lanes.get(2)) {
+          if (obsRight instanceof Trailer) {
+            if (obsCenter.touches(obsRight)) {
+              touches++;
+              break;
             }
           }
+        }
 
-          if (touches == 2) {
-            return false;
-          }
+        if (touches == 2) {
+          return false;
         }
       }
     }

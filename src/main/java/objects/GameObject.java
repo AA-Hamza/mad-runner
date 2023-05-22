@@ -49,8 +49,8 @@ public class GameObject {
     double objX = this.x;
 
     if (this.lane != null) {
-      objX = (Logic.getBounderies().getPathWidth() - this.width) / 2.0d +
-             Logic.getBounderies().getPathStartX(this.lane);
+      objX = (Logic.getBounderies().getLaneWidth() - this.width) / 2.0d +
+             Logic.getBounderies().getLaneStartX(this.lane);
       this.x = objX;
     }
 
