@@ -36,7 +36,7 @@ public class GameObject {
   public double getWidth() { return this.width; }
   public double getLength() { return this.length; }
   public void setColor(Color color) { this.color = color; }
-  public void setLanePath(Block.Lane path) { this.lane = path; }
+  public void setLane(Block.Lane path) { this.lane = path; }
 
   public Block.Lane getLane() { return this.lane; }
   public void setX(double x) { this.x = x; }
@@ -103,11 +103,12 @@ public class GameObject {
     return false;
   }
 
-  public boolean within(GameObject other) {
-    if (this.x >= other.x && this.x + this.width <= other.x + other.width &&
-        this.y >= other.y && this.y + this.length <= other.y + other.length) {
-      return true;
-    }
-    return false;
-  }
+  // public boolean within(GameObject other) {
+  //   if (this.x >= other.x && this.x + this.width <= other.x + other.width &&
+  //       this.y >= other.y && this.y + this.length <= other.y + other.length)
+  //       {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 }

@@ -1,58 +1,55 @@
 package objects;
 import java.util.ArrayList;
-import java.util.Arrays;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import logic.Logic;
-import objects.Block.Lane;
 
 public class Player extends GameLaneObject {
   /* Static public vars */
   // static public final double playerLength = 50.0d;
   static public final double playerLength = 64.0d;
   static public final int maxJumpFrames = 40;
-  static public final int maxJumpDistance = 2;
+  static public final int maxJumpLength = 2;
   static public final int maxRampFrames =
       (int)(TrailerWithRamp.rampSize / 2.0d);
   static public enum Level { LOW, HIGH }
-  static public final double a;
-  static public final double b;
+
+  // This was in static block which makes better sense but it is here for
+  // simplicity ¯\_(ツ)_/¯
+  static public final double jumpFormulaATerm =
+      (double)(-4 * maxJumpLength) / (double)(maxJumpFrames * maxJumpFrames);
+
+  static public final double jumpFormulaBTerm =
+      (double)(4 * maxJumpLength) / (double)maxJumpFrames;
 
   /* Private constants */
+  // This color will be used in case the image doesn't exist
   private final Color playerColor = Color.DARKKHAKI;
-  private Boolean alive = true;
-  private Boolean isDying = false;
-  // private final Color playerColor = Color.BLACK;
 
   /* Private vars */
-  private Level level;
+  private Level level = Level.LOW;
   private boolean jumping = false;
-  public boolean isClimbingRamp = false;
+  private boolean isClimbingRamp = false;
+  private Boolean alive = true;
+  private Boolean isDying = false;
+  private ArrayList<Image> runFrames = null;
+  private ArrayList<Image> deathFrames = null;
+  // Animation frames counters
   private int currentJumpFrame = 0;
   private int currentRunningFrame = 0;
   private int currentDeathFrame = 0;
   private int currentClimbingFrame = 0;
 
-  private ArrayList<Image> runFrames = null;
-  private ArrayList<Image> deathFrames = null;
-
-  static {
-    a = (double)(-4 * maxJumpDistance) /
-        (double)(maxJumpFrames * maxJumpFrames);
-    b = (double)(4 * maxJumpDistance) / (double)maxJumpFrames;
-    System.out.println("a:" + a);
-    System.out.println("b:" + b);
-  }
-
   /* Constructors */
   public Player() {
     super(Block.Lane.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
     this.setColor(playerColor);
-    this.level = Level.LOW;
     setAnimations();
   }
 
+  /**
+   * This function is responsible of loading player animations
+   */
   private void setAnimations() {
     this.runFrames = new ArrayList<Image>(4);
     for (int i = 0; i < 4; i++) {
@@ -75,13 +72,14 @@ public class Player extends GameLaneObject {
   /* Setters */
   public void setLevel(Level level) { this.level = level; }
 
+  /* Utils */
   public void moveLeft() {
     switch (getLane()) {
     case CENTER:
-      this.setLanePath(Block.Lane.LEFT);
+      this.setLane(Block.Lane.LEFT);
       break;
     case RIGHT:
-      this.setLanePath(Block.Lane.CENTER);
+      this.setLane(Block.Lane.CENTER);
       break;
     default:
       break;
@@ -91,10 +89,10 @@ public class Player extends GameLaneObject {
   public void moveRight() {
     switch (getLane()) {
     case CENTER:
-      setLanePath(Block.Lane.RIGHT);
+      setLane(Block.Lane.RIGHT);
       break;
     case LEFT:
-      setLanePath(Block.Lane.CENTER);
+      setLane(Block.Lane.CENTER);
       break;
     default:
       break;
@@ -107,36 +105,50 @@ public class Player extends GameLaneObject {
   }
 
   private void playerLengthDecrease(double diff) {
-    this.width -= diff;
-    this.length -= diff;
+    this.playerLengthIncrease(-1 * diff);
+    if (this.width <
+        Player.playerLength) { // Hard stop, if something is wrong in the logic
+      this.width = Player.playerLength;
+      this.length = Player.playerLength;
+    }
   }
 
+  public boolean isJumping() { return this.jumping; }
+  public boolean isAlive() { return this.alive; }
+  public boolean isDying() { return this.isDying; }
+  public void die() { this.alive = false; }
+  public void rampClimb() { this.isClimbingRamp = true; }
+  public void jump() { this.jumping = true; }
+  public void setIsDying() { this.isDying = true; }
+
+  /**
+   * This is a simple square function that behaves a little bit like gravity
+   * <a href="https://www.desmos.com/calculator/ih0rpsele9">Desmos Link</a>
+   * The idea here is having a linear function make the jumping look weird
+   * so a square function is a bit similar to real life (it still looks a bit
+   * weird for a game). We are using length to as a z index
+   * @param frame current frame (which should be smaller than maxJumpFrames)
+   * @return the value of player increase in length all positive (it is smaller
+   *     than maxJumpLength)
+   */
   private double jumpCurrentValue(int frame) {
-    System.out.println("jump:" + (a * frame * frame + b * frame));
-    return a * frame * frame + b * frame;
+    return jumpFormulaATerm * frame * frame + jumpFormulaBTerm * frame;
   }
 
+  /* Animation UTILS */
   public void jumpUpdate() {
     if (this.jumping == true) {
-      if (this.currentJumpFrame != 0) {
-        if (this.currentJumpFrame <= Player.maxJumpFrames / 2) { // Up
-          playerLengthIncrease(jumpCurrentValue(this.currentJumpFrame));
-        } else { // down
-          if (this.getLength() <= Player.playerLength) {
-            this.width = playerLength;
-            this.length = playerLength;
-            this.currentJumpFrame = 0;
-            this.jumping = false;
-          } else {
-            playerLengthDecrease(jumpCurrentValue(this.currentJumpFrame));
-          }
-          if (this.currentJumpFrame >= Player.maxJumpFrames) {
-            this.currentJumpFrame = 0;
-            this.jumping = false;
-          }
-        }
+      if (this.currentJumpFrame <= Player.maxJumpFrames / 2) { // Up
+        playerLengthIncrease(jumpCurrentValue(this.currentJumpFrame));
+      } else { // down
+        playerLengthDecrease(jumpCurrentValue(this.currentJumpFrame));
       }
-      this.currentJumpFrame += 1;
+      if (this.currentJumpFrame >= Player.maxJumpFrames) {
+        this.currentJumpFrame = 0;
+        this.jumping = false;
+      } else {
+        this.currentJumpFrame += 1;
+      }
     }
   }
 
@@ -156,18 +168,17 @@ public class Player extends GameLaneObject {
 
   public void rampUpdate() {
     if (this.isClimbingRamp == true) {
-      if (this.currentClimbingFrame == 0) {
+      if (this.currentClimbingFrame == 0) { //  effect that the player got down
         setPlayerLevelLow();
       }
-      if (this.currentClimbingFrame == Player.maxRampFrames) {
+      if (this.currentClimbingFrame >= Player.maxRampFrames) {
         this.currentClimbingFrame = 0;
         this.isClimbingRamp = false;
         setPlayerLevelHigh();
       } else {
-        this.length += 0.5;
-        this.width += 0.5;
-        this.currentClimbingFrame++;
+        playerLengthIncrease(0.5);
       }
+      this.currentClimbingFrame += 1;
     }
   }
 
@@ -177,8 +188,6 @@ public class Player extends GameLaneObject {
     this.image = runFrames.get(index);
   }
 
-  public void setDying() { this.isDying = true; }
-  public boolean isDying() { return this.isDying; }
   public void updateDeathAnimation() {
     currentDeathFrame++;
     int index = (currentDeathFrame / 10) % deathFrames.size();
@@ -202,17 +211,5 @@ public class Player extends GameLaneObject {
         updateRunningAnimation();
       }
     }
-  }
-
-  public void jump() { this.jumping = true; }
-
-  public boolean isJumping() { return this.jumping; }
-
-  public boolean isAlive() { return this.alive; }
-  public void die() { this.alive = false; }
-
-  @Override
-  public void Draw() {
-    super.Draw();
   }
 }

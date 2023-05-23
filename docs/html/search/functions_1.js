@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playercollision_0',['playerCollision',['../classlogic_1_1Logic.html#ad2ec3db5a6380323c49334cd47e4c6e3',1,'logic::Logic']]]
+  ['addy_0',['addY',['../classobjects_1_1Obstacle.html#a8e7dd1ec5eabc171fa606fdc3ede3a26',1,'objects::Obstacle']]]
 ];

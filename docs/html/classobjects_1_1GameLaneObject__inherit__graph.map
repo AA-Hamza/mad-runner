@@ -1,9 +1,9 @@
 <map id="objects.GameLaneObject" name="objects.GameLaneObject">
-<area shape="rect" id="node1" title=" " alt="" coords="321,468,780,633"/>
-<area shape="rect" id="node3" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="236,843,564,949"/>
-<area shape="rect" id="node7" href="$classobjects_1_1Player.html" title=" " alt="" coords="589,681,814,1111"/>
-<area shape="rect" id="node2" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="335,5,766,420"/>
-<area shape="rect" id="node4" href="$classobjects_1_1RoadBlock.html" title=" " alt="" coords="5,1195,248,1273"/>
-<area shape="rect" id="node5" href="$classobjects_1_1Trailer.html" title=" " alt="" coords="273,1159,527,1309"/>
-<area shape="rect" id="node6" href="$classobjects_1_1TrailerWithRamp.html" title=" " alt="" coords="552,1166,869,1302"/>
+<area shape="rect" id="node1" title=" " alt="" coords="328,468,787,633"/>
+<area shape="rect" id="node3" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="236,960,564,1067"/>
+<area shape="rect" id="node7" href="$classobjects_1_1Player.html" title=" " alt="" coords="589,681,843,1345"/>
+<area shape="rect" id="node2" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="342,5,773,420"/>
+<area shape="rect" id="node4" href="$classobjects_1_1RoadBlock.html" title=" " alt="" coords="5,1437,248,1515"/>
+<area shape="rect" id="node5" href="$classobjects_1_1Trailer.html" title=" " alt="" coords="273,1401,527,1551"/>
+<area shape="rect" id="node6" href="$classobjects_1_1TrailerWithRamp.html" title=" " alt="" coords="552,1393,869,1559"/>
 </map>

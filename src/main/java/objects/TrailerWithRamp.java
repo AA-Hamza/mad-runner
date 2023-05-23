@@ -4,16 +4,14 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class TrailerWithRamp extends Obstacle {
-  // static public final double rampSize = Trailer.singleTrailerLength / 2.0d;
   static public final double rampSize = Obstacle.obestacleWidth;
-  // static public final int maxNumberOfTrailers = 3;
-  protected final int count;
+  protected final int trailerCount;
   private Trailer trailer;
   private Obstacle ramp;
   public TrailerWithRamp(Block.Lane lane, double length) {
     super(lane, 0, length);
     int count = (int)(length / Trailer.singleTrailerLength);
-    this.count = count;
+    this.trailerCount = count;
     this.trailer = new Trailer(lane, count);
     this.ramp = new Obstacle(lane, this.y + this.trailer.getLength(), rampSize);
     this.ramp.setColor(Color.BROWN);
@@ -25,16 +23,23 @@ public class TrailerWithRamp extends Obstacle {
                    rampSize);
   }
 
+  /**
+   * Update both of TrailerWithRamp objects (Trailer, Obstacle)
+   * @param lane new lane
+   */
   @Override
-  public void setLanePath(Block.Lane path) {
-    super.setLanePath(path);
-    this.trailer.setLanePath(path);
-    this.ramp.setLanePath(path);
+  public void setLane(Block.Lane lane) {
+    super.setLane(lane);
+    this.trailer.setLane(lane);
+    this.ramp.setLane(lane);
     this.ramp.image =
         new Image("file:src/main/java/assets/images/obstacles/ramp.png",
                   ramp.getWidth(), ramp.getLength(), true, false);
   }
 
+  /**
+   * Draw both objects seperately
+   */
   @Override
   public void Draw() {
     this.trailer.setY(this.getY());

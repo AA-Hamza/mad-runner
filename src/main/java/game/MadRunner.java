@@ -7,19 +7,21 @@ import javafx.scene.canvas.Canvas;
 import javafx.stage.Stage;
 
 public class MadRunner extends Application {
-  static public double minScreenY = 500;
-  static public double minScreenX = 500;
+  /* static vars */
+  static public final double minScreenY = 500;
+  static public final double minScreenX = 500;
+
   @Override
   public void start(Stage stage) {
     Group root = new Group();
     Scene theScene = new Scene(root);
     stage.setScene(theScene);
 
-    stage.setResizable(false);
+    stage.setResizable(false); // disable resizing the screen
 
-    Canvas canvas = new Canvas(1024, 768);
-    // Canvas canvas = new Canvas(minScreenX, minScreenY);
-    // Canvas canvas = new Canvas(m, 1080);
+    Canvas canvas =
+        new Canvas(1024, 768); // We are only using canvas to draw objects
+
     stage.setMinWidth(minScreenX);
     stage.setMaxWidth(minScreenY);
     stage.setMaximized(true);

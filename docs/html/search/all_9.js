@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['tick_0',['tick',['../classlogic_1_1Logic.html#ab109664f008c396294c7e87742e81451',1,'logic::Logic']]],
-  ['touches_1',['touches',['../classobjects_1_1GameLaneObject.html#a3d6eb2b22ef432f6145ef408d2330d34',1,'objects::GameLaneObject']]],
-  ['trailer_2',['Trailer',['../classobjects_1_1Trailer.html',1,'objects']]],
-  ['trailerwithramp_3',['TrailerWithRamp',['../classobjects_1_1TrailerWithRamp.html',1,'objects']]]
+  ['jump_0',['jump',['../classobjects_1_1Player.html#a948adb334ee04423823aed581d614af7',1,'objects::Player']]],
+  ['jumpcurrentvalue_1',['jumpCurrentValue',['../classobjects_1_1Player.html#a23ee6daf338186ba9e0e08888d1f91e2',1,'objects::Player']]],
+  ['jumping_2',['jumping',['../classobjects_1_1Player.html#a84db39825c9283c7904881de5cae5dea',1,'objects::Player']]],
+  ['jumpupdate_3',['jumpUpdate',['../classobjects_1_1Player.html#a39ffa65ab19ccedcad672fa9a58027ed',1,'objects::Player']]]
 ];

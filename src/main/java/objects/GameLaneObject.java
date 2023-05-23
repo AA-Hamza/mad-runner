@@ -1,5 +1,4 @@
 package objects;
-import javafx.scene.canvas.GraphicsContext;
 import logic.Logic;
 
 public class GameLaneObject extends GameObject {
@@ -17,7 +16,7 @@ public class GameLaneObject extends GameObject {
   }
 
   /* Setters */
-  public void setLanePath(Block.Lane path) { this.lane = path; }
+  public void setLane(Block.Lane path) { this.lane = path; }
 
   /* Getters */
   public Block.Lane getLane() { return this.lane; }
@@ -34,10 +33,10 @@ public class GameLaneObject extends GameObject {
   }
 
   /**
-   * Returns true if the lane matches the object lane and y is within the
-   * object or in other words the object contains this point.
+   * tests if the object contains this point.
    * @param lane the lane to test against
    * @param y the y value to test if it relies inside the object
+   * @return if the lane matches the object lane and y is within the object
    */
   public boolean contains(Block.Lane lane, double y) {
     if (this.lane == lane && y > this.y && y < this.y + this.length) {
@@ -52,6 +51,7 @@ public class GameLaneObject extends GameObject {
    * calculate the difference between their Ys if the
    * difference is less than or equal the length of the then they are touching
    * @param other the other object
+   * @return if the two objects touch each other
    */
   public boolean touches(GameLaneObject other) {
     if (other.lane != this.lane) {
@@ -62,5 +62,20 @@ public class GameLaneObject extends GameObject {
       return other.y - this.y <= this.length;
     }
     return false;
+  }
+
+  /**
+   * Get distance between lane objects, Note that it assumes both objects are on
+   * the same lane and doesn't test against it by design
+   */
+  public double distance(GameLaneObject other) {
+    if (this.y > other.y) {
+      return this.y - (other.y + other.length);
+    }
+
+    if (other.y >= this.y) {
+      return other.y - (this.y + this.length);
+    }
+    return 0;
   }
 }

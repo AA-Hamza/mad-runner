@@ -16,6 +16,7 @@ public class ObstacleFactory {
   static private final double minSpace = 100d;
   static private final double space = 250d;
   static private final double testObjectStep = Player.playerLength / 2.0d;
+  static private final double testObjectLength = Player.playerLength;
 
   private final double logicalLaneLength;
 
@@ -43,6 +44,11 @@ public class ObstacleFactory {
     return null;
   }
 
+  /**
+   * Generate one lane with random obstacles
+   * @return an array containing a random number of obstacles with random
+   *     locations (never touching though).
+   */
   public ArrayList<Obstacle> generatePath() {
     ArrayList<Obstacle> path = new ArrayList<Obstacle>();
     double startY = Math.random() * logicalLaneLength * 0.5;
@@ -59,9 +65,24 @@ public class ObstacleFactory {
     return path;
   }
 
+  /**
+   * Test if there is at least one possible way for the player to win.
+   * Note only Trailers will be able to generate an unwinning path. so we only
+   * test them.
+   * the test have two tests. The first test uses a test object
+   * with double the length of the player, this object moves using a step which
+   * is half the player length (Assumption: all lanes are in left lanes).
+   * If this object touches three trailers at once, then that will be unwinable
+   * path
+   *
+   * the second test
+   * We
+   */
   public boolean winningPath(ArrayList<ArrayList<Obstacle>> lanes) {
+    // testObj is in the left lane because we expect all lanes obstacles to be
+    // in left lane
     GameLaneObject testObj =
-        new GameLaneObject(Block.Lane.LEFT, 0, Player.playerLength * 2);
+        new GameLaneObject(Block.Lane.LEFT, 0, testObjectLength);
 
     // Test if there is enough space between trailers for the player
     // un winnable
@@ -75,7 +96,6 @@ public class ObstacleFactory {
         for (int j = 0; j < lanes.get(laneIndex).size(); j++) {
           if (lanes.get(laneIndex).get(j) instanceof Trailer) {
             Obstacle trailer = lanes.get(laneIndex).get(j);
-            // System.out.println("Testing touching");
             if (trailer.touches(testObj)) {
               pointOfContacts += 1;
               break;
@@ -89,6 +109,32 @@ public class ObstacleFactory {
         return false;
       }
     }
+    // We only need to test lane 1 & 2, lane 1 & 3, lane 2 & 3
+    // for (int currentLaneIndex = 0; currentLaneIndex < lanes.size();
+    //      currentLaneIndex++) {
+    //   for (int otherLaneIndex = currentLaneIndex + 1;
+    //        otherLaneIndex < lanes.size(); otherLaneIndex++) {
+    //
+    //     for (Obstacle curr : lanes.get(currentLaneIndex)) {
+    //       double max = 0;
+    //       for (Obstacle other : lanes.get(otherLaneIndex)) {
+    //         if (!curr.touches(other)) {
+    //           // System.out.println(curr.getY() + " " + other.getY());
+    //           // System.out.println(curr.getLength() + " " +
+    //           other.getLength());
+    //           // System.out.println(curr.distance(other));
+    //           max = Math.max(curr.distance(other), max);
+    //           // if (curr.distance(other) <= Player.playerLength) {
+    //           //   return false;
+    //           // }
+    //         }
+    //       }
+    //       if (max <= testObjectLength) {
+    //         return false;
+    //       }
+    //     }
+    //   }
+    // }
 
     // Test if a trailer in the center PATH is adjacent to 2 trailers on each
     // PATH
@@ -138,7 +184,6 @@ public class ObstacleFactory {
     return true;
   }
 
-  // public Obstacle generateObstacle() {  }
   public Obstacle generateObstacle() {
     double chance = Math.random();
     if (chance < 0.3) {

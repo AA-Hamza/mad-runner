@@ -6,14 +6,17 @@ import javafx.scene.text.Font;
 import logic.Logic;
 
 public class GameLoop extends AnimationTimer {
+  /* static constants */
+  static public final double fontSize = 30;
+  static public final long FPS = 40;
+
+  /* private vars */
   private GraphicsContext gc;
   private Logic gameLogic;
   private Font gameFont;
-  static public double fontSize = 30;
-  static public final long FPS = 40;
-
   private long last = 0;
 
+  /* Constructors */
   public GameLoop(Canvas canvas) {
     gc = canvas.getGraphicsContext2D();
     this.gameFont = Font.loadFont(

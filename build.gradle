@@ -1,10 +1,11 @@
 plugins {
   id 'java'
-  id 'org.ysb33r.doxygen' version "1.0.0"
   id 'application'
   id 'com.github.johnrengelman.shadow' version '8.1.1'
   id 'org.openjfx.javafxplugin' version '0.0.9'
+  id("com.github.onslip.gradle-one-jar") version "1.1.0"
 }
+
 
 repositories {
     mavenCentral()
@@ -13,57 +14,32 @@ repositories {
 javafx {
     version = "17"
     modules = [ 'javafx.controls' ]
-}
+}    
 
 mainClassName = 'game.MadRunner'
 
-doxygen  {
-   option 'generate_html', true
-   source new File(projectDir,'src/main/java')
-   template 'src/documentation.config'
-   outputDir new File(buildDir,'docs')
-    // // generate_latex          false
-    // generate_latex(false)
-    // generate_html           true
-    // source                  projectDir
-    // include '*.java'
-    // include '**/*.md'
-    // use_mdfile_as_mainpage  new File(projectDir, 'readme.md')
-    // full_path_names         false
-    //
-    // //Project related configuration options
-    // project_logo            new File(projectDir,'logo.png')
-    // project_name            'Android'
-    // outputDir               new File(projectDir, 'docs/')
-    // optimize_output_java    true
-    // markdown_support        true
-    // autolink_support        true
-    // subgrouping             true
-    //
-    // //Configuration options related to the input files
-    // input_encoding          'UTF-8'
-    // file_paterns            '*.java','*.md'
-    // recursive               true
-    //
-    // //Configuration options related to source browsing
-    // strip_code_comments     true
-    // references_link_source  true
-    // source_tooltips         true
-    // verbatim_headers        true
-    //
-    // //Configuration options related to the alphabetical class index
-    // alphabetical_index      true
-    // cols_in_alpha_index     5
-    //
-    // //Configuration options related to the HTML output
-    // html_header             new File(projectDir,'header.html')
-    // html_footer             new File(projectDir,'footer.html')
-    // html_stylesheet         new File(projectDir,'custom.css')
-    // html_extra_files        new File(projectDir,'favicon.ico')
-    // generate_treeview       true
-  }
-
-// javadoc {
-//     source = sourceSets.main.allJava
-//     classpath = configurations.compile
+// remember to add your main class => mainClassName = ' org.example.Main'
+// task fatJar(type: Jar) {
+//
+//     manifest {
+//         attributes 'Main-Class': "${mainClassName}"
+//     }
+//
+//     archiveBaseName = "${rootProject.name}"
+//     tasks.withType(Jar){
+//         duplicatesStrategy = DuplicatesStrategy.INCLUDE
+//     }
+//     from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+//     //from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } setDuplicatesStrategy(DuplicatesStrategy.INCLUDE) }
+//     with jar
 // }
+jar {
+  manifest {
+    attributes 'Main-Class': 'game.MadRunner'
+  }
+}
+
+task awesomeFunJar(type: OneJar) {
+  mainClass = 'game.MadRunner'
+  // archiveName = 'koala.jar'
+}

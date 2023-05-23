@@ -4,7 +4,6 @@ import game.MadRunner;
 import java.util.Deque;
 import java.util.LinkedList;
 import javafx.event.EventHandler;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
@@ -13,11 +12,11 @@ import objects.*;
 
 public class Logic {
   /* static variables */
+  /* Note having these two variables as static vars without locks is just asking
+   * for problems, especially if there are multiplle threads accessing it.
+   */
   static public GraphicsContext gc;
-
-  /* private constants */
-  private final double canvasWidth;
-  private final double canvasHeight;
+  static public Bounderies bounderiesOBJ = null;
 
   /* private variables */
   private Ground ground;
@@ -26,16 +25,12 @@ public class Logic {
   private Player player;
   private Score score;
   private Obstacle lastTouchedObs = null;
-
   private boolean playerDied;
 
   /* Constructors */
   public Logic(GraphicsContext gc) {
+    // Setting graphics context
     Logic.gc = gc;
-    final Canvas canvas = gc.getCanvas();
-    this.canvasWidth = canvas.getWidth();
-    this.canvasHeight = canvas.getHeight();
-    bounderiesOBJ = new Bounderies(this.canvasWidth, this.canvasHeight);
 
     // Obstacles
     this.obstacleFactory = new ObstacleFactory();
@@ -45,7 +40,8 @@ public class Logic {
     // Calculating ground
     final double groundStartX = getBounderies().getGroundStartX();
     final double groundWidth = getBounderies().getGroundWidth();
-    ground = new Ground(groundStartX, groundWidth, canvasHeight);
+    ground = new Ground(groundStartX, groundWidth,
+                        getBounderies().getScreenHeight());
 
     // Set up Player
     this.player = new Player();
@@ -54,7 +50,7 @@ public class Logic {
     // score
     this.score = new Score();
 
-    canvas.getScene().setOnKeyReleased(new GameControls());
+    gc.getCanvas().getScene().setOnKeyReleased(new GameControls());
   }
 
   private long last1000Millisecond = 0;
@@ -63,6 +59,7 @@ public class Logic {
    * called by the game loop and game loop logic mostly happens here
    * This function gets called at the start of every frame
    * @param now contains the current time in nano seconds
+   * TODO simplify this function
    */
   public void tick(Long now) {
     // Clear screen
@@ -78,13 +75,13 @@ public class Logic {
       if (playerDied == false) {
         l.frameUpdate();
       }
-      for (Obstacle o : l.left) {
+      for (Obstacle o : l.getLeftLane()) {
         o.Draw();
       }
-      for (Obstacle o : l.center) {
+      for (Obstacle o : l.getCenterLane()) {
         o.Draw();
       }
-      for (Obstacle o : l.right) {
+      for (Obstacle o : l.getRightLane()) {
         o.Draw();
       }
     }
@@ -92,7 +89,7 @@ public class Logic {
     if (playerDied == false) {
       if (playerCollision()) {
         playerDied();
-        this.player.setDying();
+        this.player.setIsDying();
       }
     }
 
@@ -121,10 +118,10 @@ public class Logic {
     }
   }
 
-  static public Bounderies bounderiesOBJ = null;
   static public Bounderies getBounderies() {
     if (bounderiesOBJ == null) {
-      bounderiesOBJ = new Bounderies(1024, 768);
+      bounderiesOBJ = new Bounderies(Logic.gc.getCanvas().getWidth(),
+                                     Logic.gc.getCanvas().getHeight());
     }
     return bounderiesOBJ;
   }
@@ -196,14 +193,9 @@ public class Logic {
       switch (event.getCode()) {
       case RIGHT:
         player.moveRight();
-        // if (checkIfLaneAvailable(player.getLane()) == false) {
-        //   playerDied();
-        // };
         break;
       case LEFT:
         player.moveLeft();
-        // if (checkIfLaneAvailable(player.getLane()) == false)
-        //   playerDied();
         break;
       case UP:
         player.jump();
@@ -216,31 +208,6 @@ public class Logic {
       }
     }
   }
-
-  /**
-   * Checks if the lane is available so the player will be able to move into
-   * the plane without losing
-   * @param lane the target lane, the lane the player is moving into
-   */
-  // public boolean checkIfLaneAvailable(Lane lane) {
-  //   // All lanes are available if the user is on a trailer
-  //   if (this.player.getLevel() == Level.HIGH) {
-  //     return true;
-  //   }
-  //
-  //   for (Block block : obstaclesBlocks) {
-  //     for (Obstacle obs : block.getLane(lane)) {
-  //       if (obs.contains(lane, player.getY()) ||
-  //           obs.contains(lane, player.getY() + player.getLength() / 1.5d)) {
-  //         System.out.println("Lane not available");
-  //         System.out.println("Lane.y: " + obs.getY() +
-  //                            " player.y: " + player.getY());
-  //         return false;
-  //       }
-  //     }
-  //   }
-  //   return true;
-  // }
 
   /**
    * This function is responsible of detecting if the user has collided with
@@ -263,7 +230,7 @@ public class Logic {
         }
 
         if (obs instanceof TrailerWithRamp) {
-          player.isClimbingRamp = true;
+          player.rampClimb();
           return false;
         }
 
@@ -279,54 +246,6 @@ public class Logic {
       }
     }
     return false;
-
-    // if (lastTouch != null) {
-    //   if (player.touches(lastTouch)) {
-    //     return false;
-    //   }
-    //
-    //   // Test if the object tests other objects
-    //   for (Block block : obstaclesBlocks) {
-    //     for (Obstacle obs : block.getLane(playerLane)) {
-    //       // System.out.println("Testing");
-    //       if (player.touches(obs)) {
-    //         lastTouch = obs;
-    //         return false;
-    //       }
-    //     }
-    //   }
-    //   if (!player.isJumping()) {
-    //     player.setLevel(Player.Level.LOW);
-    //     // System.out.println("Player is getting low");
-    //     lastTouch = null;
-    //   }
-    //   return false;
-    // }
-    //
-    // for (Block block : obstaclesBlocks) {
-    //   for (Obstacle obs : block.getLane(playerLane)) {
-    //     if (player.touches(obs)) {
-    //       // System.out.println("Touches another object");
-    //       if (obs instanceof TrailerWithRamp) {
-    //         // System.out.println("Player is touching ramp");
-    //         // player.setLevel(Player.Level.HIGH);
-    //         player.isClimbingRamp = true;
-    //
-    //         lastTouch = obs;
-    //         return false;
-    //       } else if (obs instanceof RoadBlock) {
-    //         if (player.isJumping()) {
-    //           return false;
-    //         }
-    //         return true;
-    //       } else {
-    //         return true;
-    //       }
-    //     }
-    //   }
-    // }
-    // return false;
-    // }
   }
 
   public Obstacle getPlayerTouchingObstacle() {
@@ -355,8 +274,7 @@ public class Logic {
     static public final double padding = 50;
     private int currentScore;
     Score() {
-      super(Logic.getBounderies().getGroundStartX() + 1 * padding, padding,
-            length);
+      super(Logic.getBounderies().getGroundStartX() + padding, padding, length);
       this.currentScore = 0;
       this.color = Color.YELLOW;
     }
@@ -373,8 +291,6 @@ public class Logic {
       Paint p = gc.getFill();
       gc.setFill(this.color);
       String s = "Score: " + this.currentScore;
-      // gc.fillText(s, this.x - (s.length() - 8) * gc.getFont().getSize(),
-      //             this.y);
       gc.fillText(s, this.x, this.y);
       gc.setFill(p);
     }
