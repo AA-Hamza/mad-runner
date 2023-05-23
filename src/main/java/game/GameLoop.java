@@ -17,7 +17,7 @@ public class GameLoop extends AnimationTimer {
   public GameLoop(Canvas canvas) {
     gc = canvas.getGraphicsContext2D();
     this.gameFont = Font.loadFont(
-        "file:src/main/java/assets/RussoOne-Regular.ttf", fontSize);
+        "file:src/main/java/assets/fonts/RussoOne-Regular.ttf", fontSize);
     gc.setFont(this.gameFont);
     gameLogic = new Logic(gc);
   }

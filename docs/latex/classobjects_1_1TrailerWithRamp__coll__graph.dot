@@ -1,0 +1,23 @@
+digraph "objects.TrailerWithRamp"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="objects.TrailerWithRamp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="objects.Obstacle",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classobjects_1_1Obstacle.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="objects.GameLaneObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classobjects_1_1GameLaneObject.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="objects.GameObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classobjects_1_1GameObject.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" color" ];
+  Node5 [label="Color",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node6 [label="Image",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" lane" ];
+  Node7 [label="objects.Block",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$classobjects_1_1Block.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" center\nleft\nright" ];
+  Node8 [label="ArrayList\< objects.Obstacle \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" lane" ];
+}

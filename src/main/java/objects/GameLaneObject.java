@@ -24,7 +24,6 @@ public class GameLaneObject extends GameObject {
 
   /* Draw Function */
   public void Draw() {
-    GraphicsContext gc = Logic.gc;
     double laneObjectX = this.x;
 
     laneObjectX = (Logic.getBounderies().getLaneWidth() - this.width) / 2.0d +

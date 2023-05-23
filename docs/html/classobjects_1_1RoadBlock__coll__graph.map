@@ -1,0 +1,10 @@
+<map id="objects.RoadBlock" name="objects.RoadBlock">
+<area shape="rect" id="node1" title=" " alt="" coords="231,1164,474,1241"/>
+<area shape="rect" id="node2" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="189,1008,517,1115"/>
+<area shape="rect" id="node3" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="123,793,582,959"/>
+<area shape="rect" id="node4" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="5,373,436,744"/>
+<area shape="rect" id="node5" title=" " alt="" coords="125,204,178,281"/>
+<area shape="rect" id="node6" title=" " alt="" coords="202,204,261,281"/>
+<area shape="rect" id="node7" href="$classobjects_1_1Block.html" title=" " alt="" coords="303,175,647,311"/>
+<area shape="rect" id="node8" title=" " alt="" coords="377,5,573,83"/>
+</map>

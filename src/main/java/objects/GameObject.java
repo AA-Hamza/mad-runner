@@ -7,10 +7,9 @@ import logic.Logic;
 public class GameObject {
   protected Color color = Color.GREEN;
   protected Image image = null;
-  private Block.Lane lane = null;
+  protected Block.Lane lane = null;
 
   protected double x, y, width, length = 0;
-  private int zIndex;
 
   public GameObject(double x, double y, double width, double length) {
     this.x = x;
@@ -34,15 +33,16 @@ public class GameObject {
     this(x, y, cubeLength, cubeLength);
   }
 
-  public void setZIndex(int z) { this.zIndex = z; }
-  public int getZIndex() { return this.zIndex; }
   public double getWidth() { return this.width; }
   public double getLength() { return this.length; }
   public void setColor(Color color) { this.color = color; }
   public void setLanePath(Block.Lane path) { this.lane = path; }
+
   public Block.Lane getLane() { return this.lane; }
+  public void setX(double x) { this.x = x; }
   public void setY(double y) { this.y = y; }
   public double getY() { return this.y; }
+  public double getX() { return this.x; }
 
   public void Draw() {
     GraphicsContext gc = Logic.gc;
