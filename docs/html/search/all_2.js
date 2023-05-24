@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['b_0',['b',['../classobjects_1_1Player.html#a35000717bbd6f394c41705e6c51eb938',1,'objects::Player']]],
-  ['block_1',['Block',['../classobjects_1_1Block.html#a444c7614fe78111864838781cffe2117',1,'objects.Block.Block()'],['../classobjects_1_1Block.html',1,'objects.Block']]],
-  ['block_2ejava_2',['Block.java',['../Block_8java.html',1,'']]],
-  ['bounderies_3',['Bounderies',['../classlogic_1_1Logic_1_1Bounderies.html#a06fc4e7651dcc3a67f305e925327522a',1,'logic.Logic.Bounderies.Bounderies()'],['../classlogic_1_1Logic_1_1Bounderies.html',1,'logic.Logic.Bounderies']]],
-  ['bounderiesobj_4',['bounderiesOBJ',['../classlogic_1_1Logic.html#a0a3dcdc83daeb28a3e943bbedd9eb7e8',1,'logic::Logic']]],
-  ['bufferscreens_5',['bufferScreens',['../classlogic_1_1ObstacleFactory.html#a43098f3db2887045096ff2987f3973e6',1,'logic::ObstacleFactory']]],
-  ['buildingscreens_6',['buildingScreens',['../classlogic_1_1ObstacleFactory.html#ae5a00ef2790cf41aa4a6b79ba0e9e06a',1,'logic::ObstacleFactory']]]
+  ['center_0',['center',['../classobjects_1_1Block.html#ae609ab99b18201fec18d4c2a4c897d73',1,'objects::Block']]],
+  ['center_1',['CENTER',['../enumobjects_1_1Block_1_1Lane.html#a68d37951bdb2b8dd8f7728d09e47b2f7',1,'objects::Block::Lane']]],
+  ['color_2',['color',['../classobjects_1_1GameObject.html#aca34a4bb1e7b1cc94cb102c3b72b15fc',1,'objects::GameObject']]],
+  ['contains_3',['contains',['../classobjects_1_1GameLaneObject.html#a0d45382fd2d5481932dc7bf5d46b80ae',1,'objects::GameLaneObject']]],
+  ['currentclimbingframe_4',['currentClimbingFrame',['../classobjects_1_1Player.html#a3190f5e808a2a77e8a68a14b0bbc46f4',1,'objects::Player']]],
+  ['currentdeathframe_5',['currentDeathFrame',['../classobjects_1_1Player.html#ad6919e74dedc27d5c247479e9b968974',1,'objects::Player']]],
+  ['currentjumpframe_6',['currentJumpFrame',['../classobjects_1_1Player.html#a278958abf43776c6248f560ab439e4e9',1,'objects::Player']]],
+  ['currentrunningframe_7',['currentRunningFrame',['../classobjects_1_1Player.html#ac6d8f0ed7e25f69754be16cd26157062',1,'objects::Player']]],
+  ['currentscore_8',['currentScore',['../classlogic_1_1Logic_1_1Score.html#a5a39338854881a8a64b98ce0f6ac374f',1,'logic::Logic::Score']]],
+  ['currenty_9',['currentY',['../classobjects_1_1Block.html#a96ca5b3fdc755441122d8d2fb77457e1',1,'objects::Block']]]
 ];

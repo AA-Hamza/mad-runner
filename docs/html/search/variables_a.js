@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['maxjumpdistance_0',['maxJumpDistance',['../classobjects_1_1Player.html#a1260537947ab3c547134d060c430a989',1,'objects::Player']]],
-  ['maxjumpframes_1',['maxJumpFrames',['../classobjects_1_1Player.html#a07e27db7ae101c84e08e35791b7d868a',1,'objects::Player']]],
+  ['maxjumpframes_0',['maxJumpFrames',['../classobjects_1_1Player.html#a07e27db7ae101c84e08e35791b7d868a',1,'objects::Player']]],
+  ['maxjumplength_1',['maxJumpLength',['../classobjects_1_1Player.html#aaaec038560b99b623a0eea6e9268354e',1,'objects::Player']]],
   ['maxnumberoftrailers_2',['maxNumberOfTrailers',['../classobjects_1_1Trailer.html#a2d7299f67bb9ca35af5aa37cf306ccec',1,'objects::Trailer']]],
   ['maxrampframes_3',['maxRampFrames',['../classobjects_1_1Player.html#a0c3e616b6ae5194024e067febebaa2dc',1,'objects::Player']]],
   ['minscreenx_4',['minScreenX',['../classgame_1_1MadRunner.html#a3fb430cf6668859dfd8564e11d59b8e0',1,'game::MadRunner']]],

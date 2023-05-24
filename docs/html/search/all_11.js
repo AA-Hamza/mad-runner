@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['updatedeathanimation_0',['updateDeathAnimation',['../classobjects_1_1Player.html#ae9500e139fd4c9a9ee0c3cde910d3f21',1,'objects::Player']]],
-  ['updaterunninganimation_1',['updateRunningAnimation',['../classobjects_1_1Player.html#ab08f3d7bb1fc4b5720e298e4ab929437',1,'objects::Player']]]
+  ['width_0',['width',['../classobjects_1_1GameObject.html#aa8ea4734316b994b5a2b9e2116f0feea',1,'objects::GameObject']]],
+  ['winningpath_1',['winningPath',['../classlogic_1_1ObstacleFactory.html#aa0b6c46aefbf1720c0bcbb7ec105eae8',1,'logic::ObstacleFactory']]]
 ];

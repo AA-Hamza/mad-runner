@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classlogic_1_1Logic.html',''); initRes
 <div class="dynheader">
 Collaboration diagram for logic.Logic:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogic_1_1Logic__coll__graph.svg" width="1932" height="2286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogic_1_1Logic__coll__graph.svg" width="2111" height="2286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -150,10 +150,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8cb53ac3c0b71e12eea77cc847b2ef65"><td class="memItemLeft" align="right" valign="top">final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Logic.html#a8cb53ac3c0b71e12eea77cc847b2ef65">canvasWidth</a></td></tr>
-<tr class="separator:a8cb53ac3c0b71e12eea77cc847b2ef65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bf0d717b16f6ea5add500a9d962c292"><td class="memItemLeft" align="right" valign="top">final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Logic.html#a7bf0d717b16f6ea5add500a9d962c292">canvasHeight</a></td></tr>
-<tr class="separator:a7bf0d717b16f6ea5add500a9d962c292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94582b5c244c14fe82145b3f0562aa18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classobjects_1_1Ground.html">Ground</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Logic.html#a94582b5c244c14fe82145b3f0562aa18">ground</a></td></tr>
 <tr class="separator:a94582b5c244c14fe82145b3f0562aa18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf6a5b7c9207d81cd72fafd39208116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlogic_1_1ObstacleFactory.html">ObstacleFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Logic.html#aebf6a5b7c9207d81cd72fafd39208116">obstacleFactory</a></td></tr>
@@ -296,12 +292,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks if the lane is available so the player will be able to move into the plane without losing </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lane</td><td>the target lane, the lane the player is moving into This function is responsible of detecting if the user has collided with any Obstacle </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>This function is responsible of detecting if the user has collided with any Obstacle </p>
 
 </div>
 </div>
@@ -380,7 +371,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>This is considered the main function of the game, this function gets called by the game loop and game loop logic mostly happens here This function gets called at the start of every frame </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">now</td><td>contains the current time in nano seconds </td></tr>
+    <tr><td class="paramname">now</td><td>contains the current time in nano seconds TODO simplify this function </td></tr>
   </table>
   </dd>
 </dl>
@@ -404,50 +395,6 @@ Private Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7bf0d717b16f6ea5add500a9d962c292" name="a7bf0d717b16f6ea5add500a9d962c292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bf0d717b16f6ea5add500a9d962c292">&#9670;&#160;</a></span>canvasHeight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final double logic.Logic.canvasHeight</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8cb53ac3c0b71e12eea77cc847b2ef65" name="a8cb53ac3c0b71e12eea77cc847b2ef65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cb53ac3c0b71e12eea77cc847b2ef65">&#9670;&#160;</a></span>canvasWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final double logic.Logic.canvasWidth</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

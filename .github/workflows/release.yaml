@@ -42,8 +42,8 @@ jobs:
           artifacts: "build/libs/*"
           tag: ${{ steps.tag.outputs.new_tag }}
 
-      - name: Build docs
-        shell: bash
+      - name: Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.4
         if: github.ref == 'refs/heads/main'
-        run: |
-          make docs
+        with:
+          doxyfile-path: './documentation.config'

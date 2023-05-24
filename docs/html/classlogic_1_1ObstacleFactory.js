@@ -10,5 +10,6 @@ var classlogic_1_1ObstacleFactory =
     [ "logicalLaneLength", "classlogic_1_1ObstacleFactory.html#a51d3d65efbe167a2b520c0bd371b2b62", null ],
     [ "minSpace", "classlogic_1_1ObstacleFactory.html#a4416fb251a1d2d791443cc13209f941f", null ],
     [ "space", "classlogic_1_1ObstacleFactory.html#accc102cab8d0e2e887794edd76078ec5", null ],
+    [ "testObjectLength", "classlogic_1_1ObstacleFactory.html#ae37d8a3300d47f268bd039379713c6de", null ],
     [ "testObjectStep", "classlogic_1_1ObstacleFactory.html#a96358598193823b1e782456a2727bfd8", null ]
 ];
