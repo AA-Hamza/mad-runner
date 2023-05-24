@@ -44,8 +44,8 @@ public class Logic
         Logic.currentLogic = this;
         Logic.pauseObject = new GamePause();
         Logic.gameOverObject = new GameOver();
-        gc.getCanvas().getScene().setOnKeyReleased(new GameControls());
 
+        gc.getCanvas().getScene().setOnKeyReleased(new GameControls());
         this.objectsSetUP();
     }
 
@@ -274,18 +274,17 @@ public class Logic
     {
         @Override public void handle(KeyEvent event)
         {
-            if (playerDied == true)
+
+            if (gameOverObject.isEnabled())
             {
                 if (event.getCode() == KeyCode.R)
                 {
-                    if (gameOverObject.isEnabled())
-                    {
-                        Logic.currentLogic.objectsSetUP();
-                        Logic.currentLogic.score.resetScore();
-                        Logic.gameOverObject.disable();
-                        return;
-                    }
+                    Logic.currentLogic.objectsSetUP();
+                    Logic.currentLogic.score.resetScore();
+                    Logic.gameOverObject.disable();
+                    Logic.pauseObject.disable();
                 }
+                return;
             }
 
             switch (event.getCode())
