@@ -5,9 +5,11 @@ import java.util.Deque;
 import java.util.LinkedList;
 import javafx.event.EventHandler;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.TextAlignment;
 import objects.*;
 
 public class Logic {
@@ -17,6 +19,9 @@ public class Logic {
    */
   static public GraphicsContext gc;
   static public Bounderies bounderiesOBJ = null;
+  static public GamePause pauseObject;
+  static public GameOver gameOverObject;
+  static public Logic currentLogic;
 
   /* private variables */
   private Ground ground;
@@ -31,7 +36,15 @@ public class Logic {
   public Logic(GraphicsContext gc) {
     // Setting graphics context
     Logic.gc = gc;
+    Logic.currentLogic = this;
+    Logic.pauseObject = new GamePause();
+    Logic.gameOverObject = new GameOver();
+    gc.getCanvas().getScene().setOnKeyReleased(new GameControls());
 
+    this.objectsSetUP();
+  }
+
+  public void objectsSetUP() {
     // Obstacles
     this.obstacleFactory = new ObstacleFactory();
     this.obstaclesBlocks = new LinkedList<Block>();
@@ -48,9 +61,17 @@ public class Logic {
     this.playerDied = false;
 
     // score
-    this.score = new Score();
+    if (this.score != null) {
+      int oldScore = this.score.getScore();
+      this.score = new Score();
+      this.score.increaseScore(oldScore);
+    } else {
+      this.score = new Score();
+    }
 
-    gc.getCanvas().getScene().setOnKeyReleased(new GameControls());
+    lastTouchedObs = null;
+
+    System.gc();
   }
 
   private long last1000Millisecond = 0;
@@ -59,9 +80,23 @@ public class Logic {
    * called by the game loop and game loop logic mostly happens here
    * This function gets called at the start of every frame
    * @param now contains the current time in nano seconds
-   * TODO simplify this function
    */
   public void tick(Long now) {
+    if (!player.isAlive()) {
+      gameOverObject.enable();
+      gameOverObject.setScore(this.score.getScore());
+    }
+
+    if (gameOverObject.isEnabled()) {
+      gameOverObject.Draw();
+      return;
+    }
+
+    if (pauseObject.isEnabled()) {
+      pauseObject.Draw();
+      return;
+    }
+
     // Clear screen
     Logic.gc.fillRect(0, 0, Logic.getBounderies().getScreenWidth(),
                       Logic.getBounderies().getScreenHeight());
@@ -88,17 +123,15 @@ public class Logic {
 
     if (playerDied == false) {
       if (playerCollision()) {
-        playerDied();
+        killPlayer();
         this.player.setIsDying();
       }
     }
 
     player.Draw();
     player.playerUpdateAnimation();
-
+    score.Draw();
     if (playerDied == false) {
-      score.Draw();
-
       if ((now - last1000Millisecond) > 1000 * 1_000_000) {
         score.incrementScore();
         Block first = obstaclesBlocks.peekFirst();
@@ -126,9 +159,7 @@ public class Logic {
     return bounderiesOBJ;
   }
 
-  private void playerDied() { this.playerDied = true; }
-
-  private void startPlayer() { this.playerDied = false; }
+  private void killPlayer() { this.playerDied = true; }
 
   static public class Bounderies {
     private final double groundPaddingPercentage = 0.25;
@@ -190,6 +221,17 @@ public class Logic {
   public class GameControls implements EventHandler<KeyEvent> {
     @Override
     public void handle(KeyEvent event) {
+      if (playerDied == true) {
+        if (event.getCode() == KeyCode.R) {
+          if (gameOverObject.isEnabled()) {
+            Logic.currentLogic.objectsSetUP();
+            Logic.currentLogic.score.resetScore();
+            Logic.gameOverObject.disable();
+            return;
+          }
+        }
+      }
+
       switch (event.getCode()) {
       case RIGHT:
         player.moveRight();
@@ -200,8 +242,15 @@ public class Logic {
       case UP:
         player.jump();
         break;
-      case DOWN:
-        startPlayer();
+      case ESCAPE:
+        Logic.pauseObject.toggle();
+        break;
+      case R:
+        if (pauseObject.isEnabled()) {
+          Logic.currentLogic.objectsSetUP();
+          Logic.currentLogic.score.resetScore();
+          Logic.pauseObject.disable();
+        }
         break;
       default:
         break;
@@ -236,10 +285,8 @@ public class Logic {
 
         return true;
       }
-    } else if (lastTouchedObs != null) {
-      if (!player.isJumping() && (lastTouchedObs instanceof Trailer ||
-                                  lastTouchedObs instanceof TrailerWithRamp)) {
-
+    } else {
+      if (!player.isJumping()) {
         player.setPlayerLevelLow();
         lastTouchedObs = null;
         return false;
@@ -269,15 +316,11 @@ public class Logic {
     return Player.Level.LOW;
   }
 
-  public class Score extends GameObject {
-    static public final double length = 100;
+  public class Score {
+    // static public final double length = 100;
     static public final double padding = 50;
     private int currentScore;
-    Score() {
-      super(Logic.getBounderies().getGroundStartX() + padding, padding, length);
-      this.currentScore = 0;
-      this.color = Color.YELLOW;
-    }
+    Score() { this.currentScore = 0; }
 
     public void increaseScore(int diff) { this.currentScore += diff; }
 
@@ -286,12 +329,12 @@ public class Logic {
     public int getScore() { return this.currentScore; }
     public void resetScore() { this.currentScore = 0; }
 
-    @Override
     public void Draw() {
       Paint p = gc.getFill();
-      gc.setFill(this.color);
+      gc.setFill(Color.WHITE);
       String s = "Score: " + this.currentScore;
-      gc.fillText(s, this.x, this.y);
+      gc.setTextAlign(TextAlignment.CENTER);
+      gc.fillText(s, Logic.getBounderies().getScreenWidth() / 2, padding);
       gc.setFill(p);
     }
   }

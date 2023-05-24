@@ -26,6 +26,17 @@ public class GameLoop extends AnimationTimer {
                       fontSize);
     gc.setFont(this.gameFont);
     gameLogic = new Logic(gc);
+    canvas.widthProperty().addListener(evt -> {
+      Logic.pauseObject.enable();
+      Logic.bounderiesOBJ = null;
+      gameLogic.objectsSetUP();
+    });
+    canvas.heightProperty().addListener(evt -> {
+      Logic.pauseObject.enable();
+      Logic.bounderiesOBJ = null;
+      gameLogic.objectsSetUP();
+    });
+    Logic.pauseObject.disable();
   }
 
   @Override

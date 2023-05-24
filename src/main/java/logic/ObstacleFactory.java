@@ -18,11 +18,11 @@ public class ObstacleFactory {
   static private final double testObjectStep = Player.playerLength / 2.0d;
   static private final double testObjectLength = Player.playerLength;
 
-  private final double logicalLaneLength;
+  // private final double logicalLaneLength;
 
   public ObstacleFactory() {
-    this.logicalLaneLength =
-        Logic.getBounderies().getScreenHeight() * buildingScreens;
+    // this.logicalLaneLength =
+    //     Logic.getBounderies().getScreenHeight() * buildingScreens;
   }
 
   public Block generateBlock() {
@@ -50,6 +50,8 @@ public class ObstacleFactory {
    *     locations (never touching though).
    */
   public ArrayList<Obstacle> generatePath() {
+    double logicalLaneLength =
+        Logic.getBounderies().getScreenHeight() * buildingScreens;
     ArrayList<Obstacle> path = new ArrayList<Obstacle>();
     double startY = Math.random() * logicalLaneLength * 0.5;
     while (startY < logicalLaneLength) {
@@ -79,6 +81,8 @@ public class ObstacleFactory {
    * We
    */
   public boolean winningPath(ArrayList<ArrayList<Obstacle>> lanes) {
+    double logicalLaneLength =
+        Logic.getBounderies().getScreenHeight() * buildingScreens;
     // testObj is in the left lane because we expect all lanes obstacles to be
     // in left lane
     GameLaneObject testObj =
@@ -90,25 +94,25 @@ public class ObstacleFactory {
     // |   |
     //   |
     //   |
-    // while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
-    //   int pointOfContacts = 0;
-    //   for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
-    //     for (int j = 0; j < lanes.get(laneIndex).size(); j++) {
-    //       if (lanes.get(laneIndex).get(j) instanceof Trailer) {
-    //         Obstacle trailer = lanes.get(laneIndex).get(j);
-    //         if (trailer.touches(testObj)) {
-    //           pointOfContacts += 1;
-    //           break;
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   testObj.setY(testObj.getY() + testObjectStep);
-    //   if (pointOfContacts == 3) {
-    //     return false;
-    //   }
-    // }
+    while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
+      int pointOfContacts = 0;
+      for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
+        for (int j = 0; j < lanes.get(laneIndex).size(); j++) {
+          if (lanes.get(laneIndex).get(j) instanceof Trailer) {
+            Obstacle trailer = lanes.get(laneIndex).get(j);
+            if (trailer.touches(testObj)) {
+              pointOfContacts += 1;
+              break;
+            }
+          }
+        }
+      }
+
+      testObj.setY(testObj.getY() + testObjectStep);
+      if (pointOfContacts == 3) {
+        return false;
+      }
+    }
     // We only need to test lane 1 & 2, lane 1 & 3, lane 2 & 3
     for (int currentLaneIndex = 0; currentLaneIndex < lanes.size();
          currentLaneIndex++) {

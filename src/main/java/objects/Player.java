@@ -155,7 +155,7 @@ public class Player extends GameLaneObject {
   }
 
   public void setPlayerLevelLow() {
-    System.out.println("Player is low");
+    // System.out.println("Player is low");
     this.level = Level.LOW;
     this.length = Player.playerLength;
     this.width = Player.playerLength;
