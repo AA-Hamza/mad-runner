@@ -240,7 +240,7 @@ public class Player extends GameLaneObject
     {
         currentRunningFrame++;
         int index = (currentRunningFrame / 3) % runFrames.size();
-        this.image = runFrames.get(index);
+        this.setImage(runFrames.get(index));
     }
 
     public void updateDeathAnimation()
@@ -252,7 +252,7 @@ public class Player extends GameLaneObject
             alive = false;
             isDying = false;
         }
-        this.image = deathFrames.get(index);
+        this.setImage(deathFrames.get(index));
     }
 
     public void playerUpdateAnimation()
