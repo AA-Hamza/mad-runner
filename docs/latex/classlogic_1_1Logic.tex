@@ -1,0 +1,76 @@
+\hypertarget{classlogic_1_1Logic}{}\doxysection{logic.\+Logic Class Reference}
+\label{classlogic_1_1Logic}\index{logic.Logic@{logic.Logic}}
+
+
+Collaboration diagram for logic.\+Logic\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Bounderies}
+\item 
+class \mbox{\hyperlink{classlogic_1_1Logic_1_1GameControls}{Game\+Controls}}
+\item 
+class \mbox{\hyperlink{classlogic_1_1Logic_1_1Score}{Score}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_a99b3f1152ffc9917ce5d8a094b6956a7}\label{classlogic_1_1Logic_a99b3f1152ffc9917ce5d8a094b6956a7}} 
+{\bfseries Logic} (Graphics\+Context gc)
+\item 
+void \mbox{\hyperlink{classlogic_1_1Logic_ab109664f008c396294c7e87742e81451}{tick}} (Long now)
+\item 
+boolean \mbox{\hyperlink{classlogic_1_1Logic_ad2ec3db5a6380323c49334cd47e4c6e3}{player\+Collision}} ()
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_a067614c86f3522e544d33d45c52acec2}\label{classlogic_1_1Logic_a067614c86f3522e544d33d45c52acec2}} 
+\mbox{\hyperlink{classobjects_1_1Obstacle}{Obstacle}} {\bfseries get\+Player\+Touching\+Obstacle} ()
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_a4389ac0e0847475f62d73ea4011652d5}\label{classlogic_1_1Logic_a4389ac0e0847475f62d73ea4011652d5}} 
+Player.\+Level {\bfseries get\+Player\+Level} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_a9bd31c24a5fa5cbb924fc374846d3271}\label{classlogic_1_1Logic_a9bd31c24a5fa5cbb924fc374846d3271}} 
+static Bounderies {\bfseries get\+Bounderies} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_aaf8c577aec59565a43792cd690862ef6}\label{classlogic_1_1Logic_aaf8c577aec59565a43792cd690862ef6}} 
+static Graphics\+Context {\bfseries gc}
+\item 
+\mbox{\Hypertarget{classlogic_1_1Logic_a0a3dcdc83daeb28a3e943bbedd9eb7e8}\label{classlogic_1_1Logic_a0a3dcdc83daeb28a3e943bbedd9eb7e8}} 
+static Bounderies {\bfseries bounderies\+OBJ} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlogic_1_1Logic_ad2ec3db5a6380323c49334cd47e4c6e3}\label{classlogic_1_1Logic_ad2ec3db5a6380323c49334cd47e4c6e3}} 
+\index{logic.Logic@{logic.Logic}!playerCollision@{playerCollision}}
+\index{playerCollision@{playerCollision}!logic.Logic@{logic.Logic}}
+\doxysubsubsection{\texorpdfstring{playerCollision()}{playerCollision()}}
+{\footnotesize\ttfamily boolean logic.\+Logic.\+player\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if the lane is available so the player will be able to move into the plane without losing 
+\begin{DoxyParams}{Parameters}
+{\em lane} & the target lane, the lane the player is moving into This function is responsible of detecting if the user has collided with any Obstacle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlogic_1_1Logic_ab109664f008c396294c7e87742e81451}\label{classlogic_1_1Logic_ab109664f008c396294c7e87742e81451}} 
+\index{logic.Logic@{logic.Logic}!tick@{tick}}
+\index{tick@{tick}!logic.Logic@{logic.Logic}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void logic.\+Logic.\+tick (\begin{DoxyParamCaption}\item[{Long}]{now }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is considered the main function of the game, this function gets called by the game loop and game loop logic mostly happens here This function gets called at the start of every frame 
+\begin{DoxyParams}{Parameters}
+{\em now} & contains the current time in nano seconds \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/logic/Logic.\+java\end{DoxyCompactItemize}

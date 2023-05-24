@@ -1,0 +1,33 @@
+\hypertarget{classgame_1_1GameLoop}{}\doxysection{game.\+Game\+Loop Class Reference}
+\label{classgame_1_1GameLoop}\index{game.GameLoop@{game.GameLoop}}
+
+
+Inheritance diagram for game.\+Game\+Loop\+:
+% FIG 0
+
+
+Collaboration diagram for game.\+Game\+Loop\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1GameLoop_abb75bc0845cdde71fe1a3b46c3daacd9}\label{classgame_1_1GameLoop_abb75bc0845cdde71fe1a3b46c3daacd9}} 
+{\bfseries Game\+Loop} (Canvas canvas)
+\item 
+\mbox{\Hypertarget{classgame_1_1GameLoop_af1e200bc1b2cdab2fc5f64e2d92cb9fd}\label{classgame_1_1GameLoop_af1e200bc1b2cdab2fc5f64e2d92cb9fd}} 
+void {\bfseries handle} (long now)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgame_1_1GameLoop_ae06ff69256f6aa39d89538592658a0ca}\label{classgame_1_1GameLoop_ae06ff69256f6aa39d89538592658a0ca}} 
+static double {\bfseries font\+Size} = 30
+\item 
+\mbox{\Hypertarget{classgame_1_1GameLoop_a9da522c9d8f651db64ae245262dc96f8}\label{classgame_1_1GameLoop_a9da522c9d8f651db64ae245262dc96f8}} 
+static final long {\bfseries FPS} = 40
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/game/Game\+Loop.\+java\end{DoxyCompactItemize}

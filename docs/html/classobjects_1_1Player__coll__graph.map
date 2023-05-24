@@ -1,0 +1,12 @@
+<map id="objects.Player" name="objects.Player">
+<area shape="rect" id="node1" title=" " alt="" coords="416,1223,671,1828"/>
+<area shape="rect" id="node2" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="114,995,573,1160"/>
+<area shape="rect" id="node3" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="43,561,473,932"/>
+<area shape="rect" id="node4" title=" " alt="" coords="26,385,79,462"/>
+<area shape="rect" id="node5" title=" " alt="" coords="146,385,205,462"/>
+<area shape="rect" id="node6" href="$classobjects_1_1Block.html" title=" " alt="" coords="229,348,573,499"/>
+<area shape="rect" id="node7" title=" " alt="" coords="320,145,516,223"/>
+<area shape="rect" id="node8" title=" " alt="" coords="485,5,559,83"/>
+<area shape="rect" id="node10" title=" " alt="" coords="540,247,675,324"/>
+<area shape="rect" id="node9" href="$enumobjects_1_1Player_1_1Level.html" title=" " alt="" coords="648,1031,788,1123"/>
+</map>

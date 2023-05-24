@@ -1,0 +1,27 @@
+name: Build github pages for documentation
+on:
+  push:
+    path:
+      - 'docs/'
+      - 'documentaion.config'
+
+permissions:
+  contents: write
+jobs:
+  pages:
+    name: Build and Deploy github pages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Doxygen
+        uses: mattnotmitt/doxygen-action@v1.9.4
+        with:
+          doxyfile-path: './documentation.config'
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/html/
