@@ -90,51 +90,50 @@ public class ObstacleFactory {
     // |   |
     //   |
     //   |
-    while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
-      int pointOfContacts = 0;
-      for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
-        for (int j = 0; j < lanes.get(laneIndex).size(); j++) {
-          if (lanes.get(laneIndex).get(j) instanceof Trailer) {
-            Obstacle trailer = lanes.get(laneIndex).get(j);
-            if (trailer.touches(testObj)) {
-              pointOfContacts += 1;
-              break;
-            }
-          }
-        }
-      }
-
-      testObj.setY(testObj.getY() + testObjectStep);
-      if (pointOfContacts == 3) {
-        return false;
-      }
-    }
-    // We only need to test lane 1 & 2, lane 1 & 3, lane 2 & 3
-    // for (int currentLaneIndex = 0; currentLaneIndex < lanes.size();
-    //      currentLaneIndex++) {
-    //   for (int otherLaneIndex = currentLaneIndex + 1;
-    //        otherLaneIndex < lanes.size(); otherLaneIndex++) {
-    //
-    //     for (Obstacle curr : lanes.get(currentLaneIndex)) {
-    //       double max = 0;
-    //       for (Obstacle other : lanes.get(otherLaneIndex)) {
-    //         if (!curr.touches(other)) {
-    //           // System.out.println(curr.getY() + " " + other.getY());
-    //           // System.out.println(curr.getLength() + " " +
-    //           other.getLength());
-    //           // System.out.println(curr.distance(other));
-    //           max = Math.max(curr.distance(other), max);
-    //           // if (curr.distance(other) <= Player.playerLength) {
-    //           //   return false;
-    //           // }
+    // while (testObj.getY() + testObj.getLength() < logicalLaneLength) {
+    //   int pointOfContacts = 0;
+    //   for (int laneIndex = 0; laneIndex < lanes.size(); laneIndex++) {
+    //     for (int j = 0; j < lanes.get(laneIndex).size(); j++) {
+    //       if (lanes.get(laneIndex).get(j) instanceof Trailer) {
+    //         Obstacle trailer = lanes.get(laneIndex).get(j);
+    //         if (trailer.touches(testObj)) {
+    //           pointOfContacts += 1;
+    //           break;
     //         }
-    //       }
-    //       if (max <= testObjectLength) {
-    //         return false;
     //       }
     //     }
     //   }
+    //
+    //   testObj.setY(testObj.getY() + testObjectStep);
+    //   if (pointOfContacts == 3) {
+    //     return false;
+    //   }
     // }
+    // We only need to test lane 1 & 2, lane 1 & 3, lane 2 & 3
+    for (int currentLaneIndex = 0; currentLaneIndex < lanes.size();
+         currentLaneIndex++) {
+      for (int otherLaneIndex = currentLaneIndex + 1;
+           otherLaneIndex < lanes.size(); otherLaneIndex++) {
+
+        for (Obstacle curr : lanes.get(currentLaneIndex)) {
+          double max = 0;
+          for (Obstacle other : lanes.get(otherLaneIndex)) {
+            if (!curr.touches(other)) {
+              // System.out.println(curr.getY() + " " + other.getY());
+              // System.out.println(curr.getLength() + " " + other.getLength());
+              // System.out.println(curr.distance(other));
+              max = Math.max(curr.distance(other), max);
+              // if (curr.distance(other) <= Player.playerLength) {
+              //   return false;
+              // }
+            }
+          }
+          if (max <= testObjectLength) {
+            return false;
+          }
+        }
+      }
+    }
 
     // Test if a trailer in the center PATH is adjacent to 2 trailers on each
     // PATH

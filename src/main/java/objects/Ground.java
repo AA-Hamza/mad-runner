@@ -13,14 +13,14 @@ public class Ground extends GameObject {
   public Ground(double x, double width, double length) {
     super(x, 0, width, length);
     super.setColor(Color.GREY);
-    this.image =
-        new Image("file:src/main/java/assets/images/ground/railway.png",
-                  Logic.getBounderies().getLaneWidth(),
-                  Logic.getBounderies().getLaneWidth(), true, false);
-    this.tile = new Image("file:src/main/java/assets/images/ground/tile.png",
+    this.image = new Image(getClass().getClassLoader().getResourceAsStream(
+                               "images/ground/railway.png"),
+                           Logic.getBounderies().getLaneWidth(),
+                           Logic.getBounderies().getLaneWidth(), true, false);
+    this.tile = new Image(getClass().getClassLoader().getResourceAsStream(
+                              "images/ground/tile.png"),
                           Logic.getBounderies().getLaneWidth(),
                           Logic.getBounderies().getLaneWidth(), true, false);
-    // this.image = new Image("file:src/main/java/assets/railway.png");
   }
 
   public void frameUpdate() {

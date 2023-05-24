@@ -13,7 +13,8 @@ public class Trailer extends Obstacle {
     this.TrailerCount = count;
     setColor(Color.CADETBLUE);
     this.image =
-        new Image("file:src/main/java/assets/images/obstacles/trailer.png",
+        new Image(getClass().getClassLoader().getResourceAsStream(
+                      "images/obstacles/trailer.png"),
                   Obstacle.obestacleWidth, singleTrailerLength, false, false);
   }
 

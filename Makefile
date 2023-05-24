@@ -6,5 +6,8 @@ build:
 run:
 	gradle run --console=plain -q
 
+jar:
+	gradle jar
+
 docs:
 	doxygen ./documentation.config

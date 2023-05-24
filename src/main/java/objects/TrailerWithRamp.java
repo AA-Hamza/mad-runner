@@ -32,9 +32,9 @@ public class TrailerWithRamp extends Obstacle {
     super.setLane(lane);
     this.trailer.setLane(lane);
     this.ramp.setLane(lane);
-    this.ramp.image =
-        new Image("file:src/main/java/assets/images/obstacles/ramp.png",
-                  ramp.getWidth(), ramp.getLength(), true, false);
+    this.ramp.image = new Image(getClass().getClassLoader().getResourceAsStream(
+                                    "images/obstacles/ramp.png"),
+                                ramp.getWidth(), ramp.getLength(), true, false);
   }
 
   /**
