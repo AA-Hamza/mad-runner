@@ -16,11 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Doxygen
-        uses: mattnotmitt/doxygen-action@v1.9.4
-        with:
-          doxyfile-path: './documentation.config'
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:

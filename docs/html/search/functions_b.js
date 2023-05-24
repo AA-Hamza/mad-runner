@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../classgame_1_1MadRunner.html#aa1a7d9c6cd34e585c8e56927a9361c28',1,'game::MadRunner']]],
-  ['moveleft_1',['moveLeft',['../classobjects_1_1Player.html#afff26a65cb2909d2fc69e3088ff150c4',1,'objects::Player']]],
-  ['moveright_2',['moveRight',['../classobjects_1_1Player.html#a7f4c14cdc28d7b4e927e2baa47f2f38b',1,'objects::Player']]]
+  ['obstacle_0',['Obstacle',['../classobjects_1_1Obstacle.html#aa1710d0b995bde3559598757c3501cad',1,'objects::Obstacle']]],
+  ['obstaclefactory_1',['ObstacleFactory',['../classlogic_1_1ObstacleFactory.html#a36226ed850fb7c36f78fdb836a02bdd0',1,'logic::ObstacleFactory']]]
 ];

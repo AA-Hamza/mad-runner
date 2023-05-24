@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['handle_0',['handle',['../classgame_1_1GameLoop.html#af1e200bc1b2cdab2fc5f64e2d92cb9fd',1,'game.GameLoop.handle()'],['../classlogic_1_1Logic_1_1GameControls.html#ad602b126e1743a2677bd0e144bb79a15',1,'logic.Logic.GameControls.handle()']]],
-  ['high_1',['HIGH',['../enumobjects_1_1Player_1_1Level.html#aba49cd61542050a2684c359786c3e39e',1,'objects::Player::Level']]]
+  ['image_0',['image',['../classobjects_1_1GameObject.html#ae6070db6cab1504ab7247fda2efc8160',1,'objects::GameObject']]],
+  ['increasescore_1',['increaseScore',['../classlogic_1_1Logic_1_1Score.html#a39dbfa59f9d109dda158aac4d66dd7a7',1,'logic::Logic::Score']]],
+  ['incrementscore_2',['incrementScore',['../classlogic_1_1Logic_1_1Score.html#a782379cadaeb351e8a1ea864300782f7',1,'logic::Logic::Score']]],
+  ['interesects_3',['interesects',['../classobjects_1_1GameObject.html#a427a52722c613429ae18815e58e27ae5',1,'objects.GameObject.interesects(double x, double y)'],['../classobjects_1_1GameObject.html#afa9b9e4c3a09c04c89a6eafc7d9ad8ea',1,'objects.GameObject.interesects(Block.Lane lane, double y)']]],
+  ['isalive_4',['isAlive',['../classobjects_1_1Player.html#a1c5276f04560bc97102b725c8aa1b10a',1,'objects::Player']]],
+  ['isclimbingramp_5',['isClimbingRamp',['../classobjects_1_1Player.html#a0b4c5556e22520ba3658d3ff2dea49a6',1,'objects::Player']]],
+  ['isdying_6',['isDying',['../classobjects_1_1Player.html#a7dec31e1c4512bd478a30ad3cb4621e8',1,'objects.Player.isDying()'],['../classobjects_1_1Player.html#a780c7ba5d5cbef9130c2f54b20e92263',1,'objects.Player.isDying()']]],
+  ['isjumping_7',['isJumping',['../classobjects_1_1Player.html#a7569fdd62dc43a127c6b6936b38bf6ef',1,'objects::Player']]],
+  ['isoffthescreen_8',['isOffTheScreen',['../classobjects_1_1Obstacle.html#a6c3c9a81c0dc6a68cc9213a38ae0ba91',1,'objects::Obstacle']]]
 ];

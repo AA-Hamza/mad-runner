@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['ramp_0',['ramp',['../classobjects_1_1TrailerWithRamp.html#a1c0d3b5f967e2c9c1e18027c78fa809e',1,'objects::TrailerWithRamp']]],
-  ['rampsize_1',['rampSize',['../classobjects_1_1TrailerWithRamp.html#a6779970becc720582560905695c2218b',1,'objects::TrailerWithRamp']]],
-  ['rampupdate_2',['rampUpdate',['../classobjects_1_1Player.html#ab1985d0795e1ab94728ee630a521b7a5',1,'objects::Player']]],
-  ['resetscore_3',['resetScore',['../classlogic_1_1Logic_1_1Score.html#a6403ea08d82555923fc15b1197ed091f',1,'logic::Logic::Score']]],
-  ['right_4',['RIGHT',['../enumobjects_1_1Block_1_1Lane.html#aa9de4ea0f640a46e2c7f8aeaf39097f4',1,'objects::Block::Lane']]],
-  ['right_5',['right',['../classobjects_1_1Block.html#a9b61d1faa81c4cf7f10debcfa6e32e78',1,'objects::Block']]],
-  ['roadblock_6',['RoadBlock',['../classobjects_1_1RoadBlock.html',1,'objects.RoadBlock'],['../classobjects_1_1RoadBlock.html#ab7bfb0f74ba792fa8c33149e5a6336a1',1,'objects.RoadBlock.RoadBlock()']]],
-  ['roadblock_2ejava_7',['RoadBlock.java',['../RoadBlock_8java.html',1,'']]],
-  ['roadblocklength_8',['RoadBlockLength',['../classobjects_1_1RoadBlock.html#aeb86f9100ccb37b3bb9208eb63c0c513',1,'objects::RoadBlock']]],
-  ['runframes_9',['runFrames',['../classobjects_1_1Player.html#a95c4d765ad4523a45db4d16ab5aba2e9',1,'objects::Player']]]
+  ['score_0',['Score',['../classlogic_1_1Logic_1_1Score.html',1,'logic::Logic']]],
+  ['score_1',['score',['../classlogic_1_1Logic.html#a17d0df54b61feea751f082d53796af1a',1,'logic::Logic']]],
+  ['score_2',['Score',['../classlogic_1_1Logic_1_1Score.html#aeb10c319bfc867cc100b743b6b375af9',1,'logic::Logic::Score']]],
+  ['screenheight_3',['screenHeight',['../classlogic_1_1Logic_1_1Bounderies.html#a0078f0f4e27d13c74d6528f33becf9b2',1,'logic::Logic::Bounderies']]],
+  ['screenwidth_4',['screenWidth',['../classlogic_1_1Logic_1_1Bounderies.html#a3bbe17920b5a123ae9133446947528c3',1,'logic::Logic::Bounderies']]],
+  ['setanimations_5',['setAnimations',['../classobjects_1_1Player.html#a42c3765d1c5b074abec6d1241fbc7c3b',1,'objects::Player']]],
+  ['setcolor_6',['setColor',['../classobjects_1_1GameObject.html#af603d3df6b7737cc7b786f640472949c',1,'objects::GameObject']]],
+  ['setisdying_7',['setIsDying',['../classobjects_1_1Player.html#ae73a379c12210c226605847b227b220d',1,'objects::Player']]],
+  ['setlane_8',['setLane',['../classobjects_1_1TrailerWithRamp.html#a3557fa0c925167de8a1dd2a8a8fb08a4',1,'objects.TrailerWithRamp.setLane()'],['../classobjects_1_1GameObject.html#a947a481ccdf16e3b4b4e9b3f26df83b1',1,'objects.GameObject.setLane()'],['../classobjects_1_1GameLaneObject.html#ad6bf9a924e211a5df0df921127fae295',1,'objects.GameLaneObject.setLane()']]],
+  ['setlevel_9',['setLevel',['../classobjects_1_1Player.html#a5e4e28b3c9b0aeaebc3b92f5a9c28b92',1,'objects::Player']]],
+  ['setplayerlevelhigh_10',['setPlayerLevelHigh',['../classobjects_1_1Player.html#a1dfb5e638b5a555296fb4bcacb0cdb94',1,'objects::Player']]],
+  ['setplayerlevellow_11',['setPlayerLevelLow',['../classobjects_1_1Player.html#ab9e7e544019d76a7694119ec7e82eb5e',1,'objects::Player']]],
+  ['setx_12',['setX',['../classobjects_1_1GameObject.html#a9c945fae5daa7a3069b854a21d379235',1,'objects::GameObject']]],
+  ['sety_13',['setY',['../classobjects_1_1GameObject.html#aecc40fbe8f83477916488870d07c76a4',1,'objects::GameObject']]],
+  ['singletrailerlength_14',['singleTrailerLength',['../classobjects_1_1Trailer.html#ac8b0772fdc8ac82a712b0503e52755dd',1,'objects::Trailer']]],
+  ['space_15',['space',['../classlogic_1_1ObstacleFactory.html#accc102cab8d0e2e887794edd76078ec5',1,'logic::ObstacleFactory']]],
+  ['speed_16',['speed',['../classobjects_1_1Block.html#a98a95cb45039b8e782f32dd4239f9cf8',1,'objects::Block']]],
+  ['start_17',['start',['../classgame_1_1MadRunner.html#a2e7814b067ac5d94f5d5f1cc1abca2c2',1,'game::MadRunner']]],
+  ['startplayer_18',['startPlayer',['../classlogic_1_1Logic.html#a1139e00d0cca99c42585b2dc7061830f',1,'logic::Logic']]]
 ];

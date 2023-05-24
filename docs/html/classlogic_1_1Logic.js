@@ -12,8 +12,6 @@ var classlogic_1_1Logic =
     [ "startPlayer", "classlogic_1_1Logic.html#a1139e00d0cca99c42585b2dc7061830f", null ],
     [ "tick", "classlogic_1_1Logic.html#ab109664f008c396294c7e87742e81451", null ],
     [ "bounderiesOBJ", "classlogic_1_1Logic.html#a0a3dcdc83daeb28a3e943bbedd9eb7e8", null ],
-    [ "canvasHeight", "classlogic_1_1Logic.html#a7bf0d717b16f6ea5add500a9d962c292", null ],
-    [ "canvasWidth", "classlogic_1_1Logic.html#a8cb53ac3c0b71e12eea77cc847b2ef65", null ],
     [ "gc", "classlogic_1_1Logic.html#aaf8c577aec59565a43792cd690862ef6", null ],
     [ "ground", "classlogic_1_1Logic.html#a94582b5c244c14fe82145b3f0562aa18", null ],
     [ "last1000Millisecond", "classlogic_1_1Logic.html#aa5c3b3c0c1dcab4b78a705c22df69a3f", null ],

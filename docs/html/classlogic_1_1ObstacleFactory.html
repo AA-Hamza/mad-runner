@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('classlogic_1_1ObstacleFactory.html',''
 <div class="dynheader">
 Collaboration diagram for logic.ObstacleFactory:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classlogic_1_1ObstacleFactory__coll__graph.svg" width="411" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classlogic_1_1ObstacleFactory__coll__graph.svg" width="411" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -138,6 +138,8 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:accc102cab8d0e2e887794edd76078ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96358598193823b1e782456a2727bfd8"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ObstacleFactory.html#a96358598193823b1e782456a2727bfd8">testObjectStep</a> = <a class="el" href="classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651">Player.playerLength</a> / 2.0d</td></tr>
 <tr class="separator:a96358598193823b1e782456a2727bfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37d8a3300d47f268bd039379713c6de"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ObstacleFactory.html#ae37d8a3300d47f268bd039379713c6de">testObjectLength</a> = <a class="el" href="classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651">Player.playerLength</a></td></tr>
+<tr class="separator:ae37d8a3300d47f268bd039379713c6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a36226ed850fb7c36f78fdb836a02bdd0" name="a36226ed850fb7c36f78fdb836a02bdd0"></a>
@@ -238,6 +240,7 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Generate one lane with random obstacles </p><dl class="section return"><dt>Returns</dt><dd>an array containing a random number of obstacles with random locations (never touching though). </dd></dl>
 
 </div>
 </div>
@@ -264,6 +267,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Test if there is at least one possible way for the player to win. Note only Trailers will be able to generate an unwinning path. so we only test them. the test have two tests. The first test uses a test object with double the length of the player, this object moves using a step which is half the player length (Assumption: all lanes are in left lanes). If this object touches three trailers at once, then that will be unwinable path</p>
+<p>the second test We </p>
 
 </div>
 </div>
@@ -367,6 +372,28 @@ Static Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">final double logic.ObstacleFactory.space = 250d</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae37d8a3300d47f268bd039379713c6de" name="ae37d8a3300d47f268bd039379713c6de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37d8a3300d47f268bd039379713c6de">&#9670;&#160;</a></span>testObjectLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final double logic.ObstacleFactory.testObjectLength = <a class="el" href="classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651">Player.playerLength</a></td>
         </tr>
       </table>
   </td>

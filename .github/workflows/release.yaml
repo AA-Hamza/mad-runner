@@ -42,8 +42,20 @@ jobs:
           artifacts: "build/libs/*"
           tag: ${{ steps.tag.outputs.new_tag }}
 
-      - name: Build docs
-        shell: bash
+      - name: Doxygen
         if: github.ref == 'refs/heads/main'
+        uses: mattnotmitt/doxygen-action@v1.9.4
+        with:
+          doxyfile-path: './documentation.config'
+
+      - name: GIT commit and push docs
+        if: github.ref == 'refs/heads/main'
+        env: 
+          CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
+          CI_COMMIT_AUTHOR: Continuous Integration
         run: |
-          make docs
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "username@users.noreply.github.com"
+          git add docs
+          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push

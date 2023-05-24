@@ -1,11 +1,11 @@
 <map id="objects.GameObject" name="objects.GameObject">
-<area shape="rect" id="node1" title=" " alt="" coords="343,5,774,420"/>
-<area shape="rect" id="node2" href="$classlogic_1_1Logic_1_1Score.html" title=" " alt="" coords="117,468,305,648"/>
-<area shape="rect" id="node3" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="329,475,788,641"/>
-<area shape="rect" id="node9" href="$classobjects_1_1Ground.html" title=" " alt="" coords="812,490,1111,626"/>
-<area shape="rect" id="node4" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="236,975,564,1081"/>
-<area shape="rect" id="node8" href="$classobjects_1_1Player.html" title=" " alt="" coords="589,696,843,1360"/>
-<area shape="rect" id="node5" href="$classobjects_1_1RoadBlock.html" title=" " alt="" coords="5,1452,248,1529"/>
-<area shape="rect" id="node6" href="$classobjects_1_1Trailer.html" title=" " alt="" coords="273,1415,527,1566"/>
-<area shape="rect" id="node7" href="$classobjects_1_1TrailerWithRamp.html" title=" " alt="" coords="552,1408,869,1573"/>
+<area shape="rect" id="node1" title=" " alt="" coords="343,5,774,405"/>
+<area shape="rect" id="node2" href="$classlogic_1_1Logic_1_1Score.html" title=" " alt="" coords="117,453,305,633"/>
+<area shape="rect" id="node3" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="329,453,788,633"/>
+<area shape="rect" id="node9" href="$classobjects_1_1Ground.html" title=" " alt="" coords="812,475,1111,611"/>
+<area shape="rect" id="node4" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="236,945,564,1067"/>
+<area shape="rect" id="node8" href="$classobjects_1_1Player.html" title=" " alt="" coords="589,681,843,1331"/>
+<area shape="rect" id="node5" href="$classobjects_1_1RoadBlock.html" title=" " alt="" coords="5,1423,248,1500"/>
+<area shape="rect" id="node6" href="$classobjects_1_1Trailer.html" title=" " alt="" coords="273,1386,527,1537"/>
+<area shape="rect" id="node7" href="$classobjects_1_1TrailerWithRamp.html" title=" " alt="" coords="552,1379,869,1544"/>
 </map>
