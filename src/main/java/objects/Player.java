@@ -54,15 +54,17 @@ public class Player extends GameLaneObject {
     this.runFrames = new ArrayList<Image>(4);
     for (int i = 0; i < 4; i++) {
       this.runFrames.add(
-          new Image("file:src/main/java/assets/images/player/run_" + i + ".png",
+          new Image(getClass().getClassLoader().getResourceAsStream(
+                        "images/player/run_" + i + ".png"),
                     playerLength, playerLength, true, false));
     }
 
     this.deathFrames = new ArrayList<Image>(4);
     for (int i = 0; i < 4; i++) {
-      this.deathFrames.add(new Image(
-          "file:src/main/java/assets/images/player/death_" + i + ".png",
-          playerLength, playerLength, true, false));
+      this.deathFrames.add(
+          new Image(getClass().getClassLoader().getResourceAsStream(
+                        "images/player/death_" + i + ".png"),
+                    playerLength, playerLength, true, false));
     }
   }
 

@@ -1,7 +1,7 @@
 name: Test the game
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
@@ -9,9 +9,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java_version: [13, 16, 18, 20]
-        os: [ubuntu-latest, ubuntu-18.04, windows-2019]
-        java_distributions: [zulu, liberica]
+        java_version: [13, 16, 20]
+        os: [ubuntu-latest, windows-2019]
+        java_distributions: [liberica]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3

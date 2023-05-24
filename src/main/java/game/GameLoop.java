@@ -1,4 +1,5 @@
 package game;
+import java.net.URL;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -19,8 +20,10 @@ public class GameLoop extends AnimationTimer {
   /* Constructors */
   public GameLoop(Canvas canvas) {
     gc = canvas.getGraphicsContext2D();
-    this.gameFont = Font.loadFont(
-        "file:src/main/java/assets/fonts/RussoOne-Regular.ttf", fontSize);
+    this.gameFont =
+        Font.loadFont(getClass().getClassLoader().getResourceAsStream(
+                          "fonts/RussoOne-Regular.ttf"),
+                      fontSize);
     gc.setFont(this.gameFont);
     gameLogic = new Logic(gc);
   }

@@ -18,21 +18,6 @@ javafx {
 
 mainClassName = 'game.MadRunner'
 
-// remember to add your main class => mainClassName = ' org.example.Main'
-// task fatJar(type: Jar) {
-//
-//     manifest {
-//         attributes 'Main-Class': "${mainClassName}"
-//     }
-//
-//     archiveBaseName = "${rootProject.name}"
-//     tasks.withType(Jar){
-//         duplicatesStrategy = DuplicatesStrategy.INCLUDE
-//     }
-//     from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-//     //from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } setDuplicatesStrategy(DuplicatesStrategy.INCLUDE) }
-//     with jar
-// }
 jar {
   manifest {
     attributes 'Main-Class': 'game.MadRunner'
@@ -41,5 +26,4 @@ jar {
 
 task awesomeFunJar(type: OneJar) {
   mainClass = 'game.MadRunner'
-  // archiveName = 'koala.jar'
 }

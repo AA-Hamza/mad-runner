@@ -9,7 +9,8 @@ public class RoadBlock extends Obstacle {
     super(lane, 0, RoadBlockLength);
     setColor(Color.CRIMSON);
     this.image =
-        new Image("file:src/main/java/assets/images/obstacles/roadblock.png",
+        new Image(getClass().getClassLoader().getResourceAsStream(
+                      "images/obstacles/roadblock.png"),
                   Obstacle.obestacleWidth, RoadBlockLength, false, false);
   }
 }
