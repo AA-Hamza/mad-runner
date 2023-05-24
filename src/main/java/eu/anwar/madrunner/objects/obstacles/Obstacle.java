@@ -1,8 +1,8 @@
-package objects.obstacles;
+package eu.anwar.madrunner.objects.obstacles;
 
-import logic.Logic;
+import eu.anwar.madrunner.logic.Logic;
 
-public class Obstacle extends objects.GameLaneObject
+public class Obstacle extends eu.anwar.madrunner.objects.GameLaneObject
 {
     /* static vars */
     static public final double obestacleWidth = 70.0d;

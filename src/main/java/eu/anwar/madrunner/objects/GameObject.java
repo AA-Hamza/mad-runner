@@ -1,9 +1,9 @@
-package objects;
+package eu.anwar.madrunner.objects;
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.objects.obstacles.Block;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import logic.Logic;
-import objects.obstacles.Block;
 
 public class GameObject
 {

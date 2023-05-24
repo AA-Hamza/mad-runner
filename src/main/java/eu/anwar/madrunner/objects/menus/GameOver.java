@@ -28,11 +28,11 @@
 //                       this.width);
 //   }
 // }
-package objects.menus;
+package eu.anwar.madrunner.objects.menus;
 
+import eu.anwar.madrunner.logic.Logic;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
-import logic.Logic;
 
 public class GameOver extends GamePause
 {

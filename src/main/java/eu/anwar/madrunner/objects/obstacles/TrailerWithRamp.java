@@ -1,4 +1,4 @@
-package objects.obstacles;
+package eu.anwar.madrunner.objects.obstacles;
 
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;

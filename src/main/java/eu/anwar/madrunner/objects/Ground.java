@@ -1,11 +1,11 @@
-package objects;
+package eu.anwar.madrunner.objects;
 
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.objects.obstacles.Block;
+import eu.anwar.madrunner.objects.obstacles.Block.Lane;
+import eu.anwar.madrunner.objects.obstacles.Obstacle;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import logic.Logic;
-import objects.obstacles.Block;
-import objects.obstacles.Block.Lane;
-import objects.obstacles.Obstacle;
 
 public class Ground extends GameObject
 {

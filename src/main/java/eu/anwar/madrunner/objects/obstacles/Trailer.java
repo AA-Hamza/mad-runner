@@ -1,8 +1,8 @@
-package objects.obstacles;
+package eu.anwar.madrunner.objects.obstacles;
 
+import eu.anwar.madrunner.logic.Logic;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import logic.Logic;
 
 public class Trailer extends Obstacle
 {
