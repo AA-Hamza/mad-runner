@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['player_0',['Player',['../classobjects_1_1Player.html#a4793dd2101b206716601767ccc554b33',1,'objects::Player']]],
-  ['playercollision_1',['playerCollision',['../classlogic_1_1Logic.html#ad2ec3db5a6380323c49334cd47e4c6e3',1,'logic::Logic']]],
-  ['playerdied_2',['playerDied',['../classlogic_1_1Logic.html#a7f6aec597eade1ef6cc0e060ad633a12',1,'logic::Logic']]],
-  ['playerlengthdecrease_3',['playerLengthDecrease',['../classobjects_1_1Player.html#af1f8e726b6df37aa978a6ebbe39bc712',1,'objects::Player']]],
-  ['playerlengthincrease_4',['playerLengthIncrease',['../classobjects_1_1Player.html#acee2cc9cd9ca7ec30b5e4c4db3949917',1,'objects::Player']]],
-  ['playerupdateanimation_5',['playerUpdateAnimation',['../classobjects_1_1Player.html#ab2b9bfb264bccaafae1295456a109f7b',1,'objects::Player']]]
+  ['main_0',['main',['../classgame_1_1MadRunner.html#aa1a7d9c6cd34e585c8e56927a9361c28',1,'game::MadRunner']]],
+  ['moveleft_1',['moveLeft',['../classobjects_1_1Player.html#afff26a65cb2909d2fc69e3088ff150c4',1,'objects::Player']]],
+  ['moveright_2',['moveRight',['../classobjects_1_1Player.html#a7f4c14cdc28d7b4e927e2baa47f2f38b',1,'objects::Player']]]
 ];

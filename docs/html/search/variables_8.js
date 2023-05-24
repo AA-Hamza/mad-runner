@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jumpformulaaterm_0',['jumpFormulaATerm',['../classobjects_1_1Player.html#a0f6e28df2c7c1575604067fcd77e0805',1,'objects::Player']]],
-  ['jumpformulabterm_1',['jumpFormulaBTerm',['../classobjects_1_1Player.html#a61ab0ac78e0160da01672d162d245f76',1,'objects::Player']]],
-  ['jumping_2',['jumping',['../classobjects_1_1Player.html#a84db39825c9283c7904881de5cae5dea',1,'objects::Player']]]
+  ['image_0',['image',['../classobjects_1_1GameObject.html#ae6070db6cab1504ab7247fda2efc8160',1,'objects::GameObject']]],
+  ['isclimbingramp_1',['isClimbingRamp',['../classobjects_1_1Player.html#a0b4c5556e22520ba3658d3ff2dea49a6',1,'objects::Player']]],
+  ['isdying_2',['isDying',['../classobjects_1_1Player.html#a7dec31e1c4512bd478a30ad3cb4621e8',1,'objects::Player']]]
 ];

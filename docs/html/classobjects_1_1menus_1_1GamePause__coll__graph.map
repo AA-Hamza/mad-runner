@@ -1,0 +1,9 @@
+<map id="objects.menus.GamePause" name="objects.menus.GamePause">
+<area shape="rect" id="node1" title=" " alt="" coords="86,1007,417,1187"/>
+<area shape="rect" id="node2" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="40,572,463,957"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,373,57,451"/>
+<area shape="rect" id="node4" href="$classobjects_1_1obstacles_1_1Block.html" title=" " alt="" coords="82,315,421,509"/>
+<area shape="rect" id="node5" title=" " alt="" coords="125,145,377,223"/>
+<area shape="rect" id="node6" title=" " alt="" coords="214,5,289,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="445,373,503,451"/>
+</map>

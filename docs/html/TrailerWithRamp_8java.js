@@ -1,4 +1,4 @@
 var TrailerWithRamp_8java =
 [
-    [ "objects.TrailerWithRamp", "classobjects_1_1TrailerWithRamp.html", "classobjects_1_1TrailerWithRamp" ]
+    [ "objects.obstacles.TrailerWithRamp", "classobjects_1_1obstacles_1_1TrailerWithRamp.html", "classobjects_1_1obstacles_1_1TrailerWithRamp" ]
 ];

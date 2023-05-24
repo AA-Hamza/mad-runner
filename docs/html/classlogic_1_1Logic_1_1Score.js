@@ -7,6 +7,5 @@ var classlogic_1_1Logic_1_1Score =
     [ "incrementScore", "classlogic_1_1Logic_1_1Score.html#a782379cadaeb351e8a1ea864300782f7", null ],
     [ "resetScore", "classlogic_1_1Logic_1_1Score.html#a6403ea08d82555923fc15b1197ed091f", null ],
     [ "currentScore", "classlogic_1_1Logic_1_1Score.html#a5a39338854881a8a64b98ce0f6ac374f", null ],
-    [ "length", "classlogic_1_1Logic_1_1Score.html#a95878c7f34cf6c0ee727842822b8897c", null ],
     [ "padding", "classlogic_1_1Logic_1_1Score.html#a6a1f898b14b1550c88e576f5343ca96d", null ]
 ];
