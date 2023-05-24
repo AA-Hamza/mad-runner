@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['jump_0',['jump',['../classobjects_1_1Player.html#a948adb334ee04423823aed581d614af7',1,'objects::Player']]],
-  ['jumpcurrentvalue_1',['jumpCurrentValue',['../classobjects_1_1Player.html#a23ee6daf338186ba9e0e08888d1f91e2',1,'objects::Player']]],
-  ['jumpupdate_2',['jumpUpdate',['../classobjects_1_1Player.html#a39ffa65ab19ccedcad672fa9a58027ed',1,'objects::Player']]]
+  ['increasescore_0',['increaseScore',['../classlogic_1_1Logic_1_1Score.html#a39dbfa59f9d109dda158aac4d66dd7a7',1,'logic::Logic::Score']]],
+  ['incrementscore_1',['incrementScore',['../classlogic_1_1Logic_1_1Score.html#a782379cadaeb351e8a1ea864300782f7',1,'logic::Logic::Score']]],
+  ['interesects_2',['interesects',['../classobjects_1_1GameObject.html#a427a52722c613429ae18815e58e27ae5',1,'objects.GameObject.interesects(double x, double y)'],['../classobjects_1_1GameObject.html#afa9b9e4c3a09c04c89a6eafc7d9ad8ea',1,'objects.GameObject.interesects(Block.Lane lane, double y)']]],
+  ['isalive_3',['isAlive',['../classobjects_1_1Player.html#a1c5276f04560bc97102b725c8aa1b10a',1,'objects::Player']]],
+  ['isdying_4',['isDying',['../classobjects_1_1Player.html#a780c7ba5d5cbef9130c2f54b20e92263',1,'objects::Player']]],
+  ['isenabled_5',['isEnabled',['../classobjects_1_1menus_1_1GamePause.html#a89e91bdbfa9e7be1ac5b8d1ca5c51f9a',1,'objects::menus::GamePause']]],
+  ['isjumping_6',['isJumping',['../classobjects_1_1Player.html#a7569fdd62dc43a127c6b6936b38bf6ef',1,'objects::Player']]],
+  ['isoffthescreen_7',['isOffTheScreen',['../classobjects_1_1obstacles_1_1Obstacle.html#a225514579c9a72cd08eb6d5bf12e9b83',1,'objects::obstacles::Obstacle']]],
+  ['isresizable_8',['isResizable',['../classgame_1_1MadRunner_1_1ResizableCanvas.html#a8e5dc30be935f4d8954459e74fddd909',1,'game::MadRunner::ResizableCanvas']]]
 ];

@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['ramp_0',['ramp',['../classobjects_1_1TrailerWithRamp.html#a1c0d3b5f967e2c9c1e18027c78fa809e',1,'objects::TrailerWithRamp']]],
-  ['rampsize_1',['rampSize',['../classobjects_1_1TrailerWithRamp.html#a6779970becc720582560905695c2218b',1,'objects::TrailerWithRamp']]],
-  ['right_2',['RIGHT',['../enumobjects_1_1Block_1_1Lane.html#aa9de4ea0f640a46e2c7f8aeaf39097f4',1,'objects::Block::Lane']]],
-  ['right_3',['right',['../classobjects_1_1Block.html#a9b61d1faa81c4cf7f10debcfa6e32e78',1,'objects::Block']]],
-  ['roadblocklength_4',['RoadBlockLength',['../classobjects_1_1RoadBlock.html#aeb86f9100ccb37b3bb9208eb63c0c513',1,'objects::RoadBlock']]],
-  ['runframes_5',['runFrames',['../classobjects_1_1Player.html#a95c4d765ad4523a45db4d16ab5aba2e9',1,'objects::Player']]]
+  ['padding_0',['padding',['../classlogic_1_1Logic_1_1Score.html#a6a1f898b14b1550c88e576f5343ca96d',1,'logic::Logic::Score']]],
+  ['pauseobject_1',['pauseObject',['../classlogic_1_1Logic.html#aa74c79a44934f6420680cfffc30ba1ab',1,'logic::Logic']]],
+  ['player_2',['player',['../classlogic_1_1Logic.html#a689a7e3a4c8141e238bb098530b81cd4',1,'logic::Logic']]],
+  ['playercolor_3',['playerColor',['../classobjects_1_1Player.html#ad6348b4c10b4a628995d633ed4a3a6d9',1,'objects::Player']]],
+  ['playerdied_4',['playerDied',['../classlogic_1_1Logic.html#a392dc882c889f46ee9168a484676be8b',1,'logic::Logic']]],
+  ['playerlength_5',['playerLength',['../classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651',1,'objects::Player']]],
+  ['playerypercentage_6',['playerYPercentage',['../classlogic_1_1Logic_1_1Bounderies.html#ae37007cd7a1b5b3ff7768466377db141',1,'logic::Logic::Bounderies']]]
 ];

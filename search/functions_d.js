@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['rampclimb_0',['rampClimb',['../classobjects_1_1Player.html#a1bb3504dc12caead5e4215496156b624',1,'objects::Player']]],
-  ['rampupdate_1',['rampUpdate',['../classobjects_1_1Player.html#ab1985d0795e1ab94728ee630a521b7a5',1,'objects::Player']]],
-  ['resetscore_2',['resetScore',['../classlogic_1_1Logic_1_1Score.html#a6403ea08d82555923fc15b1197ed091f',1,'logic::Logic::Score']]],
-  ['roadblock_3',['RoadBlock',['../classobjects_1_1RoadBlock.html#ab7bfb0f74ba792fa8c33149e5a6336a1',1,'objects::RoadBlock']]]
+  ['objectssetup_0',['objectsSetUP',['../classlogic_1_1Logic.html#a3aae852cd32293baf0537085e67d669c',1,'logic::Logic']]],
+  ['obstacle_1',['Obstacle',['../classobjects_1_1obstacles_1_1Obstacle.html#a2a3a8b6ce7afd935dd2f60ac7442f71b',1,'objects::obstacles::Obstacle']]],
+  ['obstaclefactory_2',['ObstacleFactory',['../classlogic_1_1ObstacleFactory.html#a36226ed850fb7c36f78fdb836a02bdd0',1,'logic::ObstacleFactory']]]
 ];

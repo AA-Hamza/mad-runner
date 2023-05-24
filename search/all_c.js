@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['padding_0',['padding',['../classlogic_1_1Logic_1_1Score.html#a6a1f898b14b1550c88e576f5343ca96d',1,'logic::Logic::Score']]],
-  ['player_1',['Player',['../classobjects_1_1Player.html',1,'objects']]],
-  ['player_2',['player',['../classlogic_1_1Logic.html#a689a7e3a4c8141e238bb098530b81cd4',1,'logic::Logic']]],
-  ['player_3',['Player',['../classobjects_1_1Player.html#a4793dd2101b206716601767ccc554b33',1,'objects::Player']]],
-  ['player_2ejava_4',['Player.java',['../Player_8java.html',1,'']]],
-  ['playercollision_5',['playerCollision',['../classlogic_1_1Logic.html#ad2ec3db5a6380323c49334cd47e4c6e3',1,'logic::Logic']]],
-  ['playercolor_6',['playerColor',['../classobjects_1_1Player.html#ad6348b4c10b4a628995d633ed4a3a6d9',1,'objects::Player']]],
-  ['playerdied_7',['playerDied',['../classlogic_1_1Logic.html#a392dc882c889f46ee9168a484676be8b',1,'logic.Logic.playerDied()'],['../classlogic_1_1Logic.html#a7f6aec597eade1ef6cc0e060ad633a12',1,'logic.Logic.playerDied()']]],
-  ['playerlength_8',['playerLength',['../classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651',1,'objects::Player']]],
-  ['playerlengthdecrease_9',['playerLengthDecrease',['../classobjects_1_1Player.html#af1f8e726b6df37aa978a6ebbe39bc712',1,'objects::Player']]],
-  ['playerlengthincrease_10',['playerLengthIncrease',['../classobjects_1_1Player.html#acee2cc9cd9ca7ec30b5e4c4db3949917',1,'objects::Player']]],
-  ['playerupdateanimation_11',['playerUpdateAnimation',['../classobjects_1_1Player.html#ab2b9bfb264bccaafae1295456a109f7b',1,'objects::Player']]],
-  ['playerypercentage_12',['playerYPercentage',['../classlogic_1_1Logic_1_1Bounderies.html#ae37007cd7a1b5b3ff7768466377db141',1,'logic::Logic::Bounderies']]]
+  ['madrunner_0',['MadRunner',['../classgame_1_1MadRunner.html',1,'game']]],
+  ['madrunner_2ejava_1',['MadRunner.java',['../MadRunner_8java.html',1,'']]],
+  ['main_2',['main',['../classgame_1_1MadRunner.html#aa1a7d9c6cd34e585c8e56927a9361c28',1,'game::MadRunner']]],
+  ['maxjumpframes_3',['maxJumpFrames',['../classobjects_1_1Player.html#a07e27db7ae101c84e08e35791b7d868a',1,'objects::Player']]],
+  ['maxjumplength_4',['maxJumpLength',['../classobjects_1_1Player.html#aaaec038560b99b623a0eea6e9268354e',1,'objects::Player']]],
+  ['maxnumberoftrailers_5',['maxNumberOfTrailers',['../classobjects_1_1obstacles_1_1Trailer.html#a4ea4ebcca1687f78250e8ebab90e9015',1,'objects::obstacles::Trailer']]],
+  ['maxrampframes_6',['maxRampFrames',['../classobjects_1_1Player.html#a0c3e616b6ae5194024e067febebaa2dc',1,'objects::Player']]],
+  ['maxscore_7',['maxScore',['../classobjects_1_1menus_1_1GameOver.html#a9e54f43f649d7a8b5ea1d6853f54f307',1,'objects::menus::GameOver']]],
+  ['minscreenx_8',['minScreenX',['../classgame_1_1MadRunner.html#a3fb430cf6668859dfd8564e11d59b8e0',1,'game::MadRunner']]],
+  ['minscreeny_9',['minScreenY',['../classgame_1_1MadRunner.html#a1ccaca61603f5aab73a3794a20b7bd8c',1,'game::MadRunner']]],
+  ['minspace_10',['minSpace',['../classlogic_1_1ObstacleFactory.html#a4416fb251a1d2d791443cc13209f941f',1,'logic::ObstacleFactory']]],
+  ['moveleft_11',['moveLeft',['../classobjects_1_1Player.html#afff26a65cb2909d2fc69e3088ff150c4',1,'objects::Player']]],
+  ['moveright_12',['moveRight',['../classobjects_1_1Player.html#a7f4c14cdc28d7b4e927e2baa47f2f38b',1,'objects::Player']]]
 ];
