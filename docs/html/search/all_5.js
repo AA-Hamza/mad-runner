@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fontsize_0',['fontSize',['../classgame_1_1GameLoop.html#af4ef9f118b039a8b88b4257a38439f9a',1,'game::GameLoop']]],
-  ['fps_1',['FPS',['../classgame_1_1GameLoop.html#a9da522c9d8f651db64ae245262dc96f8',1,'game::GameLoop']]],
-  ['frameupdate_2',['frameUpdate',['../classobjects_1_1Ground.html#a03f8c828b484d768f66d5b8d5fe77fbc',1,'objects.Ground.frameUpdate()'],['../classobjects_1_1obstacles_1_1Block.html#a5720320f847a93e9f1c7e6d93583f109',1,'objects.obstacles.Block.frameUpdate()']]]
+  ['fontsize_0',['fontSize',['../classeu_1_1anwar_1_1madrunner_1_1GameLoop.html#aac5427ec276945ff3d21b534ff325de6',1,'eu::anwar::madrunner::GameLoop']]],
+  ['fps_1',['FPS',['../classeu_1_1anwar_1_1madrunner_1_1GameLoop.html#a527dc65cbff4ce8b22f9872b31e2176b',1,'eu::anwar::madrunner::GameLoop']]],
+  ['frameupdate_2',['frameUpdate',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Ground.html#a374eb54b6387ad7d4e37856c7de8740a',1,'eu.anwar.madrunner.objects.Ground.frameUpdate()'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#ab1010a6cb2afb50a39d7b5ab17162521',1,'eu.anwar.madrunner.objects.obstacles.Block.frameUpdate()']]]
 ];

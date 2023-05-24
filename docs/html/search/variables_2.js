@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['center_0',['center',['../classobjects_1_1obstacles_1_1Block.html#a26876bf650d2bc5885f4345589a914f0',1,'objects::obstacles::Block']]],
-  ['center_1',['CENTER',['../enumobjects_1_1obstacles_1_1Block_1_1Lane.html#aaa3e01d46e48a8ebe363b970fc8a1315',1,'objects::obstacles::Block::Lane']]],
-  ['centertxt_2',['centerTxt',['../classobjects_1_1menus_1_1GamePause.html#a632f835a6e45035b6ccd96b5a96dea36',1,'objects::menus::GamePause']]],
-  ['color_3',['color',['../classobjects_1_1GameObject.html#aca34a4bb1e7b1cc94cb102c3b72b15fc',1,'objects::GameObject']]],
-  ['currentclimbingframe_4',['currentClimbingFrame',['../classobjects_1_1Player.html#a3190f5e808a2a77e8a68a14b0bbc46f4',1,'objects::Player']]],
-  ['currentdeathframe_5',['currentDeathFrame',['../classobjects_1_1Player.html#ad6919e74dedc27d5c247479e9b968974',1,'objects::Player']]],
-  ['currentjumpframe_6',['currentJumpFrame',['../classobjects_1_1Player.html#a278958abf43776c6248f560ab439e4e9',1,'objects::Player']]],
-  ['currentlogic_7',['currentLogic',['../classlogic_1_1Logic.html#a9a46bcd9584ae72bdc3ea0388a5b0204',1,'logic::Logic']]],
-  ['currentrunningframe_8',['currentRunningFrame',['../classobjects_1_1Player.html#ac6d8f0ed7e25f69754be16cd26157062',1,'objects::Player']]],
-  ['currentscore_9',['currentScore',['../classlogic_1_1Logic_1_1Score.html#a5a39338854881a8a64b98ce0f6ac374f',1,'logic.Logic.Score.currentScore()'],['../classobjects_1_1menus_1_1GameOver.html#aa0350b26826abcc47330556498658752',1,'objects.menus.GameOver.currentScore()']]],
-  ['currenty_10',['currentY',['../classobjects_1_1obstacles_1_1Block.html#afea908e1d660f6ea1b0a6682af5c7ac0',1,'objects::obstacles::Block']]]
+  ['center_0',['CENTER',['../enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html#a46b9d0c21356ecccc8979992dfb44910',1,'eu::anwar::madrunner::objects::obstacles::Block::Lane']]],
+  ['center_1',['center',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#a6ee3e6bba1d811d60be6ba0823433acc',1,'eu::anwar::madrunner::objects::obstacles::Block']]],
+  ['centertxt_2',['centerTxt',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html#a1c5d716bbe5cb11c4a568e2b1b122c6f',1,'eu::anwar::madrunner::objects::menus::GamePause']]],
+  ['color_3',['color',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#ae340e4ab43d8f10e1928b30f5678f871',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['currentclimbingframe_4',['currentClimbingFrame',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a31e35d501301f7b3b0869775ddceded3',1,'eu::anwar::madrunner::objects::Player']]],
+  ['currentdeathframe_5',['currentDeathFrame',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a7820d0090be00e0a3c5362fcfa08185a',1,'eu::anwar::madrunner::objects::Player']]],
+  ['currentjumpframe_6',['currentJumpFrame',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#ac3a24a18dea4daf61c2dd90ef960d426',1,'eu::anwar::madrunner::objects::Player']]],
+  ['currentlogic_7',['currentLogic',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#aeba3f3024a964bb12efefc680234b595',1,'eu::anwar::madrunner::logic::Logic']]],
+  ['currentrunningframe_8',['currentRunningFrame',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a4e6b4b7c64954fb49a8795a164c3e50d',1,'eu::anwar::madrunner::objects::Player']]],
+  ['currentscore_9',['currentScore',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#ab3b2db199b875515801fc3712111ae55',1,'eu.anwar.madrunner.logic.Logic.Score.currentScore()'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#ac694a94feecb3f99ef6ca87eb6f2b7fe',1,'eu.anwar.madrunner.objects.menus.GameOver.currentScore()']]],
+  ['currenty_10',['currentY',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#a6521503fa8d84d3ca04f1f55e0fc1610',1,'eu::anwar::madrunner::objects::obstacles::Block']]]
 ];

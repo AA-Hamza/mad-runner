@@ -1,0 +1,12 @@
+<map id="eu.anwar.madrunner.objects.Player" name="eu.anwar.madrunner.objects.Player">
+<area shape="rect" id="node1" title=" " alt="" coords="419,1296,670,1887"/>
+<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html" title=" " alt="" coords="123,1053,574,1233"/>
+<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="46,605,469,991"/>
+<area shape="rect" id="node4" title=" " alt="" coords="26,407,78,484"/>
+<area shape="rect" id="node5" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html" title=" " alt="" coords="227,348,566,543"/>
+<area shape="rect" id="node6" title=" " alt="" coords="191,145,562,223"/>
+<area shape="rect" id="node7" title=" " alt="" coords="450,5,524,83"/>
+<area shape="rect" id="node10" title=" " alt="" coords="577,247,709,324"/>
+<area shape="rect" id="node8" title=" " alt="" coords="144,407,203,484"/>
+<area shape="rect" id="node9" href="$enumeu_1_1anwar_1_1madrunner_1_1objects_1_1Player_1_1Level.html" title=" " alt="" coords="649,1097,906,1189"/>
+</map>

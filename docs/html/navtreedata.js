@@ -26,7 +26,7 @@ var NAVTREE =
 [
   [ "Mad Runner", "index.html", [
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+      [ "Namespace List", "namespaces.html", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -47,8 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Block_8java.html",
-"classobjects_1_1GameObject.html#afa9b9e4c3a09c04c89a6eafc7d9ad8ea",
-"functions_k.html"
+"dir_b7c58830cb01cf23e99964038a4a01b1.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,28 +1,33 @@
 var annotated_dup =
 [
-    [ "game", "namespacegame.html", [
-      [ "GameLoop", "classgame_1_1GameLoop.html", "classgame_1_1GameLoop" ],
-      [ "MadRunner", "classgame_1_1MadRunner.html", "classgame_1_1MadRunner" ]
-    ] ],
-    [ "logic", "namespacelogic.html", [
-      [ "Logic", "classlogic_1_1Logic.html", "classlogic_1_1Logic" ],
-      [ "ObstacleFactory", "classlogic_1_1ObstacleFactory.html", "classlogic_1_1ObstacleFactory" ]
-    ] ],
-    [ "objects", "namespaceobjects.html", [
-      [ "menus", "namespaceobjects_1_1menus.html", [
-        [ "GameOver", "classobjects_1_1menus_1_1GameOver.html", "classobjects_1_1menus_1_1GameOver" ],
-        [ "GamePause", "classobjects_1_1menus_1_1GamePause.html", "classobjects_1_1menus_1_1GamePause" ]
-      ] ],
-      [ "obstacles", "namespaceobjects_1_1obstacles.html", [
-        [ "Block", "classobjects_1_1obstacles_1_1Block.html", "classobjects_1_1obstacles_1_1Block" ],
-        [ "Obstacle", "classobjects_1_1obstacles_1_1Obstacle.html", "classobjects_1_1obstacles_1_1Obstacle" ],
-        [ "RoadBlock", "classobjects_1_1obstacles_1_1RoadBlock.html", "classobjects_1_1obstacles_1_1RoadBlock" ],
-        [ "Trailer", "classobjects_1_1obstacles_1_1Trailer.html", "classobjects_1_1obstacles_1_1Trailer" ],
-        [ "TrailerWithRamp", "classobjects_1_1obstacles_1_1TrailerWithRamp.html", "classobjects_1_1obstacles_1_1TrailerWithRamp" ]
-      ] ],
-      [ "GameLaneObject", "classobjects_1_1GameLaneObject.html", "classobjects_1_1GameLaneObject" ],
-      [ "GameObject", "classobjects_1_1GameObject.html", "classobjects_1_1GameObject" ],
-      [ "Ground", "classobjects_1_1Ground.html", "classobjects_1_1Ground" ],
-      [ "Player", "classobjects_1_1Player.html", "classobjects_1_1Player" ]
+    [ "eu", null, [
+      [ "anwar", null, [
+        [ "madrunner", "namespaceeu_1_1anwar_1_1madrunner.html", [
+          [ "logic", "namespaceeu_1_1anwar_1_1madrunner_1_1logic.html", [
+            [ "Logic", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic" ],
+            [ "ObstacleFactory", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory" ]
+          ] ],
+          [ "objects", "namespaceeu_1_1anwar_1_1madrunner_1_1objects.html", [
+            [ "menus", "namespaceeu_1_1anwar_1_1madrunner_1_1objects_1_1menus.html", [
+              [ "GameOver", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver" ],
+              [ "GamePause", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause" ]
+            ] ],
+            [ "obstacles", "namespaceeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles.html", [
+              [ "Block", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block" ],
+              [ "Obstacle", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle" ],
+              [ "RoadBlock", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock" ],
+              [ "Trailer", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer" ],
+              [ "TrailerWithRamp", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp" ]
+            ] ],
+            [ "GameLaneObject", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject" ],
+            [ "GameObject", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject" ],
+            [ "Ground", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1Ground.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1Ground" ],
+            [ "Player", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player" ]
+          ] ],
+          [ "GameLoop", "classeu_1_1anwar_1_1madrunner_1_1GameLoop.html", "classeu_1_1anwar_1_1madrunner_1_1GameLoop" ],
+          [ "Launcher", "classeu_1_1anwar_1_1madrunner_1_1Launcher.html", "classeu_1_1anwar_1_1madrunner_1_1Launcher" ],
+          [ "MadRunner", "classeu_1_1anwar_1_1madrunner_1_1MadRunner.html", "classeu_1_1anwar_1_1madrunner_1_1MadRunner" ]
+        ] ]
+      ] ]
     ] ]
 ];

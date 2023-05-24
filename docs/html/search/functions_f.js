@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['rampclimb_0',['rampClimb',['../classobjects_1_1Player.html#a1bb3504dc12caead5e4215496156b624',1,'objects::Player']]],
-  ['rampupdate_1',['rampUpdate',['../classobjects_1_1Player.html#ab1985d0795e1ab94728ee630a521b7a5',1,'objects::Player']]],
-  ['resetscore_2',['resetScore',['../classlogic_1_1Logic_1_1Score.html#a6403ea08d82555923fc15b1197ed091f',1,'logic::Logic::Score']]],
-  ['roadblock_3',['RoadBlock',['../classobjects_1_1obstacles_1_1RoadBlock.html#aad2a481f45a47f33b2cc2809681865a5',1,'objects::obstacles::RoadBlock']]]
+  ['rampclimb_0',['rampClimb',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a50376b174ec5556b82197e159c92560e',1,'eu::anwar::madrunner::objects::Player']]],
+  ['rampupdate_1',['rampUpdate',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a681ef9d65c6089cb49913920168496fa',1,'eu::anwar::madrunner::objects::Player']]],
+  ['resetscore_2',['resetScore',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#a06869bb6e944e4fa8ba61ff059487ddf',1,'eu::anwar::madrunner::logic::Logic::Score']]],
+  ['roadblock_3',['RoadBlock',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html#ace153d8cb1346b631787aa5254c4bfaf',1,'eu::anwar::madrunner::objects::obstacles::RoadBlock']]]
 ];
