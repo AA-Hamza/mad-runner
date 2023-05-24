@@ -1,0 +1,12 @@
+<map id="objects.TrailerWithRamp" name="objects.TrailerWithRamp">
+<area shape="rect" id="node1" title=" " alt="" coords="190,1591,502,1727"/>
+<area shape="rect" id="node2" href="$classobjects_1_1Obstacle.html" title=" " alt="" coords="185,1207,507,1328"/>
+<area shape="rect" id="node10" href="$classobjects_1_1Trailer.html" title=" " alt="" coords="408,1377,660,1528"/>
+<area shape="rect" id="node3" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="121,977,571,1157"/>
+<area shape="rect" id="node4" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="5,572,428,928"/>
+<area shape="rect" id="node5" title=" " alt="" coords="120,373,172,451"/>
+<area shape="rect" id="node6" title=" " alt="" coords="197,373,255,451"/>
+<area shape="rect" id="node7" href="$classobjects_1_1Block.html" title=" " alt="" coords="298,315,637,509"/>
+<area shape="rect" id="node8" title=" " alt="" coords="371,145,564,223"/>
+<area shape="rect" id="node9" title=" " alt="" coords="430,5,505,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="objects.Player" name="objects.Player">
+<area shape="rect" id="node1" title=" " alt="" coords="105,681,356,1331"/>
+<area shape="rect" id="node2" href="$classobjects_1_1GameLaneObject.html" title=" " alt="" coords="5,453,456,633"/>
+<area shape="rect" id="node3" href="$classobjects_1_1GameObject.html" title=" " alt="" coords="19,5,442,405"/>
+</map>
