@@ -37,12 +37,12 @@
 //     Logic.gc.fillText(txt, this.width / 2, this.length / 2, this.width);
 //   }
 // }
-package objects.menus;
+package eu.anwar.madrunner.objects.menus;
 
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.objects.GameObject;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
-import logic.Logic;
-import objects.GameObject;
 
 public class GamePause extends GameObject
 {

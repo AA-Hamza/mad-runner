@@ -1,9 +1,9 @@
-package game;
+package eu.anwar.madrunner;
+import eu.anwar.madrunner.logic.Logic;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.text.Font;
-import logic.Logic;
 
 public class GameLoop extends AnimationTimer
 {

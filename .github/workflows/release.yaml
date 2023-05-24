@@ -18,15 +18,15 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: liberica
-          java-version: 20
+          java-version: 17
           java-package: jdk+fx
           cache: 'gradle'
 
 
-      - name: Run build
+      - name: Run build jar
         shell: bash
         run: |
-          make build
+          make jar
 
       - name: Bump version and push tag
         id: tag

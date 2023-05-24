@@ -1,7 +1,8 @@
-package objects.obstacles;
+package eu.anwar.madrunner.objects.obstacles;
 
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.logic.ObstacleFactory;
 import java.util.ArrayList;
-import logic.Logic;
 
 public class Block
 {
@@ -30,7 +31,7 @@ public class Block
         this.center = center;
         this.right = right;
 
-        this.currentY = -1 * (logic.ObstacleFactory.bufferScreens + logic.ObstacleFactory.buildingScreens) *
+        this.currentY = -1 * (ObstacleFactory.bufferScreens + ObstacleFactory.buildingScreens) *
                         Logic.getBounderies().getScreenHeight();
 
         // Update left

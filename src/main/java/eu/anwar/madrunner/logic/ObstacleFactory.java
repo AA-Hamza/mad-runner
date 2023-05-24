@@ -1,13 +1,13 @@
-package logic;
+package eu.anwar.madrunner.logic;
 
+import eu.anwar.madrunner.objects.GameLaneObject;
+import eu.anwar.madrunner.objects.Player;
+import eu.anwar.madrunner.objects.obstacles.Block;
+import eu.anwar.madrunner.objects.obstacles.Obstacle;
+import eu.anwar.madrunner.objects.obstacles.RoadBlock;
+import eu.anwar.madrunner.objects.obstacles.Trailer;
+import eu.anwar.madrunner.objects.obstacles.TrailerWithRamp;
 import java.util.ArrayList;
-import objects.GameLaneObject;
-import objects.Player;
-import objects.obstacles.Block;
-import objects.obstacles.Obstacle;
-import objects.obstacles.RoadBlock;
-import objects.obstacles.Trailer;
-import objects.obstacles.TrailerWithRamp;
 
 public class ObstacleFactory
 {

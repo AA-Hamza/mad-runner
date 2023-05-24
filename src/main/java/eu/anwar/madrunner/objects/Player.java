@@ -1,9 +1,9 @@
-package objects;
+package eu.anwar.madrunner.objects;
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.objects.obstacles.*;
 import java.util.ArrayList;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import logic.Logic;
-import objects.obstacles.*;
 
 public class Player extends GameLaneObject
 {

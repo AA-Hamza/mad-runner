@@ -1,6 +1,9 @@
-package logic;
+package eu.anwar.madrunner.logic;
 
-import game.MadRunner;
+import eu.anwar.madrunner.MadRunner;
+import eu.anwar.madrunner.objects.*;
+import eu.anwar.madrunner.objects.menus.*;
+import eu.anwar.madrunner.objects.obstacles.*;
 import java.util.Deque;
 import java.util.LinkedList;
 import javafx.event.EventHandler;
@@ -10,9 +13,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.TextAlignment;
-import objects.*;
-import objects.menus.*;
-import objects.obstacles.*;
 // import objects.obstacles.Block.Lane;
 
 public class Logic

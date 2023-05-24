@@ -1,4 +1,5 @@
-package game;
+package eu.anwar.madrunner;
+
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Group;

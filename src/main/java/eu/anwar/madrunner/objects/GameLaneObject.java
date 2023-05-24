@@ -1,6 +1,6 @@
-package objects;
-import logic.Logic;
-import objects.obstacles.Block;
+package eu.anwar.madrunner.objects;
+import eu.anwar.madrunner.logic.Logic;
+import eu.anwar.madrunner.objects.obstacles.Block;
 
 public class GameLaneObject extends GameObject
 {

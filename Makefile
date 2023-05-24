@@ -1,13 +1,13 @@
 .PHONY: all build run docs
 
 build:
-	gradle build --build-cache
+	./gradlew build --build-cache
 
 run:
-	gradle run --console=plain -q
+	./gradlew run --console=plain -q
 
 jar:
-	gradle jar
+	./gradlew clean build jar
 
 docs:
 	doxygen ./documentation.config
