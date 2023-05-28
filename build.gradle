@@ -88,19 +88,13 @@ task Main(type: JavaExec) {
 }
 
 // Fix problems with loading resources
-sourceSets {
-    main {
-        output.setResourcesDir(java.outputDir)
-    }
-}
+//sourceSets {
+//    main {
+//        output.setResourcesDir(java.outputDir)
+//    }
+//}
 
 run {
-    inputs.property("moduleName", moduleName)
-    doFirst {
-        jvmArgs = [
-                '--module-path', classpath.asPath,
-                '--module', mainClassName
-        ]
-        classpath = files()
-    }
+    main = mainClassName 
+    classpath = sourceSets.main.runtimeClasspath
 }

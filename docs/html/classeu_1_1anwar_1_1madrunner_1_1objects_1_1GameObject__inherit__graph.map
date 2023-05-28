@@ -1,12 +1,12 @@
 <map id="eu.anwar.madrunner.objects.GameObject" name="eu.anwar.madrunner.objects.GameObject">
-<area shape="rect" id="node1" title=" " alt="" coords="507,5,929,435"/>
-<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html" title=" " alt="" coords="97,483,547,663"/>
-<area shape="rect" id="node8" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Ground.html" title=" " alt="" coords="572,505,864,641"/>
-<area shape="rect" id="node9" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html" title=" " alt="" coords="889,483,1219,663"/>
-<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html" title=" " alt="" coords="42,711,293,1360"/>
-<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="317,975,639,1096"/>
-<area shape="rect" id="node5" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html" title=" " alt="" coords="5,1452,313,1529"/>
-<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html" title=" " alt="" coords="337,1415,619,1566"/>
-<area shape="rect" id="node7" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html" title=" " alt="" coords="643,1408,985,1573"/>
-<area shape="rect" id="node10" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html" title=" " alt="" coords="909,960,1199,1111"/>
+<area shape="rect" id="node1" title=" " alt="" coords="517,5,947,435"/>
+<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html" title=" " alt="" coords="100,483,559,663"/>
+<area shape="rect" id="node8" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Ground.html" title=" " alt="" coords="583,505,881,641"/>
+<area shape="rect" id="node9" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html" title=" " alt="" coords="905,483,1241,663"/>
+<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html" title=" " alt="" coords="45,711,299,1389"/>
+<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="324,989,652,1111"/>
+<area shape="rect" id="node5" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html" title=" " alt="" coords="5,1481,320,1559"/>
+<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html" title=" " alt="" coords="345,1445,631,1595"/>
+<area shape="rect" id="node7" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html" title=" " alt="" coords="655,1437,1003,1603"/>
+<area shape="rect" id="node10" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html" title=" " alt="" coords="925,975,1221,1125"/>
 </map>

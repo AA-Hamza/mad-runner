@@ -13,13 +13,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.TextAlignment;
-// import objects.obstacles.Block.Lane;
 
 public class Logic
 {
     /* static variables */
     /* Note having these two variables as static vars without locks is just asking
-     * for problems, especially if there are multiplle threads accessing it.
+     * for problems, especially if there are multiple threads accessing it.
      */
     static public GraphicsContext gc;
     static public Bounderies bounderiesOBJ = null;
@@ -184,6 +183,7 @@ public class Logic
     private void killPlayer()
     {
         this.playerDied = true;
+        this.player.playDeathClip();
     }
 
     static public class Bounderies
@@ -287,6 +287,10 @@ public class Logic
                 return;
             }
 
+            if (playerDied) {
+                return;
+            }
+
             switch (event.getCode())
             {
             case RIGHT:
@@ -377,6 +381,7 @@ public class Logic
         return null;
     }
 
+    /*
     public Player.Level getPlayerLevel()
     {
         Obstacle obs = getPlayerTouchingObstacle();
@@ -389,8 +394,9 @@ public class Logic
         }
         return Player.Level.LOW;
     }
+    */
 
-    public class Score
+    public static class Score
     {
         // static public final double length = 100;
         static public final double padding = 50;

@@ -1,6 +1,5 @@
 var classgame_1_1MadRunner =
 [
-    [ "ResizableCanvas", "classgame_1_1MadRunner_1_1ResizableCanvas.html", "classgame_1_1MadRunner_1_1ResizableCanvas" ],
     [ "main", "classgame_1_1MadRunner.html#aa1a7d9c6cd34e585c8e56927a9361c28", null ],
     [ "start", "classgame_1_1MadRunner.html#a2e7814b067ac5d94f5d5f1cc1abca2c2", null ],
     [ "minScreenX", "classgame_1_1MadRunner.html#a3fb430cf6668859dfd8564e11d59b8e0", null ],

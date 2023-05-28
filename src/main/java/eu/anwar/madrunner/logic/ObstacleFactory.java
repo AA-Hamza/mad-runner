@@ -21,12 +21,6 @@ public class ObstacleFactory
 
     // private final double logicalLaneLength;
 
-    public ObstacleFactory()
-    {
-        // this.logicalLaneLength =
-        //     Logic.getBounderies().getScreenHeight() * buildingScreens;
-    }
-
     public Block generateBlock()
     {
         int tries = 100;

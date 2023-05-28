@@ -21,6 +21,7 @@ public class GameObject
         this.length = length;
     }
 
+    /*
     public GameObject(Block.Lane lane, double y, double width, double length)
     {
         this.lane = lane;
@@ -38,6 +39,7 @@ public class GameObject
     {
         this(x, y, cubeLength, cubeLength);
     }
+    */
 
     public double getWidth()
     {
@@ -68,10 +70,6 @@ public class GameObject
     {
         return this.image;
     }
-    public void setX(double x)
-    {
-        this.x = x;
-    }
     public void setY(double y)
     {
         this.y = y;
@@ -80,10 +78,12 @@ public class GameObject
     {
         return this.y;
     }
+    /*
     public double getX()
     {
         return this.x;
     }
+    */
 
     public void Draw()
     {
@@ -108,54 +108,54 @@ public class GameObject
         }
     }
 
-    public boolean interesects(double x, double y)
-    {
-        if (x > this.x && x < this.x + this.width && y > this.y && y < this.y + length)
-        {
-            return true;
-        }
-        return false;
-    }
+    //public boolean interesects(double x, double y)
+    //{
+    //    if (x > this.x && x < this.x + this.width && y > this.y && y < this.y + length)
+    //    {
+    //        return true;
+    //    }
+    //    return false;
+    //}
 
-    public boolean interesects(Block.Lane lane, double y)
-    {
-        if (this.lane == null)
-        {
-            System.out.println("Trying to get interesection using Lanes on an Object without lane field");
-        }
-        else
-        {
-            if (this.lane == lane && y > this.y && y < this.y + this.length)
-            {
-                return true;
-            }
-        }
-        return false;
-    }
+    //public boolean interesects(Block.Lane lane, double y)
+    //{
+    //    if (this.lane == null)
+    //    {
+    //        System.out.println("Trying to get interesection using Lanes on an Object without lane field");
+    //    }
+    //    else
+    //    {
+    //        if (this.lane == lane && y > this.y && y < this.y + this.length)
+    //        {
+    //            return true;
+    //        }
+    //    }
+    //    return false;
+    //}
 
-    public boolean touches(GameObject other)
-    {
-        if (other.lane != null)
-        {
-            if (other.lane != this.lane)
-            {
-                return false;
-            }
-            double y11 = other.y;
-            double y12 = other.y + other.length;
-            double y21 = this.y;
-            double y22 = this.y + this.length;
-            if (y11 >= y21 && y11 <= y22)
-                return true;
-            else if (y12 >= y21 && y12 <= y22)
-                return true;
-            if (y21 >= y11 && y21 <= y12)
-                return true;
-            else if (y22 >= y11 && y22 <= y12)
-                return true;
-        }
-        return false;
-    }
+    //public boolean touches(GameObject other)
+    //{
+    //    if (other.lane != null)
+    //    {
+    //        if (other.lane != this.lane)
+    //        {
+    //            return false;
+    //        }
+    //        double y11 = other.y;
+    //        double y12 = other.y + other.length;
+    //        double y21 = this.y;
+    //        double y22 = this.y + this.length;
+    //        if (y11 >= y21 && y11 <= y22)
+    //            return true;
+    //        else if (y12 >= y21 && y12 <= y22)
+    //            return true;
+    //        if (y21 >= y11 && y21 <= y12)
+    //            return true;
+    //        else if (y22 >= y11 && y22 <= y12)
+    //            return true;
+    //    }
+    //    return false;
+    //}
 
     // public boolean within(GameObject other) {
     //   if (this.x >= other.x && this.x + this.width <= other.x + other.width &&

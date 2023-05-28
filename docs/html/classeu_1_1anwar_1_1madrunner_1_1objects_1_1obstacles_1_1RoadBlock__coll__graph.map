@@ -1,11 +1,11 @@
 <map id="eu.anwar.madrunner.objects.obstacles.RoadBlock" name="eu.anwar.madrunner.objects.obstacles.RoadBlock">
-<area shape="rect" id="node1" title=" " alt="" coords="192,1407,500,1484"/>
-<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="185,1236,507,1357"/>
-<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html" title=" " alt="" coords="121,1007,571,1187"/>
-<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="5,572,428,957"/>
-<area shape="rect" id="node5" title=" " alt="" coords="120,373,172,451"/>
-<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html" title=" " alt="" coords="298,315,637,509"/>
-<area shape="rect" id="node7" title=" " alt="" coords="282,145,653,223"/>
-<area shape="rect" id="node8" title=" " alt="" coords="430,5,505,83"/>
-<area shape="rect" id="node9" title=" " alt="" coords="197,373,255,451"/>
+<area shape="rect" id="node1" title=" " alt="" coords="195,1407,510,1484"/>
+<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="189,1236,517,1357"/>
+<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html" title=" " alt="" coords="123,1007,582,1187"/>
+<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="5,572,436,957"/>
+<area shape="rect" id="node5" title=" " alt="" coords="125,373,178,451"/>
+<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html" title=" " alt="" coords="303,315,647,509"/>
+<area shape="rect" id="node7" title=" " alt="" coords="286,145,665,223"/>
+<area shape="rect" id="node8" title=" " alt="" coords="438,5,513,83"/>
+<area shape="rect" id="node9" title=" " alt="" coords="202,373,261,451"/>
 </map>

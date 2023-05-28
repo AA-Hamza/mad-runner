@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Block
 {
     /* Enums */
-    static public enum Lane { LEFT, CENTER, RIGHT }
+    public enum Lane { LEFT, CENTER, RIGHT }
 
     /* static vars */
     public static final double speed = 4d;
