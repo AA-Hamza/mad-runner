@@ -5,16 +5,17 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class MadRunner extends Application
 {
+
+    static public MediaPlayer mainTheme;
     /* static vars */
     static public final double minScreenY = 500;
     static public final double minScreenX = 500;
-
-    // static public final double screenY;
-    // static public final double screenX;
 
     @Override public void start(Stage stage)
     {
@@ -29,13 +30,15 @@ public class MadRunner extends Application
         stage.setHeight(768);
         stage.setMaximized(true);
 
-        // Canvas canvas = new Canvas(
-        //     stage.getWidth(),
-        //     stage.getHeight()); // We are only using canvas to draw objects
         ResizableCanvas canvas = new ResizableCanvas();
 
         canvas.widthProperty().bind(stage.widthProperty());
         canvas.heightProperty().bind(stage.heightProperty());
+
+        Media mainThemeMedia = new Media(getClass().getClassLoader().getResource("sounds/main_theme.wav").toString());
+        mainTheme = new MediaPlayer(mainThemeMedia);
+        mainTheme.setAutoPlay(true);
+        mainTheme.setCycleCount(MediaPlayer.INDEFINITE);
 
         canvas.requestFocus();
 

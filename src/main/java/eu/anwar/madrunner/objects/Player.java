@@ -3,7 +3,10 @@ import eu.anwar.madrunner.logic.Logic;
 import eu.anwar.madrunner.objects.obstacles.*;
 import java.util.ArrayList;
 import javafx.scene.image.Image;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
 public class Player extends GameLaneObject
 {
@@ -26,6 +29,9 @@ public class Player extends GameLaneObject
     // This color will be used in case the image doesn't exist
     private final Color playerColor = Color.DARKKHAKI;
 
+    private MediaPlayer jumpMedia;
+    private MediaPlayer deathMedia;
+
     /* Private vars */
     private Level level = Level.LOW;
     private boolean jumping = false;
@@ -46,6 +52,7 @@ public class Player extends GameLaneObject
         super(Block.Lane.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
         this.setColor(playerColor);
         setAnimations();
+        // setSounds();
     }
 
     /**
@@ -70,6 +77,20 @@ public class Player extends GameLaneObject
         }
     }
 
+    // private void setSounds()
+    // {
+    //     Media jumpMediaSound = new Media(getClass().getClassLoader().getResource("sounds/jump.wav").toString());
+    //
+    //     this.jumpMedia = new MediaPlayer(jumpMediaSound);
+    //     jumpMedia.setOnEndOfMedia(new Runnable() {
+    //         public void run() {
+    //             jumpMedia.seek(Duration.ZERO);
+    //         }
+    //     });
+    //
+    //     Media DeathMediaSound = new Media(getClass().getClassLoader().getResource("sounds/gameover.wav").toString());
+    //     this.deathMedia = new MediaPlayer(DeathMediaSound);
+    // }
     /* Getters */
     public Level getLevel()
     {
@@ -144,6 +165,9 @@ public class Player extends GameLaneObject
     public void die()
     {
         this.alive = false;
+
+        // deathMedia.seek(deathMedia.getStartTime());
+        // deathMedia.play();
     }
     public void rampClimb()
     {
@@ -152,6 +176,7 @@ public class Player extends GameLaneObject
     public void jump()
     {
         this.jumping = true;
+        // jumpMedia.play();
     }
     public void setIsDying()
     {

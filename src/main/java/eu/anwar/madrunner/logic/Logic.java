@@ -13,7 +13,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.TextAlignment;
-// import objects.obstacles.Block.Lane;
 
 public class Logic
 {
