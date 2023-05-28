@@ -1,9 +1,9 @@
 <map id="eu.anwar.madrunner.objects.GameLaneObject" name="eu.anwar.madrunner.objects.GameLaneObject">
-<area shape="rect" id="node1" title=" " alt="" coords="100,483,559,663"/>
-<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html" title=" " alt="" coords="45,711,299,1389"/>
-<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="324,989,652,1111"/>
-<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="114,5,545,435"/>
-<area shape="rect" id="node5" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html" title=" " alt="" coords="5,1481,320,1559"/>
-<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html" title=" " alt="" coords="345,1445,631,1595"/>
-<area shape="rect" id="node7" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html" title=" " alt="" coords="655,1437,1003,1603"/>
+<area shape="rect" id="node1" title=" " alt="" coords="97,365,547,545"/>
+<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html" title=" " alt="" coords="42,593,293,1272"/>
+<area shape="rect" id="node4" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html" title=" " alt="" coords="317,872,639,993"/>
+<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="133,5,511,317"/>
+<area shape="rect" id="node5" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html" title=" " alt="" coords="5,1364,313,1441"/>
+<area shape="rect" id="node6" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html" title=" " alt="" coords="337,1327,619,1478"/>
+<area shape="rect" id="node7" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html" title=" " alt="" coords="643,1320,985,1485"/>
 </map>

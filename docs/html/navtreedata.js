@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Block_8java.html",
-"dir_5f70ab23505cf858629be064ed19a88e.html"
+"enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

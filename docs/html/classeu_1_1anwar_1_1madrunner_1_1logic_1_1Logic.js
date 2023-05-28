@@ -5,7 +5,6 @@ var classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic =
     [ "Score", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score" ],
     [ "Logic", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#a7e8c116d8291541e971e2e8741383d4c", null ],
     [ "getBounderies", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#ae58db329805588d18bc16c9e03ccf867", null ],
-    [ "getPlayerLevel", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#aa135265abfcdb23d2ae2926d08a092be", null ],
     [ "getPlayerTouchingObstacle", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#abd972b4df25abedc4bcdc6506df1de0d", null ],
     [ "killPlayer", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#a8a1de95f8d8fd8ae3f799a304c596d41", null ],
     [ "objectsSetUP", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#a9e29bbb768d101ab48372daedc6587d5", null ],

@@ -10,7 +10,7 @@ var searchData=
   ['setplayerlevelhigh_7',['setPlayerLevelHigh',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#aa88f273aa0cb3374fc680dac4eb6e7b5',1,'eu::anwar::madrunner::objects::Player']]],
   ['setplayerlevellow_8',['setPlayerLevelLow',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#ae69b4c98e392fe518a3b7226ab9c95da',1,'eu::anwar::madrunner::objects::Player']]],
   ['setscore_9',['setScore',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#aa79c7482102ac74142b0c706f46307b5',1,'eu::anwar::madrunner::objects::menus::GameOver']]],
-  ['setx_10',['setX',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a9bd6f84e8a3a33c6ba10ec95c1a35e83',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['setsounds_10',['setSounds',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#ac0c37dad5e5eb9e8dca1fe7a66d9f4ca',1,'eu::anwar::madrunner::objects::Player']]],
   ['sety_11',['setY',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a5695465382fddf4797eeb078190836c1',1,'eu::anwar::madrunner::objects::GameObject']]],
   ['start_12',['start',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#afbbce10d2c0c7d02db52e3d772333433',1,'eu::anwar::madrunner::MadRunner']]]
 ];

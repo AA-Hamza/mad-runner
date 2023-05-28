@@ -1,5 +1,5 @@
 <map id="eu.anwar.madrunner.objects.menus.GameOver" name="eu.anwar.madrunner.objects.menus.GameOver">
-<area shape="rect" id="node1" title=" " alt="" coords="73,711,369,861"/>
-<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html" title=" " alt="" coords="53,483,389,663"/>
-<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="5,5,436,435"/>
+<area shape="rect" id="node1" title=" " alt="" coords="49,593,339,744"/>
+<area shape="rect" id="node2" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html" title=" " alt="" coords="29,365,359,545"/>
+<area shape="rect" id="node3" href="$classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html" title=" " alt="" coords="5,5,383,317"/>
 </map>

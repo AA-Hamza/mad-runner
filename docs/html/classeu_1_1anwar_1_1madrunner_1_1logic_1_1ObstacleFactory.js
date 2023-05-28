@@ -1,6 +1,5 @@
 var classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory =
 [
-    [ "ObstacleFactory", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a6998004d37f3baa0274c17e83474819c", null ],
     [ "generateBlock", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a8f61b88f7e8f6c5da3d6572917abe7c0", null ],
     [ "generateObstacle", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a876e48f7148ca6485364b87bfe48312e", null ],
     [ "generatePath", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a10135a5f5e5c11954456da90d56b4605", null ],

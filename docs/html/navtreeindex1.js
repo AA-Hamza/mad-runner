@@ -1,15 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"dir_5f70ab23505cf858629be064ed19a88e.html":[2,0,0,0,0,0,0],
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,0],
-"dir_b734a2d5e35f16c49c52b5a3697c9c61.html":[2,0,0,0,0,0,0,0,0],
-"dir_b7c58830cb01cf23e99964038a4a01b1.html":[2,0,0,0,0,0,0,0,1],
-"dir_d77cacf2f85691112bf607ef90e2f1c5.html":[2,0,0,0,0,0,0,0,1,1],
-"dir_e18eba9c174a328f66afb7e2f95bb58b.html":[2,0,0,0,0,0],
-"dir_fd3f6763802dee1ad875f6c80eac0bda.html":[2,0,0,0,0],
-"enumeu_1_1anwar_1_1madrunner_1_1objects_1_1Player_1_1Level.html":[1,0,0,0,0,1,5,0],
-"enumeu_1_1anwar_1_1madrunner_1_1objects_1_1Player_1_1Level.html#a405b2088aa24398e94d1abf544f16b61":[1,0,0,0,0,1,5,0,0],
-"enumeu_1_1anwar_1_1madrunner_1_1objects_1_1Player_1_1Level.html#af2c05769d3331a5c6f898ad6f86b5711":[1,0,0,0,0,1,5,0,1],
 "enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html":[1,0,0,0,0,1,1,0,0],
 "enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html#a46b9d0c21356ecccc8979992dfb44910":[1,0,0,0,0,1,1,0,0,0],
 "enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html#ac315734241add5236c19ad33b244f0b1":[1,0,0,0,0,1,1,0,0,1],
