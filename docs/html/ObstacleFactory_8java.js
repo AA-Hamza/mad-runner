@@ -1,4 +1,4 @@
 var ObstacleFactory_8java =
 [
-    [ "logic.ObstacleFactory", "classlogic_1_1ObstacleFactory.html", "classlogic_1_1ObstacleFactory" ]
+    [ "eu.anwar.madrunner.logic.ObstacleFactory", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html", "classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory" ]
 ];

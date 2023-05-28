@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['score_0',['score',['../classlogic_1_1Logic.html#a17d0df54b61feea751f082d53796af1a',1,'logic::Logic']]],
-  ['screenheight_1',['screenHeight',['../classlogic_1_1Logic_1_1Bounderies.html#a0078f0f4e27d13c74d6528f33becf9b2',1,'logic::Logic::Bounderies']]],
-  ['screenwidth_2',['screenWidth',['../classlogic_1_1Logic_1_1Bounderies.html#a3bbe17920b5a123ae9133446947528c3',1,'logic::Logic::Bounderies']]],
-  ['singletrailerlength_3',['singleTrailerLength',['../classobjects_1_1Trailer.html#ac8b0772fdc8ac82a712b0503e52755dd',1,'objects::Trailer']]],
-  ['space_4',['space',['../classlogic_1_1ObstacleFactory.html#accc102cab8d0e2e887794edd76078ec5',1,'logic::ObstacleFactory']]],
-  ['speed_5',['speed',['../classobjects_1_1Block.html#a98a95cb45039b8e782f32dd4239f9cf8',1,'objects::Block']]]
+  ['ramp_0',['ramp',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html#ae2784f94e9960e4d9b72136c689f9a45',1,'eu::anwar::madrunner::objects::obstacles::TrailerWithRamp']]],
+  ['rampsize_1',['rampSize',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html#a4eeaa928b59f9eb65b5ec22e13571b0e',1,'eu::anwar::madrunner::objects::obstacles::TrailerWithRamp']]],
+  ['right_2',['right',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#a86be4e05f4439ad98e498ed65e56e08b',1,'eu::anwar::madrunner::objects::obstacles::Block']]],
+  ['right_3',['RIGHT',['../enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html#af07835b9c19991b70545bfcee2dd9f18',1,'eu::anwar::madrunner::objects::obstacles::Block::Lane']]],
+  ['roadblocklength_4',['RoadBlockLength',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html#aebb9447070a9e0075d9a213325238dea',1,'eu::anwar::madrunner::objects::obstacles::RoadBlock']]],
+  ['runframes_5',['runFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a2afdad839c38c8f6ae47a45fec7d7c05',1,'eu::anwar::madrunner::objects::Player']]]
 ];

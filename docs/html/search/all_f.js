@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['testobjectlength_0',['testObjectLength',['../classlogic_1_1ObstacleFactory.html#ae37d8a3300d47f268bd039379713c6de',1,'logic::ObstacleFactory']]],
-  ['testobjectstep_1',['testObjectStep',['../classlogic_1_1ObstacleFactory.html#a96358598193823b1e782456a2727bfd8',1,'logic::ObstacleFactory']]],
-  ['tick_2',['tick',['../classlogic_1_1Logic.html#ab109664f008c396294c7e87742e81451',1,'logic::Logic']]],
-  ['tile_3',['tile',['../classobjects_1_1Ground.html#a6515b8ce8a0b41a9fde3fd106a53ead9',1,'objects::Ground']]],
-  ['touches_4',['touches',['../classobjects_1_1GameLaneObject.html#a3d6eb2b22ef432f6145ef408d2330d34',1,'objects.GameLaneObject.touches()'],['../classobjects_1_1GameObject.html#a32e557d27877c5e45a2e3877494d9b5b',1,'objects.GameObject.touches()']]],
-  ['trailer_5',['Trailer',['../classobjects_1_1Trailer.html',1,'objects']]],
-  ['trailer_6',['trailer',['../classobjects_1_1TrailerWithRamp.html#a180bfe2cc6f6de01132048f3c8f51f50',1,'objects::TrailerWithRamp']]],
-  ['trailer_7',['Trailer',['../classobjects_1_1Trailer.html#aed5346a4386e33957d6aa3ed349f1e6f',1,'objects.Trailer.Trailer(Block.Lane lane, int count)'],['../classobjects_1_1Trailer.html#ab6297ec6e15acf3acc67f771254af8c2',1,'objects.Trailer.Trailer(Block.Lane lane)'],['../classobjects_1_1Trailer.html#a2ffaa2443a7419b41e4723379cdc23c9',1,'objects.Trailer.Trailer(Block.Lane lane, double length)']]],
-  ['trailer_2ejava_8',['Trailer.java',['../Trailer_8java.html',1,'']]],
-  ['trailercount_9',['trailerCount',['../classobjects_1_1TrailerWithRamp.html#afc13e1c82d1f14050e02d0e2e5c94179',1,'objects::TrailerWithRamp']]],
-  ['trailercount_10',['TrailerCount',['../classobjects_1_1Trailer.html#ac04fdfcf14e74f823c9567fc140cb466',1,'objects::Trailer']]],
-  ['trailerwithramp_11',['TrailerWithRamp',['../classobjects_1_1TrailerWithRamp.html',1,'objects.TrailerWithRamp'],['../classobjects_1_1TrailerWithRamp.html#a8d2a2682f018978f838642ffd5a6c1bc',1,'objects.TrailerWithRamp.TrailerWithRamp(Block.Lane lane, double length)'],['../classobjects_1_1TrailerWithRamp.html#ad399b5a937cab7ca562e60086df8d4e9',1,'objects.TrailerWithRamp.TrailerWithRamp(Block.Lane lane)']]],
-  ['trailerwithramp_2ejava_12',['TrailerWithRamp.java',['../TrailerWithRamp_8java.html',1,'']]]
+  ['ramp_0',['ramp',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html#ae2784f94e9960e4d9b72136c689f9a45',1,'eu::anwar::madrunner::objects::obstacles::TrailerWithRamp']]],
+  ['rampclimb_1',['rampClimb',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a50376b174ec5556b82197e159c92560e',1,'eu::anwar::madrunner::objects::Player']]],
+  ['rampsize_2',['rampSize',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html#a4eeaa928b59f9eb65b5ec22e13571b0e',1,'eu::anwar::madrunner::objects::obstacles::TrailerWithRamp']]],
+  ['rampupdate_3',['rampUpdate',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a681ef9d65c6089cb49913920168496fa',1,'eu::anwar::madrunner::objects::Player']]],
+  ['resetscore_4',['resetScore',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#a06869bb6e944e4fa8ba61ff059487ddf',1,'eu::anwar::madrunner::logic::Logic::Score']]],
+  ['resizablecanvas_5',['ResizableCanvas',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner_1_1ResizableCanvas.html',1,'eu::anwar::madrunner::MadRunner']]],
+  ['right_6',['right',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#a86be4e05f4439ad98e498ed65e56e08b',1,'eu::anwar::madrunner::objects::obstacles::Block']]],
+  ['right_7',['RIGHT',['../enumeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block_1_1Lane.html#af07835b9c19991b70545bfcee2dd9f18',1,'eu::anwar::madrunner::objects::obstacles::Block::Lane']]],
+  ['roadblock_8',['RoadBlock',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html',1,'eu.anwar.madrunner.objects.obstacles.RoadBlock'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html#ace153d8cb1346b631787aa5254c4bfaf',1,'eu.anwar.madrunner.objects.obstacles.RoadBlock.RoadBlock()']]],
+  ['roadblock_2ejava_9',['RoadBlock.java',['../RoadBlock_8java.html',1,'']]],
+  ['roadblocklength_10',['RoadBlockLength',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1RoadBlock.html#aebb9447070a9e0075d9a213325238dea',1,'eu::anwar::madrunner::objects::obstacles::RoadBlock']]],
+  ['runframes_11',['runFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a2afdad839c38c8f6ae47a45fec7d7c05',1,'eu::anwar::madrunner::objects::Player']]]
 ];

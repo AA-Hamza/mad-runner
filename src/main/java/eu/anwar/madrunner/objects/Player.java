@@ -3,6 +3,7 @@ import eu.anwar.madrunner.logic.Logic;
 import eu.anwar.madrunner.objects.obstacles.*;
 import java.util.ArrayList;
 import javafx.scene.image.Image;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
@@ -29,8 +30,8 @@ public class Player extends GameLaneObject
     // This color will be used in case the image doesn't exist
     private final Color playerColor = Color.DARKKHAKI;
 
-    private MediaPlayer jumpMedia;
-    private MediaPlayer deathMedia;
+    private AudioClip jumpClip;
+    private AudioClip deathClip;
 
     /* Private vars */
     private Level level = Level.LOW;
@@ -52,11 +53,11 @@ public class Player extends GameLaneObject
         super(Block.Lane.CENTER, Logic.getBounderies().getPlayerY(), playerLength);
         this.setColor(playerColor);
         setAnimations();
-        // setSounds();
+        setSounds();
     }
 
     /**
-     * This function is responsible of loading player animations
+     * This function is responsible for loading player animations
      */
     private void setAnimations()
     {
@@ -77,20 +78,11 @@ public class Player extends GameLaneObject
         }
     }
 
-    // private void setSounds()
-    // {
-    //     Media jumpMediaSound = new Media(getClass().getClassLoader().getResource("sounds/jump.wav").toString());
-    //
-    //     this.jumpMedia = new MediaPlayer(jumpMediaSound);
-    //     jumpMedia.setOnEndOfMedia(new Runnable() {
-    //         public void run() {
-    //             jumpMedia.seek(Duration.ZERO);
-    //         }
-    //     });
-    //
-    //     Media DeathMediaSound = new Media(getClass().getClassLoader().getResource("sounds/gameover.wav").toString());
-    //     this.deathMedia = new MediaPlayer(DeathMediaSound);
-    // }
+    private void setSounds()
+    {
+        this.jumpClip = new AudioClip(getClass().getClassLoader().getResource("sounds/jump.wav").toString());
+        this.deathClip = new AudioClip(getClass().getClassLoader().getResource("sounds/gameover.wav").toString());
+    }
     /* Getters */
     public Level getLevel()
     {
@@ -158,25 +150,21 @@ public class Player extends GameLaneObject
     {
         return this.alive;
     }
-    public boolean isDying()
-    {
-        return this.isDying;
-    }
-    public void die()
-    {
-        this.alive = false;
-
-        // deathMedia.seek(deathMedia.getStartTime());
-        // deathMedia.play();
-    }
     public void rampClimb()
     {
         this.isClimbingRamp = true;
     }
     public void jump()
     {
-        this.jumping = true;
-        // jumpMedia.play();
+        if (this.jumping == false) {
+            this.jumping = true;
+            jumpClip.play();
+            //new MediaPlayer(jumpSound).play();
+        }
+    }
+
+    public void playDeathClip() {
+        this.deathClip.play();
     }
     public void setIsDying()
     {

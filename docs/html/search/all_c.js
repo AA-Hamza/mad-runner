@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['padding_0',['padding',['../classlogic_1_1Logic_1_1Score.html#a6a1f898b14b1550c88e576f5343ca96d',1,'logic::Logic::Score']]],
-  ['player_1',['Player',['../classobjects_1_1Player.html',1,'objects']]],
-  ['player_2',['player',['../classlogic_1_1Logic.html#a689a7e3a4c8141e238bb098530b81cd4',1,'logic::Logic']]],
-  ['player_3',['Player',['../classobjects_1_1Player.html#a4793dd2101b206716601767ccc554b33',1,'objects::Player']]],
-  ['player_2ejava_4',['Player.java',['../Player_8java.html',1,'']]],
-  ['playercollision_5',['playerCollision',['../classlogic_1_1Logic.html#ad2ec3db5a6380323c49334cd47e4c6e3',1,'logic::Logic']]],
-  ['playercolor_6',['playerColor',['../classobjects_1_1Player.html#ad6348b4c10b4a628995d633ed4a3a6d9',1,'objects::Player']]],
-  ['playerdied_7',['playerDied',['../classlogic_1_1Logic.html#a392dc882c889f46ee9168a484676be8b',1,'logic.Logic.playerDied()'],['../classlogic_1_1Logic.html#a7f6aec597eade1ef6cc0e060ad633a12',1,'logic.Logic.playerDied()']]],
-  ['playerlength_8',['playerLength',['../classobjects_1_1Player.html#a9ed8868fddfcbde8ae5c193301d84651',1,'objects::Player']]],
-  ['playerlengthdecrease_9',['playerLengthDecrease',['../classobjects_1_1Player.html#af1f8e726b6df37aa978a6ebbe39bc712',1,'objects::Player']]],
-  ['playerlengthincrease_10',['playerLengthIncrease',['../classobjects_1_1Player.html#acee2cc9cd9ca7ec30b5e4c4db3949917',1,'objects::Player']]],
-  ['playerupdateanimation_11',['playerUpdateAnimation',['../classobjects_1_1Player.html#ab2b9bfb264bccaafae1295456a109f7b',1,'objects::Player']]],
-  ['playerypercentage_12',['playerYPercentage',['../classlogic_1_1Logic_1_1Bounderies.html#ae37007cd7a1b5b3ff7768466377db141',1,'logic::Logic::Bounderies']]]
+  ['madrunner_0',['MadRunner',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html',1,'eu::anwar::madrunner']]],
+  ['madrunner_2ejava_1',['MadRunner.java',['../MadRunner_8java.html',1,'']]],
+  ['main_2',['main',['../classeu_1_1anwar_1_1madrunner_1_1Launcher.html#ab6b8325ca367f24b4b49fadfd6bb52a5',1,'eu.anwar.madrunner.Launcher.main()'],['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#a9bf939e01a1f1248f251a6b21ccef1e6',1,'eu.anwar.madrunner.MadRunner.main(String[] args)']]],
+  ['maintheme_3',['mainTheme',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#ac8fbde2750e8c6b85d61fc7d9e8e5f6a',1,'eu::anwar::madrunner::MadRunner']]],
+  ['maxjumpframes_4',['maxJumpFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a2254fae5586eb5a4cce4023f72ba38fd',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxjumplength_5',['maxJumpLength',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a8e23e162ae6c56d27ea2af29d4f84982',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxnumberoftrailers_6',['maxNumberOfTrailers',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html#a4ac1925053074b52c197037ed5a32c28',1,'eu::anwar::madrunner::objects::obstacles::Trailer']]],
+  ['maxrampframes_7',['maxRampFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a5b3ac1d32f2f512767443c04f72b73f9',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxscore_8',['maxScore',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#a94666f9272415b59fe8efb5b14305e12',1,'eu::anwar::madrunner::objects::menus::GameOver']]],
+  ['minscreenx_9',['minScreenX',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#ac9290b46176a47fffe982f472ac32049',1,'eu::anwar::madrunner::MadRunner']]],
+  ['minscreeny_10',['minScreenY',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#a6fb1521f4debaa964d965c929f46bb7c',1,'eu::anwar::madrunner::MadRunner']]],
+  ['minspace_11',['minSpace',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a9ee7c77387d3398e0b02b453739f4281',1,'eu::anwar::madrunner::logic::ObstacleFactory']]],
+  ['moveleft_12',['moveLeft',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a061147b26828973453b08af11d3fd7d3',1,'eu::anwar::madrunner::objects::Player']]],
+  ['moveright_13',['moveRight',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#afcb2915826c589a9702a694ab29c7bbb',1,'eu::anwar::madrunner::objects::Player']]]
 ];

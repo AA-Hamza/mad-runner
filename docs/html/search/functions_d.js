@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['rampclimb_0',['rampClimb',['../classobjects_1_1Player.html#a1bb3504dc12caead5e4215496156b624',1,'objects::Player']]],
-  ['rampupdate_1',['rampUpdate',['../classobjects_1_1Player.html#ab1985d0795e1ab94728ee630a521b7a5',1,'objects::Player']]],
-  ['resetscore_2',['resetScore',['../classlogic_1_1Logic_1_1Score.html#a6403ea08d82555923fc15b1197ed091f',1,'logic::Logic::Score']]],
-  ['roadblock_3',['RoadBlock',['../classobjects_1_1RoadBlock.html#ab7bfb0f74ba792fa8c33149e5a6336a1',1,'objects::RoadBlock']]]
+  ['objectssetup_0',['objectsSetUP',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#a9e29bbb768d101ab48372daedc6587d5',1,'eu::anwar::madrunner::logic::Logic']]],
+  ['obstacle_1',['Obstacle',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html#a033635c2c744cf271c6fd38e215c15f3',1,'eu::anwar::madrunner::objects::obstacles::Obstacle']]],
+  ['obstaclefactory_2',['ObstacleFactory',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a6998004d37f3baa0274c17e83474819c',1,'eu::anwar::madrunner::logic::ObstacleFactory']]]
 ];

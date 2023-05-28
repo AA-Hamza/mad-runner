@@ -1,4 +1,4 @@
 var GameLoop_8java =
 [
-    [ "game.GameLoop", "classgame_1_1GameLoop.html", "classgame_1_1GameLoop" ]
+    [ "eu.anwar.madrunner.GameLoop", "classeu_1_1anwar_1_1madrunner_1_1GameLoop.html", "classeu_1_1anwar_1_1madrunner_1_1GameLoop" ]
 ];

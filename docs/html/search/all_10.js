@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['updatedeathanimation_0',['updateDeathAnimation',['../classobjects_1_1Player.html#ae9500e139fd4c9a9ee0c3cde910d3f21',1,'objects::Player']]],
-  ['updaterunninganimation_1',['updateRunningAnimation',['../classobjects_1_1Player.html#ab08f3d7bb1fc4b5720e298e4ab929437',1,'objects::Player']]]
+  ['score_0',['Score',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html',1,'eu.anwar.madrunner.logic.Logic.Score'],['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#ae363910e1c7c950c7cf0215950177078',1,'eu.anwar.madrunner.logic.Logic.Score.Score()']]],
+  ['score_1',['score',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic.html#acf0c77e636b04a65885f7148b95b4cf4',1,'eu::anwar::madrunner::logic::Logic']]],
+  ['scoretxt_2',['scoreTxt',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#ab375503a752cb42a6f1c122b596ec298',1,'eu::anwar::madrunner::objects::menus::GameOver']]],
+  ['screenheight_3',['screenHeight',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Bounderies.html#afb38cb6639dbc241f6e45e2cfa982cbe',1,'eu::anwar::madrunner::logic::Logic::Bounderies']]],
+  ['screenwidth_4',['screenWidth',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Bounderies.html#aa92c1cdf68426278c9e7ae086b251684',1,'eu::anwar::madrunner::logic::Logic::Bounderies']]],
+  ['setanimations_5',['setAnimations',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#abe2cfda62bd200fb3e287325a750d35e',1,'eu::anwar::madrunner::objects::Player']]],
+  ['setcolor_6',['setColor',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#af90137c771007923f6980d7ae40bda41',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['setimage_7',['setImage',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a080b22f716e665c03a7ad175169774d4',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['setisdying_8',['setIsDying',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a6665718f0b2479899021b88b1b465ae0',1,'eu::anwar::madrunner::objects::Player']]],
+  ['setlane_9',['setLane',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a8d8f50cfaf01fce1fcb6f74ba4602097',1,'eu.anwar.madrunner.objects.GameObject.setLane()'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1TrailerWithRamp.html#a6e7a45ea9a1f0e2a5fc35495d8b717e0',1,'eu.anwar.madrunner.objects.obstacles.TrailerWithRamp.setLane()'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameLaneObject.html#a69846a2f39af51595903429eaa763c4d',1,'eu.anwar.madrunner.objects.GameLaneObject.setLane()']]],
+  ['setlevel_10',['setLevel',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#af44386f1ace667b9488d02477fc64850',1,'eu::anwar::madrunner::objects::Player']]],
+  ['setplayerlevelhigh_11',['setPlayerLevelHigh',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#aa88f273aa0cb3374fc680dac4eb6e7b5',1,'eu::anwar::madrunner::objects::Player']]],
+  ['setplayerlevellow_12',['setPlayerLevelLow',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#ae69b4c98e392fe518a3b7226ab9c95da',1,'eu::anwar::madrunner::objects::Player']]],
+  ['setscore_13',['setScore',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#aa79c7482102ac74142b0c706f46307b5',1,'eu::anwar::madrunner::objects::menus::GameOver']]],
+  ['setx_14',['setX',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a9bd6f84e8a3a33c6ba10ec95c1a35e83',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['sety_15',['setY',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a5695465382fddf4797eeb078190836c1',1,'eu::anwar::madrunner::objects::GameObject']]],
+  ['singletrailerlength_16',['singleTrailerLength',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html#a3046bc67bdf79ecbf9fa2cd36d1bccea',1,'eu::anwar::madrunner::objects::obstacles::Trailer']]],
+  ['space_17',['space',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#acb015684aa96adb7ec7301d3a87ab671',1,'eu::anwar::madrunner::logic::ObstacleFactory']]],
+  ['speed_18',['speed',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Block.html#a2ecadf109e97298dd81cdb69a0fd23e9',1,'eu::anwar::madrunner::objects::obstacles::Block']]],
+  ['start_19',['start',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#afbbce10d2c0c7d02db52e3d772333433',1,'eu::anwar::madrunner::MadRunner']]]
 ];
