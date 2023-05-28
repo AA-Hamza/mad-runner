@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['madrunner_0',['MadRunner',['../classgame_1_1MadRunner.html',1,'game']]],
+  ['madrunner_0',['MadRunner',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html',1,'eu::anwar::madrunner']]],
   ['madrunner_2ejava_1',['MadRunner.java',['../MadRunner_8java.html',1,'']]],
-  ['main_2',['main',['../classgame_1_1MadRunner.html#aa1a7d9c6cd34e585c8e56927a9361c28',1,'game::MadRunner']]],
-  ['maxjumpframes_3',['maxJumpFrames',['../classobjects_1_1Player.html#a07e27db7ae101c84e08e35791b7d868a',1,'objects::Player']]],
-  ['maxjumplength_4',['maxJumpLength',['../classobjects_1_1Player.html#aaaec038560b99b623a0eea6e9268354e',1,'objects::Player']]],
-  ['maxnumberoftrailers_5',['maxNumberOfTrailers',['../classobjects_1_1obstacles_1_1Trailer.html#a4ea4ebcca1687f78250e8ebab90e9015',1,'objects::obstacles::Trailer']]],
-  ['maxrampframes_6',['maxRampFrames',['../classobjects_1_1Player.html#a0c3e616b6ae5194024e067febebaa2dc',1,'objects::Player']]],
-  ['maxscore_7',['maxScore',['../classobjects_1_1menus_1_1GameOver.html#a9e54f43f649d7a8b5ea1d6853f54f307',1,'objects::menus::GameOver']]],
-  ['minscreenx_8',['minScreenX',['../classgame_1_1MadRunner.html#a3fb430cf6668859dfd8564e11d59b8e0',1,'game::MadRunner']]],
-  ['minscreeny_9',['minScreenY',['../classgame_1_1MadRunner.html#a1ccaca61603f5aab73a3794a20b7bd8c',1,'game::MadRunner']]],
-  ['minspace_10',['minSpace',['../classlogic_1_1ObstacleFactory.html#a4416fb251a1d2d791443cc13209f941f',1,'logic::ObstacleFactory']]],
-  ['moveleft_11',['moveLeft',['../classobjects_1_1Player.html#afff26a65cb2909d2fc69e3088ff150c4',1,'objects::Player']]],
-  ['moveright_12',['moveRight',['../classobjects_1_1Player.html#a7f4c14cdc28d7b4e927e2baa47f2f38b',1,'objects::Player']]]
+  ['main_2',['main',['../classeu_1_1anwar_1_1madrunner_1_1Launcher.html#ab6b8325ca367f24b4b49fadfd6bb52a5',1,'eu.anwar.madrunner.Launcher.main()'],['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#a9bf939e01a1f1248f251a6b21ccef1e6',1,'eu.anwar.madrunner.MadRunner.main(String[] args)']]],
+  ['maintheme_3',['mainTheme',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#ac8fbde2750e8c6b85d61fc7d9e8e5f6a',1,'eu::anwar::madrunner::MadRunner']]],
+  ['maxjumpframes_4',['maxJumpFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a2254fae5586eb5a4cce4023f72ba38fd',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxjumplength_5',['maxJumpLength',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a8e23e162ae6c56d27ea2af29d4f84982',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxnumberoftrailers_6',['maxNumberOfTrailers',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Trailer.html#a4ac1925053074b52c197037ed5a32c28',1,'eu::anwar::madrunner::objects::obstacles::Trailer']]],
+  ['maxrampframes_7',['maxRampFrames',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a5b3ac1d32f2f512767443c04f72b73f9',1,'eu::anwar::madrunner::objects::Player']]],
+  ['maxscore_8',['maxScore',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GameOver.html#a94666f9272415b59fe8efb5b14305e12',1,'eu::anwar::madrunner::objects::menus::GameOver']]],
+  ['minscreenx_9',['minScreenX',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#ac9290b46176a47fffe982f472ac32049',1,'eu::anwar::madrunner::MadRunner']]],
+  ['minscreeny_10',['minScreenY',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner.html#a6fb1521f4debaa964d965c929f46bb7c',1,'eu::anwar::madrunner::MadRunner']]],
+  ['minspace_11',['minSpace',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1ObstacleFactory.html#a9ee7c77387d3398e0b02b453739f4281',1,'eu::anwar::madrunner::logic::ObstacleFactory']]],
+  ['moveleft_12',['moveLeft',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a061147b26828973453b08af11d3fd7d3',1,'eu::anwar::madrunner::objects::Player']]],
+  ['moveright_13',['moveRight',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#afcb2915826c589a9702a694ab29c7bbb',1,'eu::anwar::madrunner::objects::Player']]]
 ];

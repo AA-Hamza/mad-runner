@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['updatedeathanimation_0',['updateDeathAnimation',['../classobjects_1_1Player.html#ae9500e139fd4c9a9ee0c3cde910d3f21',1,'objects::Player']]],
-  ['updatedeminsions_1',['updateDeminsions',['../classobjects_1_1menus_1_1GamePause.html#adf584cd13f3803f6eaf9b5597aee2dc5',1,'objects::menus::GamePause']]],
-  ['updaterunninganimation_2',['updateRunningAnimation',['../classobjects_1_1Player.html#ab08f3d7bb1fc4b5720e298e4ab929437',1,'objects::Player']]]
+  ['updatedeathanimation_0',['updateDeathAnimation',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#aac54bd9f7fc8ea1ef5946ad82e909f62',1,'eu::anwar::madrunner::objects::Player']]],
+  ['updatedeminsions_1',['updateDeminsions',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html#a3659c164dfded670fd2653dea9285834',1,'eu::anwar::madrunner::objects::menus::GamePause']]],
+  ['updaterunninganimation_2',['updateRunningAnimation',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#afa7bee8a32fc3c90f206937890f845af',1,'eu::anwar::madrunner::objects::Player']]]
 ];

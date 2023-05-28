@@ -1,4 +1,4 @@
 var GameObject_8java =
 [
-    [ "objects.GameObject", "classobjects_1_1GameObject.html", "classobjects_1_1GameObject" ]
+    [ "eu.anwar.madrunner.objects.GameObject", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html", "classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject" ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handle_0',['handle',['../classgame_1_1GameLoop.html#af1e200bc1b2cdab2fc5f64e2d92cb9fd',1,'game.GameLoop.handle()'],['../classlogic_1_1Logic_1_1GameControls.html#ad602b126e1743a2677bd0e144bb79a15',1,'logic.Logic.GameControls.handle()']]]
+  ['handle_0',['handle',['../classeu_1_1anwar_1_1madrunner_1_1GameLoop.html#a45685da9f44d3d0ee4ebd98ad0a8a93d',1,'eu.anwar.madrunner.GameLoop.handle()'],['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1GameControls.html#a4e4f419586be337dc3675542a7e499fb',1,'eu.anwar.madrunner.logic.Logic.GameControls.handle()']]]
 ];

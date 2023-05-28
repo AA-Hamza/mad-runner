@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['increasescore_0',['increaseScore',['../classlogic_1_1Logic_1_1Score.html#a39dbfa59f9d109dda158aac4d66dd7a7',1,'logic::Logic::Score']]],
-  ['incrementscore_1',['incrementScore',['../classlogic_1_1Logic_1_1Score.html#a782379cadaeb351e8a1ea864300782f7',1,'logic::Logic::Score']]],
-  ['interesects_2',['interesects',['../classobjects_1_1GameObject.html#a427a52722c613429ae18815e58e27ae5',1,'objects.GameObject.interesects(double x, double y)'],['../classobjects_1_1GameObject.html#afa9b9e4c3a09c04c89a6eafc7d9ad8ea',1,'objects.GameObject.interesects(Block.Lane lane, double y)']]],
-  ['isalive_3',['isAlive',['../classobjects_1_1Player.html#a1c5276f04560bc97102b725c8aa1b10a',1,'objects::Player']]],
-  ['isdying_4',['isDying',['../classobjects_1_1Player.html#a780c7ba5d5cbef9130c2f54b20e92263',1,'objects::Player']]],
-  ['isenabled_5',['isEnabled',['../classobjects_1_1menus_1_1GamePause.html#a89e91bdbfa9e7be1ac5b8d1ca5c51f9a',1,'objects::menus::GamePause']]],
-  ['isjumping_6',['isJumping',['../classobjects_1_1Player.html#a7569fdd62dc43a127c6b6936b38bf6ef',1,'objects::Player']]],
-  ['isoffthescreen_7',['isOffTheScreen',['../classobjects_1_1obstacles_1_1Obstacle.html#a225514579c9a72cd08eb6d5bf12e9b83',1,'objects::obstacles::Obstacle']]],
-  ['isresizable_8',['isResizable',['../classgame_1_1MadRunner_1_1ResizableCanvas.html#a8e5dc30be935f4d8954459e74fddd909',1,'game::MadRunner::ResizableCanvas']]]
+  ['increasescore_0',['increaseScore',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#aad3856d0a5cd0062e6a85c0882b9d32b',1,'eu::anwar::madrunner::logic::Logic::Score']]],
+  ['incrementscore_1',['incrementScore',['../classeu_1_1anwar_1_1madrunner_1_1logic_1_1Logic_1_1Score.html#acb2efc0c122ef28e7d3be05868e7efff',1,'eu::anwar::madrunner::logic::Logic::Score']]],
+  ['interesects_2',['interesects',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a5f61905676971449330956a5dba759ff',1,'eu.anwar.madrunner.objects.GameObject.interesects(double x, double y)'],['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1GameObject.html#a2e24fe4b2fad871bdd624f156d03ae03',1,'eu.anwar.madrunner.objects.GameObject.interesects(Block.Lane lane, double y)']]],
+  ['isalive_3',['isAlive',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#aeca2b5b1eb2b05678a930089e3b5eada',1,'eu::anwar::madrunner::objects::Player']]],
+  ['isdying_4',['isDying',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a19ad012d8af8e7ed64c3da0e41bd467f',1,'eu::anwar::madrunner::objects::Player']]],
+  ['isenabled_5',['isEnabled',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1menus_1_1GamePause.html#a49baa789c8e5b15cef405fcf8b59fcb1',1,'eu::anwar::madrunner::objects::menus::GamePause']]],
+  ['isjumping_6',['isJumping',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1Player.html#a4f53d9afa3c98d337aceaf20b8792e38',1,'eu::anwar::madrunner::objects::Player']]],
+  ['isoffthescreen_7',['isOffTheScreen',['../classeu_1_1anwar_1_1madrunner_1_1objects_1_1obstacles_1_1Obstacle.html#a8fd66e85618adfa5386a131f336699f4',1,'eu::anwar::madrunner::objects::obstacles::Obstacle']]],
+  ['isresizable_8',['isResizable',['../classeu_1_1anwar_1_1madrunner_1_1MadRunner_1_1ResizableCanvas.html#a64b8fc60414d2797c66b1ae4ab28b343',1,'eu::anwar::madrunner::MadRunner::ResizableCanvas']]]
 ];
